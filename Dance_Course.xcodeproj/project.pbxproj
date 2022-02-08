@@ -3,27 +3,125 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EF8BC80327B2E39F001A225E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC80227B2E39F001A225E /* AppDelegate.swift */; };
+		9E4592D0B159DBD40ABEFF25 /* Pods_Dance_Course.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2D99AF86FCC1E49A6410B07 /* Pods_Dance_Course.framework */; };
 		EF8BC80527B2E39F001A225E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC80427B2E39F001A225E /* SceneDelegate.swift */; };
 		EF8BC80727B2E39F001A225E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC80627B2E39F001A225E /* ViewController.swift */; };
-		EF8BC80A27B2E39F001A225E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF8BC80827B2E39F001A225E /* Main.storyboard */; };
 		EF8BC80C27B2E3A0001A225E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF8BC80B27B2E3A0001A225E /* Assets.xcassets */; };
 		EF8BC80F27B2E3A0001A225E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF8BC80D27B2E3A0001A225E /* LaunchScreen.storyboard */; };
+		EF8BC81927B2E7B2001A225E /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC81827B2E7B2001A225E /* Presentable.swift */; };
+		EF8BC81B27B2E7E3001A225E /* ClosureTypealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC81A27B2E7E3001A225E /* ClosureTypealiases.swift */; };
+		EF8BC81E27B2E84D001A225E /* LanguageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC81D27B2E84D001A225E /* LanguageController.swift */; };
+		EF8BC82127B2E8E4001A225E /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC82027B2E8E4001A225E /* Router.swift */; };
+		EF8BC82327B2E90C001A225E /* RouterImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC82227B2E90B001A225E /* RouterImp.swift */; };
+		EF8BC82827B2E989001A225E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC82727B2E989001A225E /* Constants.swift */; };
+		EF8BC82B27B2EA2D001A225E /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC82A27B2EA2D001A225E /* UIDevice+Extension.swift */; };
+		EF8BC82D27B2EB4C001A225E /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC82C27B2EB4C001A225E /* UIViewController.swift */; };
+		EF8BC83127B2EBF1001A225E /* Wireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC83027B2EBF1001A225E /* Wireframe.swift */; };
+		EF8BC83427B2EE70001A225E /* Coordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC83327B2EE70001A225E /* Coordinatable.swift */; };
+		EF8BC83627B2EECF001A225E /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC83527B2EECF001A225E /* ApplicationCoordinator.swift */; };
+		EF8BC83927B2F1EF001A225E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC83827B2F1EF001A225E /* Coordinator.swift */; };
+		EF8BC83B27B2F300001A225E /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC83A27B2F300001A225E /* MainCoordinator.swift */; };
+		EF8BC83D27B2F355001A225E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC83C27B2F355001A225E /* AppDelegate.swift */; };
+		EF8BC84027B2F5CB001A225E /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC83F27B2F5CB001A225E /* BaseCoordinator.swift */; };
+		EF8BC84427B2F737001A225E /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC84327B2F737001A225E /* CoordinatorFactory.swift */; };
+		EF8BC84F27B2F915001A225E /* LoaderCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC84E27B2F915001A225E /* LoaderCoordinator.swift */; };
+		EF8BC85227B2F930001A225E /* LoaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC85127B2F930001A225E /* LoaderController.swift */; };
+		EF8BC85427B2F943001A225E /* LoaderViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC85327B2F943001A225E /* LoaderViewInput.swift */; };
+		EF8BC85727B2F956001A225E /* LoaderViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC85627B2F956001A225E /* LoaderViewOutput.swift */; };
+		EF8BC85927B2F98E001A225E /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC85827B2F98E001A225E /* BaseView.swift */; };
+		EF8BC85B27B2F9FD001A225E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC85A27B2F9FD001A225E /* BaseViewController.swift */; };
+		EF8BC85F27B2FA53001A225E /* WaitingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC85E27B2FA53001A225E /* WaitingScreenView.swift */; };
+		EF8BC86127B2FA78001A225E /* PrimaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC86027B2FA78001A225E /* PrimaryView.swift */; };
+		EF8BC86327B2FAC1001A225E /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC86227B2FAC1001A225E /* UIView+Extension.swift */; };
+		EF8BC86527B2FD74001A225E /* LoaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC86427B2FD74001A225E /* LoaderViewModel.swift */; };
+		EF8BC86827B2FDE8001A225E /* LoaderModuleFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC86727B2FDE8001A225E /* LoaderModuleFactories.swift */; };
+		EF8BC86A27B2FE50001A225E /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC86927B2FE50001A225E /* Dependencies.swift */; };
+		EF8BC86C27B301BD001A225E /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC86B27B301BD001A225E /* CustomNavigationController.swift */; };
+		EF8BC86E27B30249001A225E /* UIViewController+Extencion.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC86D27B30249001A225E /* UIViewController+Extencion.swift */; };
+		EF8BC87727B303E6001A225E /* DashboardCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC87627B303E6001A225E /* DashboardCoordinator.swift */; };
+		EF8BC87927B30464001A225E /* DashboardModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC87827B30464001A225E /* DashboardModuleFactory.swift */; };
+		EF8BC87C27B3049F001A225E /* DashboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC87B27B3049F001A225E /* DashboardController.swift */; };
+		EF8BC87E27B304B0001A225E /* DashboardViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC87D27B304B0001A225E /* DashboardViewInput.swift */; };
+		EF8BC88027B304C5001A225E /* DashboardViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC87F27B304C5001A225E /* DashboardViewOutput.swift */; };
+		EF8BC88227B304D5001A225E /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC88127B304D5001A225E /* DashboardViewModel.swift */; };
+		EF8BC88427B30533001A225E /* CoordinatorInTabbarInitiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC88327B30533001A225E /* CoordinatorInTabbarInitiable.swift */; };
+		EF8BC88A27B30592001A225E /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC88927B30592001A225E /* TabbarController.swift */; };
+		EF8BC88C27B3059F001A225E /* TabbarViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC88B27B3059F001A225E /* TabbarViewOutput.swift */; };
+		EF8BC88E27B305A5001A225E /* TabbarViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC88D27B305A5001A225E /* TabbarViewInput.swift */; };
+		EF8BC89027B30706001A225E /* TabbarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC88F27B30706001A225E /* TabbarCoordinator.swift */; };
+		EF8BC89427B30776001A225E /* CoordinatorFactoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC89327B30776001A225E /* CoordinatorFactoryImp.swift */; };
+		EF8BC89727B30838001A225E /* ModuleFactoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC89627B30838001A225E /* ModuleFactoryImp.swift */; };
+		EF8BC89927B308A6001A225E /* ModuleFactoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC89827B308A6001A225E /* ModuleFactoryList.swift */; };
+		EF8BC89C27B310ED001A225E /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC89B27B310ED001A225E /* R.generated.swift */; };
+		EF8BC89E27B313B2001A225E /* NavigationBarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC89D27B313B2001A225E /* NavigationBarHelper.swift */; };
+		EF8BC8A227B314E0001A225E /* NavigationViewFactoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC8A127B314E0001A225E /* NavigationViewFactoryImp.swift */; };
+		EF8BC8A527B31564001A225E /* ModalNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC8A427B31564001A225E /* ModalNavigationBar.swift */; };
+		EF8BC8A727B3157B001A225E /* ModalNavigationBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC8A627B3157B001A225E /* ModalNavigationBarViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9828B4033890F6CA3F51163F /* Pods-Dance_Course.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dance_Course.debug.xcconfig"; path = "Target Support Files/Pods-Dance_Course/Pods-Dance_Course.debug.xcconfig"; sourceTree = "<group>"; };
+		CD48932F2584B922A10213D6 /* Pods-Dance_Course.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dance_Course.release.xcconfig"; path = "Target Support Files/Pods-Dance_Course/Pods-Dance_Course.release.xcconfig"; sourceTree = "<group>"; };
+		D2D99AF86FCC1E49A6410B07 /* Pods_Dance_Course.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dance_Course.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF8BC7FF27B2E39F001A225E /* Dance_Course.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dance_Course.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EF8BC80227B2E39F001A225E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF8BC80427B2E39F001A225E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EF8BC80627B2E39F001A225E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EF8BC80927B2E39F001A225E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF8BC80B27B2E3A0001A225E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF8BC80E27B2E3A0001A225E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF8BC81027B2E3A0001A225E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF8BC81827B2E7B2001A225E /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
+		EF8BC81A27B2E7E3001A225E /* ClosureTypealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureTypealiases.swift; sourceTree = "<group>"; };
+		EF8BC81D27B2E84D001A225E /* LanguageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageController.swift; sourceTree = "<group>"; };
+		EF8BC82027B2E8E4001A225E /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		EF8BC82227B2E90B001A225E /* RouterImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterImp.swift; sourceTree = "<group>"; };
+		EF8BC82727B2E989001A225E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		EF8BC82A27B2EA2D001A225E /* UIDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
+		EF8BC82C27B2EB4C001A225E /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		EF8BC83027B2EBF1001A225E /* Wireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wireframe.swift; sourceTree = "<group>"; };
+		EF8BC83327B2EE70001A225E /* Coordinatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinatable.swift; sourceTree = "<group>"; };
+		EF8BC83527B2EECF001A225E /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		EF8BC83827B2F1EF001A225E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		EF8BC83A27B2F300001A225E /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		EF8BC83C27B2F355001A225E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EF8BC83F27B2F5CB001A225E /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		EF8BC84327B2F737001A225E /* CoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactory.swift; sourceTree = "<group>"; };
+		EF8BC84E27B2F915001A225E /* LoaderCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderCoordinator.swift; sourceTree = "<group>"; };
+		EF8BC85127B2F930001A225E /* LoaderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderController.swift; sourceTree = "<group>"; };
+		EF8BC85327B2F943001A225E /* LoaderViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderViewInput.swift; sourceTree = "<group>"; };
+		EF8BC85627B2F956001A225E /* LoaderViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderViewOutput.swift; sourceTree = "<group>"; };
+		EF8BC85827B2F98E001A225E /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		EF8BC85A27B2F9FD001A225E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		EF8BC85E27B2FA53001A225E /* WaitingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingScreenView.swift; sourceTree = "<group>"; };
+		EF8BC86027B2FA78001A225E /* PrimaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryView.swift; sourceTree = "<group>"; };
+		EF8BC86227B2FAC1001A225E /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		EF8BC86427B2FD74001A225E /* LoaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderViewModel.swift; sourceTree = "<group>"; };
+		EF8BC86727B2FDE8001A225E /* LoaderModuleFactories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderModuleFactories.swift; sourceTree = "<group>"; };
+		EF8BC86927B2FE50001A225E /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
+		EF8BC86B27B301BD001A225E /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		EF8BC86D27B30249001A225E /* UIViewController+Extencion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extencion.swift"; sourceTree = "<group>"; };
+		EF8BC87627B303E6001A225E /* DashboardCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCoordinator.swift; sourceTree = "<group>"; };
+		EF8BC87827B30464001A225E /* DashboardModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardModuleFactory.swift; sourceTree = "<group>"; };
+		EF8BC87B27B3049F001A225E /* DashboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardController.swift; sourceTree = "<group>"; };
+		EF8BC87D27B304B0001A225E /* DashboardViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewInput.swift; sourceTree = "<group>"; };
+		EF8BC87F27B304C5001A225E /* DashboardViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewOutput.swift; sourceTree = "<group>"; };
+		EF8BC88127B304D5001A225E /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		EF8BC88327B30533001A225E /* CoordinatorInTabbarInitiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorInTabbarInitiable.swift; sourceTree = "<group>"; };
+		EF8BC88927B30592001A225E /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
+		EF8BC88B27B3059F001A225E /* TabbarViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewOutput.swift; sourceTree = "<group>"; };
+		EF8BC88D27B305A5001A225E /* TabbarViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewInput.swift; sourceTree = "<group>"; };
+		EF8BC88F27B30706001A225E /* TabbarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarCoordinator.swift; sourceTree = "<group>"; };
+		EF8BC89327B30776001A225E /* CoordinatorFactoryImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactoryImp.swift; sourceTree = "<group>"; };
+		EF8BC89627B30838001A225E /* ModuleFactoryImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleFactoryImp.swift; sourceTree = "<group>"; };
+		EF8BC89827B308A6001A225E /* ModuleFactoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleFactoryList.swift; sourceTree = "<group>"; };
+		EF8BC89B27B310ED001A225E /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		EF8BC89D27B313B2001A225E /* NavigationBarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarHelper.swift; sourceTree = "<group>"; };
+		EF8BC8A127B314E0001A225E /* NavigationViewFactoryImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewFactoryImp.swift; sourceTree = "<group>"; };
+		EF8BC8A427B31564001A225E /* ModalNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalNavigationBar.swift; sourceTree = "<group>"; };
+		EF8BC8A627B3157B001A225E /* ModalNavigationBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalNavigationBarViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +129,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E4592D0B159DBD40ABEFF25 /* Pods_Dance_Course.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2CB8E58E4B7A1CA26A199F77 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D2D99AF86FCC1E49A6410B07 /* Pods_Dance_Course.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E7854649260890CD7FDF0553 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9828B4033890F6CA3F51163F /* Pods-Dance_Course.debug.xcconfig */,
+				CD48932F2584B922A10213D6 /* Pods-Dance_Course.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		EF8BC7F627B2E39F001A225E = {
 			isa = PBXGroup;
 			children = (
 				EF8BC80127B2E39F001A225E /* Dance_Course */,
 				EF8BC80027B2E39F001A225E /* Products */,
+				E7854649260890CD7FDF0553 /* Pods */,
+				2CB8E58E4B7A1CA26A199F77 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +174,350 @@
 		EF8BC80127B2E39F001A225E /* Dance_Course */ = {
 			isa = PBXGroup;
 			children = (
-				EF8BC80227B2E39F001A225E /* AppDelegate.swift */,
+				EF8BC85C27B2FA33001A225E /* Views */,
+				EF8BC84227B2F725001A225E /* Factories */,
+				EF8BC83E27B2F5B4001A225E /* Parents */,
+				EF8BC83727B2F1E5001A225E /* Coordinator */,
+				EF8BC83227B2EE2C001A225E /* Application */,
+				EF8BC82E27B2EB8F001A225E /* Services */,
+				EF8BC82927B2EA0F001A225E /* Extensions */,
+				EF8BC81F27B2E8CD001A225E /* Router */,
+				EF8BC81727B2E79E001A225E /* Protocols */,
+				EF8BC81627B2E3B2001A225E /* Utilities */,
+				EF8BC84127B2F5FF001A225E /* Flow */,
 				EF8BC80427B2E39F001A225E /* SceneDelegate.swift */,
 				EF8BC80627B2E39F001A225E /* ViewController.swift */,
-				EF8BC80827B2E39F001A225E /* Main.storyboard */,
+				EF8BC89B27B310ED001A225E /* R.generated.swift */,
 				EF8BC80B27B2E3A0001A225E /* Assets.xcassets */,
 				EF8BC80D27B2E3A0001A225E /* LaunchScreen.storyboard */,
 				EF8BC81027B2E3A0001A225E /* Info.plist */,
 			);
 			path = Dance_Course;
+			sourceTree = "<group>";
+		};
+		EF8BC81627B2E3B2001A225E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				EF8BC81C27B2E83E001A225E /* LanguageController */,
+				EF8BC81A27B2E7E3001A225E /* ClosureTypealiases.swift */,
+				EF8BC82727B2E989001A225E /* Constants.swift */,
+				EF8BC89D27B313B2001A225E /* NavigationBarHelper.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		EF8BC81727B2E79E001A225E /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				EF8BC81827B2E7B2001A225E /* Presentable.swift */,
+				EF8BC83327B2EE70001A225E /* Coordinatable.swift */,
+				EF8BC85827B2F98E001A225E /* BaseView.swift */,
+				EF8BC88327B30533001A225E /* CoordinatorInTabbarInitiable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		EF8BC81C27B2E83E001A225E /* LanguageController */ = {
+			isa = PBXGroup;
+			children = (
+				EF8BC81D27B2E84D001A225E /* LanguageController.swift */,
+			);
+			path = LanguageController;
+			sourceTree = "<group>";
+		};
+		EF8BC81F27B2E8CD001A225E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EF8BC82027B2E8E4001A225E /* Router.swift */,
+				EF8BC82227B2E90B001A225E /* RouterImp.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		EF8BC82927B2EA0F001A225E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EF8BC82A27B2EA2D001A225E /* UIDevice+Extension.swift */,
+				EF8BC82C27B2EB4C001A225E /* UIViewController.swift */,
+				EF8BC86227B2FAC1001A225E /* UIView+Extension.swift */,
+				EF8BC86D27B30249001A225E /* UIViewController+Extencion.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EF8BC82E27B2EB8F001A225E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EF8BC82F27B2EBE1001A225E /* Wireframe */,
+				EF8BC86927B2FE50001A225E /* Dependencies.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		EF8BC82F27B2EBE1001A225E /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				EF8BC83027B2EBF1001A225E /* Wireframe.swift */,
+			);
+			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		EF8BC83227B2EE2C001A225E /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				EF8BC83527B2EECF001A225E /* ApplicationCoordinator.swift */,
+				EF8BC83C27B2F355001A225E /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		EF8BC83727B2F1E5001A225E /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				EF8BC83827B2F1EF001A225E /* Coordinator.swift */,
+				EF8BC83A27B2F300001A225E /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		EF8BC83E27B2F5B4001A225E /* Parents */ = {
+			isa = PBXGroup;
+			children = (
+				EF8BC83F27B2F5CB001A225E /* BaseCoordinator.swift */,
+				EF8BC85A27B2F9FD001A225E /* BaseViewController.swift */,
+				EF8BC86027B2FA78001A225E /* PrimaryView.swift */,
+				EF8BC86B27B301BD001A225E /* CustomNavigationController.swift */,
+			);
+			path = Parents;
+			sourceTree = "<group>";
+		};
+		EF8BC84127B2F5FF001A225E /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				EF8BC88527B30562001A225E /* Tabbar */,
+				EF8BC87027B30379001A225E /* TabbarItems */,
+				EF8BC84627B2F89D001A225E /* OnboardingFlow */,
+				EF8BC84527B2F88F001A225E /* LoadingFlow */,
+			);
+			path = Flow;
+			sourceTree = "<group>";
+		};
+		EF8BC84227B2F725001A225E /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				EF8BC89F27B314D1001A225E /* NavigationViewFactory */,
+				EF8BC89127B3075E001A225E /* CoordinatorFactory */,
+				EF8BC86627B2FDCE001A225E /* ModuleFactories */,
+				EF8BC84327B2F737001A225E /* CoordinatorFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		EF8BC84527B2F88F001A225E /* LoadingFlow */ = {
+			isa = PBXGroup;
+			children = (
+				EF8BC84D27B2F8FE001A225E /* Coordinator */,
+				EF8BC84C27B2F8FA001A225E /* Module */,
+			);
+			path = LoadingFlow;
+			sourceTree = "<group>";
+		};
+		EF8BC84627B2F89D001A225E /* OnboardingFlow */ = {
+			isa = PBXGroup;
+			children = (
+				EF8BC84B27B2F8EF001A225E /* Coordinator */,
+				EF8BC84A27B2F8EA001A225E /* Module */,
+			);
+			path = OnboardingFlow;
+			sourceTree = "<group>";
+		};
+		EF8BC84A27B2F8EA001A225E /* Module */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		EF8BC84B27B2F8EF001A225E /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		EF8BC84C27B2F8FA001A225E /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				EF8BC85027B2F91C001A225E /* ViewModel */,
+				EF8BC85127B2F930001A225E /* LoaderController.swift */,
+				EF8BC85327B2F943001A225E /* LoaderViewInput.swift */,
+				EF8BC85627B2F956001A225E /* LoaderViewOutput.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		EF8BC84D27B2F8FE001A225E /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				EF8BC84E27B2F915001A225E /* LoaderCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		EF8BC85027B2F91C001A225E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EF8BC86427B2FD74001A225E /* LoaderViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EF8BC85C27B2FA33001A225E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EF8BC85D27B2FA44001A225E /* View */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EF8BC85D27B2FA44001A225E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF8BC8A327B31554001A225E /* ModalNavigationBar */,
+				EF8BC85E27B2FA53001A225E /* WaitingScreenView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF8BC86627B2FDCE001A225E /* ModuleFactories */ = {
+			isa = PBXGroup;
+			children = (
+				EF8BC89527B30829001A225E /* Imp */,
+				EF8BC86727B2FDE8001A225E /* LoaderModuleFactories.swift */,
+				EF8BC87827B30464001A225E /* DashboardModuleFactory.swift */,
+				EF8BC89827B308A6001A225E /* ModuleFactoryList.swift */,
+			);
+			path = ModuleFactories;
+			sourceTree = "<group>";
+		};
+		EF8BC87027B30379001A225E /* TabbarItems */ = {
+			isa = PBXGroup;
+			children = (
+				EF8BC87327B303B8001A225E /* DashboardFlow */,
+			);
+			path = TabbarItems;
+			sourceTree = "<group>";
+		};
+		EF8BC87327B303B8001A225E /* DashboardFlow */ = {
+			isa = PBXGroup;
+			children = (
+				EF8BC87527B303D1001A225E /* Coordinator */,
+				EF8BC87427B303CC001A225E /* Module */,
+			);
+			path = DashboardFlow;
+			sourceTree = "<group>";
+		};
+		EF8BC87427B303CC001A225E /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				EF8BC87A27B30488001A225E /* ViewModel */,
+				EF8BC87B27B3049F001A225E /* DashboardController.swift */,
+				EF8BC87D27B304B0001A225E /* DashboardViewInput.swift */,
+				EF8BC87F27B304C5001A225E /* DashboardViewOutput.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		EF8BC87527B303D1001A225E /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				EF8BC87627B303E6001A225E /* DashboardCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		EF8BC87A27B30488001A225E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EF8BC88127B304D5001A225E /* DashboardViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EF8BC88527B30562001A225E /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				EF8BC88727B30571001A225E /* Coordinator */,
+				EF8BC88627B30569001A225E /* Module */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		EF8BC88627B30569001A225E /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				EF8BC88927B30592001A225E /* TabbarController.swift */,
+				EF8BC88B27B3059F001A225E /* TabbarViewOutput.swift */,
+				EF8BC88D27B305A5001A225E /* TabbarViewInput.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		EF8BC88727B30571001A225E /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				EF8BC88F27B30706001A225E /* TabbarCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		EF8BC89127B3075E001A225E /* CoordinatorFactory */ = {
+			isa = PBXGroup;
+			children = (
+				EF8BC89227B30769001A225E /* Imp */,
+			);
+			path = CoordinatorFactory;
+			sourceTree = "<group>";
+		};
+		EF8BC89227B30769001A225E /* Imp */ = {
+			isa = PBXGroup;
+			children = (
+				EF8BC89327B30776001A225E /* CoordinatorFactoryImp.swift */,
+			);
+			path = Imp;
+			sourceTree = "<group>";
+		};
+		EF8BC89527B30829001A225E /* Imp */ = {
+			isa = PBXGroup;
+			children = (
+				EF8BC89627B30838001A225E /* ModuleFactoryImp.swift */,
+			);
+			path = Imp;
+			sourceTree = "<group>";
+		};
+		EF8BC89F27B314D1001A225E /* NavigationViewFactory */ = {
+			isa = PBXGroup;
+			children = (
+				EF8BC8A027B314D8001A225E /* Imp */,
+			);
+			path = NavigationViewFactory;
+			sourceTree = "<group>";
+		};
+		EF8BC8A027B314D8001A225E /* Imp */ = {
+			isa = PBXGroup;
+			children = (
+				EF8BC8A127B314E0001A225E /* NavigationViewFactoryImp.swift */,
+			);
+			path = Imp;
+			sourceTree = "<group>";
+		};
+		EF8BC8A327B31554001A225E /* ModalNavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				EF8BC8A427B31564001A225E /* ModalNavigationBar.swift */,
+				EF8BC8A627B3157B001A225E /* ModalNavigationBarViewModel.swift */,
+			);
+			path = ModalNavigationBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +527,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF8BC81327B2E3A0001A225E /* Build configuration list for PBXNativeTarget "Dance_Course" */;
 			buildPhases = (
+				D4168D9CF8EF6561A3215198 /* [CP] Check Pods Manifest.lock */,
+				EF8BC89A27B30CD1001A225E /* ShellScript */,
 				EF8BC7FB27B2E39F001A225E /* Sources */,
 				EF8BC7FC27B2E39F001A225E /* Frameworks */,
 				EF8BC7FD27B2E39F001A225E /* Resources */,
+				F52DA779530A5A5FFAB32265 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,34 +582,135 @@
 			files = (
 				EF8BC80F27B2E3A0001A225E /* LaunchScreen.storyboard in Resources */,
 				EF8BC80C27B2E3A0001A225E /* Assets.xcassets in Resources */,
-				EF8BC80A27B2E39F001A225E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D4168D9CF8EF6561A3215198 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Dance_Course-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF8BC89A27B30CD1001A225E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+		F52DA779530A5A5FFAB32265 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dance_Course/Pods-Dance_Course-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dance_Course/Pods-Dance_Course-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Dance_Course/Pods-Dance_Course-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EF8BC7FB27B2E39F001A225E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF8BC89427B30776001A225E /* CoordinatorFactoryImp.swift in Sources */,
+				EF8BC86E27B30249001A225E /* UIViewController+Extencion.swift in Sources */,
+				EF8BC81B27B2E7E3001A225E /* ClosureTypealiases.swift in Sources */,
+				EF8BC85F27B2FA53001A225E /* WaitingScreenView.swift in Sources */,
+				EF8BC89C27B310ED001A225E /* R.generated.swift in Sources */,
+				EF8BC82327B2E90C001A225E /* RouterImp.swift in Sources */,
+				EF8BC85727B2F956001A225E /* LoaderViewOutput.swift in Sources */,
+				EF8BC83927B2F1EF001A225E /* Coordinator.swift in Sources */,
+				EF8BC82B27B2EA2D001A225E /* UIDevice+Extension.swift in Sources */,
+				EF8BC85B27B2F9FD001A225E /* BaseViewController.swift in Sources */,
+				EF8BC86127B2FA78001A225E /* PrimaryView.swift in Sources */,
+				EF8BC82D27B2EB4C001A225E /* UIViewController.swift in Sources */,
+				EF8BC87E27B304B0001A225E /* DashboardViewInput.swift in Sources */,
 				EF8BC80727B2E39F001A225E /* ViewController.swift in Sources */,
-				EF8BC80327B2E39F001A225E /* AppDelegate.swift in Sources */,
+				EF8BC89727B30838001A225E /* ModuleFactoryImp.swift in Sources */,
+				EF8BC84027B2F5CB001A225E /* BaseCoordinator.swift in Sources */,
+				EF8BC87C27B3049F001A225E /* DashboardController.swift in Sources */,
+				EF8BC81927B2E7B2001A225E /* Presentable.swift in Sources */,
+				EF8BC86827B2FDE8001A225E /* LoaderModuleFactories.swift in Sources */,
+				EF8BC86327B2FAC1001A225E /* UIView+Extension.swift in Sources */,
+				EF8BC82827B2E989001A225E /* Constants.swift in Sources */,
+				EF8BC83427B2EE70001A225E /* Coordinatable.swift in Sources */,
+				EF8BC88427B30533001A225E /* CoordinatorInTabbarInitiable.swift in Sources */,
+				EF8BC86527B2FD74001A225E /* LoaderViewModel.swift in Sources */,
+				EF8BC86C27B301BD001A225E /* CustomNavigationController.swift in Sources */,
+				EF8BC89E27B313B2001A225E /* NavigationBarHelper.swift in Sources */,
+				EF8BC88027B304C5001A225E /* DashboardViewOutput.swift in Sources */,
+				EF8BC83B27B2F300001A225E /* MainCoordinator.swift in Sources */,
+				EF8BC88227B304D5001A225E /* DashboardViewModel.swift in Sources */,
+				EF8BC86A27B2FE50001A225E /* Dependencies.swift in Sources */,
+				EF8BC82127B2E8E4001A225E /* Router.swift in Sources */,
+				EF8BC87727B303E6001A225E /* DashboardCoordinator.swift in Sources */,
+				EF8BC83127B2EBF1001A225E /* Wireframe.swift in Sources */,
+				EF8BC8A227B314E0001A225E /* NavigationViewFactoryImp.swift in Sources */,
 				EF8BC80527B2E39F001A225E /* SceneDelegate.swift in Sources */,
+				EF8BC8A527B31564001A225E /* ModalNavigationBar.swift in Sources */,
+				EF8BC88C27B3059F001A225E /* TabbarViewOutput.swift in Sources */,
+				EF8BC81E27B2E84D001A225E /* LanguageController.swift in Sources */,
+				EF8BC84427B2F737001A225E /* CoordinatorFactory.swift in Sources */,
+				EF8BC85227B2F930001A225E /* LoaderController.swift in Sources */,
+				EF8BC88A27B30592001A225E /* TabbarController.swift in Sources */,
+				EF8BC85427B2F943001A225E /* LoaderViewInput.swift in Sources */,
+				EF8BC87927B30464001A225E /* DashboardModuleFactory.swift in Sources */,
+				EF8BC85927B2F98E001A225E /* BaseView.swift in Sources */,
+				EF8BC8A727B3157B001A225E /* ModalNavigationBarViewModel.swift in Sources */,
+				EF8BC84F27B2F915001A225E /* LoaderCoordinator.swift in Sources */,
+				EF8BC89027B30706001A225E /* TabbarCoordinator.swift in Sources */,
+				EF8BC89927B308A6001A225E /* ModuleFactoryList.swift in Sources */,
+				EF8BC88E27B305A5001A225E /* TabbarViewInput.swift in Sources */,
+				EF8BC83D27B2F355001A225E /* AppDelegate.swift in Sources */,
+				EF8BC83627B2EECF001A225E /* ApplicationCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		EF8BC80827B2E39F001A225E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EF8BC80927B2E39F001A225E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EF8BC80D27B2E3A0001A225E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -283,6 +840,7 @@
 		};
 		EF8BC81427B2E3A0001A225E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9828B4033890F6CA3F51163F /* Pods-Dance_Course.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +860,7 @@
 		};
 		EF8BC81527B2E3A0001A225E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD48932F2584B922A10213D6 /* Pods-Dance_Course.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
