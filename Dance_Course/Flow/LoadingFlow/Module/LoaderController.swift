@@ -20,8 +20,16 @@ final class LoaderViewController: BaseViewController, LoaderViewInput, LoaderVie
     private let imageView: UIImageView = {
         let view = UIImageView()
         view.image = R.image.loadView()
+        view.contentMode = .scaleAspectFit
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
+    }()
+    
+    private let activeIndicator: UIActivityIndicatorView = {
+        let activeIndicator = UIActivityIndicatorView(style: .whiteLarge)
+        activeIndicator.startAnimating()
+        activeIndicator.translatesAutoresizingMaskIntoConstraints = false
+        return activeIndicator
     }()
 
     // MARK: - Life Cycle
@@ -50,6 +58,7 @@ final class LoaderViewController: BaseViewController, LoaderViewInput, LoaderVie
     
     private func setupConstraints() {
         view.addSubview(imageView)
+        view.addSubview(activeIndicator)
         
         NSLayoutConstraint.activate([
             imageView.topAnchor.constraint(equalTo: view.topAnchor),
@@ -57,7 +66,11 @@ final class LoaderViewController: BaseViewController, LoaderViewInput, LoaderVie
             imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
+        
+        NSLayoutConstraint.activate([
+            activeIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            activeIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
     }
-    
     
 }
