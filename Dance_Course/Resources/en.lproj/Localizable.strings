@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  Dance_Course
+
+  Created by Артем Калинин on 13.02.2022.
+  
+*/
+// MARK: - Tabbar
+"Tabbar.Item.Dashboard.Title" = "Dashboard";
+"Tabbar.Item.Profile.Title" = "Profile";
