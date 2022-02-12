@@ -7,8 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9E4592D0B159DBD40ABEFF25 /* Pods_Dance_Course.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2D99AF86FCC1E49A6410B07 /* Pods_Dance_Course.framework */; };
-		EF8BC80527B2E39F001A225E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC80427B2E39F001A225E /* SceneDelegate.swift */; };
+		A45FECDC26AFCCC98AE35383 /* Pods_Dance_Course.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EF068C4FD5497E3F6D9949 /* Pods_Dance_Course.framework */; };
+		EF0D4FE627B6BC3B00B62482 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF0D4FE527B6BC3B00B62482 /* Main.storyboard */; };
+		EF0D4FE827B6BF3100B62482 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0D4FE727B6BF3100B62482 /* NSObject+Extension.swift */; };
+		EF0D4FEA27B6BF5C00B62482 /* StoryboardsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0D4FE927B6BF5C00B62482 /* StoryboardsEnum.swift */; };
+		EF0D4FF627B8564000B62482 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0D4FF527B8564000B62482 /* ProfileViewModel.swift */; };
+		EF0D4FF827B8564C00B62482 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0D4FF727B8564C00B62482 /* ProfileViewController.swift */; };
+		EF0D4FFA27B8565B00B62482 /* ProfileViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0D4FF927B8565B00B62482 /* ProfileViewInput.swift */; };
+		EF0D4FFC27B8566A00B62482 /* ProfileViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0D4FFB27B8566A00B62482 /* ProfileViewOutput.swift */; };
+		EF0D4FFE27B8567800B62482 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0D4FFD27B8567800B62482 /* ProfileCoordinator.swift */; };
+		EF0D500027B8572900B62482 /* ProfileModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0D4FFF27B8572900B62482 /* ProfileModuleFactory.swift */; };
 		EF8BC80727B2E39F001A225E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC80627B2E39F001A225E /* ViewController.swift */; };
 		EF8BC80C27B2E3A0001A225E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF8BC80B27B2E3A0001A225E /* Assets.xcassets */; };
 		EF8BC80F27B2E3A0001A225E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF8BC80D27B2E3A0001A225E /* LaunchScreen.storyboard */; };
@@ -61,14 +69,35 @@
 		EF8BC8A227B314E0001A225E /* NavigationViewFactoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC8A127B314E0001A225E /* NavigationViewFactoryImp.swift */; };
 		EF8BC8A527B31564001A225E /* ModalNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC8A427B31564001A225E /* ModalNavigationBar.swift */; };
 		EF8BC8A727B3157B001A225E /* ModalNavigationBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC8A627B3157B001A225E /* ModalNavigationBarViewModel.swift */; };
+		EF8BC8B027B434D9001A225E /* UIApplication+Extencion.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC8AF27B434D9001A225E /* UIApplication+Extencion.swift */; };
+		EF8BC8B227B435E1001A225E /* NavigationViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC8B127B435E1001A225E /* NavigationViewFactory.swift */; };
+		EF8BC8B727B43641001A225E /* CustomNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC8B627B43641001A225E /* CustomNavigationView.swift */; };
+		EF8BC8BA27B436A3001A225E /* NavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC8B927B436A3001A225E /* NavigationButton.swift */; };
+		EF8BC8BC27B436ED001A225E /* ViewPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC8BB27B436ED001A225E /* ViewPresentable.swift */; };
+		EF8BC8BE27B438D1001A225E /* NavigationTargetViewPositionObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC8BD27B438D1001A225E /* NavigationTargetViewPositionObservable.swift */; };
+		EF8BC8C127B43C64001A225E /* BaseNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC8C027B43C64001A225E /* BaseNavigationBar.swift */; };
+		EF8BC8C327B43CAE001A225E /* NavigationButtonStateObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC8C227B43CAE001A225E /* NavigationButtonStateObservable.swift */; };
+		EF8BC8C627B472E1001A225E /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC8C527B472E1001A225E /* TabbarView.swift */; };
+		EF8BC8CA27B47382001A225E /* TabbarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC8C927B47382001A225E /* TabbarCell.swift */; };
+		EF8BC8CD27B473D6001A225E /* TabbarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC8CC27B473D6001A225E /* TabbarViewModel.swift */; };
+		EF8BC8CF27B47536001A225E /* Integer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC8CE27B47536001A225E /* Integer+Extension.swift */; };
+		EF8BC8D127B47829001A225E /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC8D027B47829001A225E /* String+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9828B4033890F6CA3F51163F /* Pods-Dance_Course.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dance_Course.debug.xcconfig"; path = "Target Support Files/Pods-Dance_Course/Pods-Dance_Course.debug.xcconfig"; sourceTree = "<group>"; };
-		CD48932F2584B922A10213D6 /* Pods-Dance_Course.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dance_Course.release.xcconfig"; path = "Target Support Files/Pods-Dance_Course/Pods-Dance_Course.release.xcconfig"; sourceTree = "<group>"; };
-		D2D99AF86FCC1E49A6410B07 /* Pods_Dance_Course.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dance_Course.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		13EF068C4FD5497E3F6D9949 /* Pods_Dance_Course.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dance_Course.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EC35E8B8886EF224ADB38E9 /* Pods-Dance_Course.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dance_Course.debug.xcconfig"; path = "Target Support Files/Pods-Dance_Course/Pods-Dance_Course.debug.xcconfig"; sourceTree = "<group>"; };
+		D8A5C3D5877AE19683475EC6 /* Pods-Dance_Course.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dance_Course.release.xcconfig"; path = "Target Support Files/Pods-Dance_Course/Pods-Dance_Course.release.xcconfig"; sourceTree = "<group>"; };
+		EF0D4FE527B6BC3B00B62482 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		EF0D4FE727B6BF3100B62482 /* NSObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
+		EF0D4FE927B6BF5C00B62482 /* StoryboardsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardsEnum.swift; sourceTree = "<group>"; };
+		EF0D4FF527B8564000B62482 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		EF0D4FF727B8564C00B62482 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		EF0D4FF927B8565B00B62482 /* ProfileViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewInput.swift; sourceTree = "<group>"; };
+		EF0D4FFB27B8566A00B62482 /* ProfileViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewOutput.swift; sourceTree = "<group>"; };
+		EF0D4FFD27B8567800B62482 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
+		EF0D4FFF27B8572900B62482 /* ProfileModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModuleFactory.swift; sourceTree = "<group>"; };
 		EF8BC7FF27B2E39F001A225E /* Dance_Course.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dance_Course.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EF8BC80427B2E39F001A225E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EF8BC80627B2E39F001A225E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EF8BC80B27B2E3A0001A225E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF8BC80E27B2E3A0001A225E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -122,6 +151,19 @@
 		EF8BC8A127B314E0001A225E /* NavigationViewFactoryImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewFactoryImp.swift; sourceTree = "<group>"; };
 		EF8BC8A427B31564001A225E /* ModalNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalNavigationBar.swift; sourceTree = "<group>"; };
 		EF8BC8A627B3157B001A225E /* ModalNavigationBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalNavigationBarViewModel.swift; sourceTree = "<group>"; };
+		EF8BC8AF27B434D9001A225E /* UIApplication+Extencion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extencion.swift"; sourceTree = "<group>"; };
+		EF8BC8B127B435E1001A225E /* NavigationViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewFactory.swift; sourceTree = "<group>"; };
+		EF8BC8B627B43641001A225E /* CustomNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationView.swift; sourceTree = "<group>"; };
+		EF8BC8B927B436A3001A225E /* NavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButton.swift; sourceTree = "<group>"; };
+		EF8BC8BB27B436ED001A225E /* ViewPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPresentable.swift; sourceTree = "<group>"; };
+		EF8BC8BD27B438D1001A225E /* NavigationTargetViewPositionObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTargetViewPositionObservable.swift; sourceTree = "<group>"; };
+		EF8BC8C027B43C64001A225E /* BaseNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationBar.swift; sourceTree = "<group>"; };
+		EF8BC8C227B43CAE001A225E /* NavigationButtonStateObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButtonStateObservable.swift; sourceTree = "<group>"; };
+		EF8BC8C527B472E1001A225E /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
+		EF8BC8C927B47382001A225E /* TabbarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarCell.swift; sourceTree = "<group>"; };
+		EF8BC8CC27B473D6001A225E /* TabbarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewModel.swift; sourceTree = "<group>"; };
+		EF8BC8CE27B47536001A225E /* Integer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Integer+Extension.swift"; sourceTree = "<group>"; };
+		EF8BC8D027B47829001A225E /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,17 +171,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E4592D0B159DBD40ABEFF25 /* Pods_Dance_Course.framework in Frameworks */,
+				A45FECDC26AFCCC98AE35383 /* Pods_Dance_Course.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2CB8E58E4B7A1CA26A199F77 /* Frameworks */ = {
+		A5B9123DD427B449F1FD11E9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D2D99AF86FCC1E49A6410B07 /* Pods_Dance_Course.framework */,
+				13EF068C4FD5497E3F6D9949 /* Pods_Dance_Course.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -147,10 +189,55 @@
 		E7854649260890CD7FDF0553 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9828B4033890F6CA3F51163F /* Pods-Dance_Course.debug.xcconfig */,
-				CD48932F2584B922A10213D6 /* Pods-Dance_Course.release.xcconfig */,
+				5EC35E8B8886EF224ADB38E9 /* Pods-Dance_Course.debug.xcconfig */,
+				D8A5C3D5877AE19683475EC6 /* Pods-Dance_Course.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		EF0D4FE427B6BBFE00B62482 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				EF0D4FE927B6BF5C00B62482 /* StoryboardsEnum.swift */,
+				EF0D4FE527B6BC3B00B62482 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		EF0D4FEB27B855A500B62482 /* ProfileFlow */ = {
+			isa = PBXGroup;
+			children = (
+				EF0D4FEC27B855B300B62482 /* Coordinator */,
+				EF0D4FED27B855C500B62482 /* Module */,
+			);
+			path = ProfileFlow;
+			sourceTree = "<group>";
+		};
+		EF0D4FEC27B855B300B62482 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				EF0D4FFD27B8567800B62482 /* ProfileCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		EF0D4FED27B855C500B62482 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				EF0D4FEE27B855DD00B62482 /* ViewModel */,
+				EF0D4FF727B8564C00B62482 /* ProfileViewController.swift */,
+				EF0D4FF927B8565B00B62482 /* ProfileViewInput.swift */,
+				EF0D4FFB27B8566A00B62482 /* ProfileViewOutput.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		EF0D4FEE27B855DD00B62482 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EF0D4FF527B8564000B62482 /* ProfileViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		EF8BC7F627B2E39F001A225E = {
@@ -159,7 +246,7 @@
 				EF8BC80127B2E39F001A225E /* Dance_Course */,
 				EF8BC80027B2E39F001A225E /* Products */,
 				E7854649260890CD7FDF0553 /* Pods */,
-				2CB8E58E4B7A1CA26A199F77 /* Frameworks */,
+				A5B9123DD427B449F1FD11E9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -185,7 +272,7 @@
 				EF8BC81727B2E79E001A225E /* Protocols */,
 				EF8BC81627B2E3B2001A225E /* Utilities */,
 				EF8BC84127B2F5FF001A225E /* Flow */,
-				EF8BC80427B2E39F001A225E /* SceneDelegate.swift */,
+				EF0D4FE427B6BBFE00B62482 /* Storyboards */,
 				EF8BC80627B2E39F001A225E /* ViewController.swift */,
 				EF8BC89B27B310ED001A225E /* R.generated.swift */,
 				EF8BC80B27B2E3A0001A225E /* Assets.xcassets */,
@@ -213,6 +300,8 @@
 				EF8BC83327B2EE70001A225E /* Coordinatable.swift */,
 				EF8BC85827B2F98E001A225E /* BaseView.swift */,
 				EF8BC88327B30533001A225E /* CoordinatorInTabbarInitiable.swift */,
+				EF8BC8BB27B436ED001A225E /* ViewPresentable.swift */,
+				EF8BC8BD27B438D1001A225E /* NavigationTargetViewPositionObservable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -241,6 +330,10 @@
 				EF8BC82C27B2EB4C001A225E /* UIViewController.swift */,
 				EF8BC86227B2FAC1001A225E /* UIView+Extension.swift */,
 				EF8BC86D27B30249001A225E /* UIViewController+Extencion.swift */,
+				EF8BC8AF27B434D9001A225E /* UIApplication+Extencion.swift */,
+				EF8BC8CE27B47536001A225E /* Integer+Extension.swift */,
+				EF8BC8D027B47829001A225E /* String+Extension.swift */,
+				EF0D4FE727B6BF3100B62482 /* NSObject+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -375,6 +468,7 @@
 		EF8BC85C27B2FA33001A225E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EF8BC8B327B4361D001A225E /* Navigation */,
 				EF8BC85D27B2FA44001A225E /* View */,
 			);
 			path = Views;
@@ -396,6 +490,7 @@
 				EF8BC86727B2FDE8001A225E /* LoaderModuleFactories.swift */,
 				EF8BC87827B30464001A225E /* DashboardModuleFactory.swift */,
 				EF8BC89827B308A6001A225E /* ModuleFactoryList.swift */,
+				EF0D4FFF27B8572900B62482 /* ProfileModuleFactory.swift */,
 			);
 			path = ModuleFactories;
 			sourceTree = "<group>";
@@ -403,6 +498,7 @@
 		EF8BC87027B30379001A225E /* TabbarItems */ = {
 			isa = PBXGroup;
 			children = (
+				EF0D4FEB27B855A500B62482 /* ProfileFlow */,
 				EF8BC87327B303B8001A225E /* DashboardFlow */,
 			);
 			path = TabbarItems;
@@ -456,6 +552,8 @@
 		EF8BC88627B30569001A225E /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				EF8BC8CB27B473C3001A225E /* ViewModel */,
+				EF8BC8C427B472D1001A225E /* View */,
 				EF8BC88927B30592001A225E /* TabbarController.swift */,
 				EF8BC88B27B3059F001A225E /* TabbarViewOutput.swift */,
 				EF8BC88D27B305A5001A225E /* TabbarViewInput.swift */,
@@ -499,6 +597,7 @@
 			isa = PBXGroup;
 			children = (
 				EF8BC8A027B314D8001A225E /* Imp */,
+				EF8BC8B127B435E1001A225E /* NavigationViewFactory.swift */,
 			);
 			path = NavigationViewFactory;
 			sourceTree = "<group>";
@@ -520,6 +619,74 @@
 			path = ModalNavigationBar;
 			sourceTree = "<group>";
 		};
+		EF8BC8B327B4361D001A225E /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				EF8BC8B827B43690001A225E /* NavigationButton */,
+				EF8BC8B427B43627001A225E /* NavigationView */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		EF8BC8B427B43627001A225E /* NavigationView */ = {
+			isa = PBXGroup;
+			children = (
+				EF8BC8BF27B43C53001A225E /* Base */,
+				EF8BC8B527B43630001A225E /* Protocols */,
+			);
+			path = NavigationView;
+			sourceTree = "<group>";
+		};
+		EF8BC8B527B43630001A225E /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				EF8BC8B627B43641001A225E /* CustomNavigationView.swift */,
+				EF8BC8C227B43CAE001A225E /* NavigationButtonStateObservable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		EF8BC8B827B43690001A225E /* NavigationButton */ = {
+			isa = PBXGroup;
+			children = (
+				EF8BC8B927B436A3001A225E /* NavigationButton.swift */,
+			);
+			path = NavigationButton;
+			sourceTree = "<group>";
+		};
+		EF8BC8BF27B43C53001A225E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				EF8BC8C027B43C64001A225E /* BaseNavigationBar.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		EF8BC8C427B472D1001A225E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF8BC8C827B47375001A225E /* Cell */,
+				EF8BC8C527B472E1001A225E /* TabbarView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF8BC8C827B47375001A225E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EF8BC8C927B47382001A225E /* TabbarCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		EF8BC8CB27B473C3001A225E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EF8BC8CC27B473D6001A225E /* TabbarViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -527,12 +694,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF8BC81327B2E3A0001A225E /* Build configuration list for PBXNativeTarget "Dance_Course" */;
 			buildPhases = (
-				D4168D9CF8EF6561A3215198 /* [CP] Check Pods Manifest.lock */,
+				369A5331C6475FC9C2FF5540 /* [CP] Check Pods Manifest.lock */,
 				EF8BC89A27B30CD1001A225E /* ShellScript */,
 				EF8BC7FB27B2E39F001A225E /* Sources */,
 				EF8BC7FC27B2E39F001A225E /* Frameworks */,
 				EF8BC7FD27B2E39F001A225E /* Resources */,
-				F52DA779530A5A5FFAB32265 /* [CP] Embed Pods Frameworks */,
+				45B16C45B674263051247842 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -580,6 +747,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF0D4FE627B6BC3B00B62482 /* Main.storyboard in Resources */,
 				EF8BC80F27B2E3A0001A225E /* LaunchScreen.storyboard in Resources */,
 				EF8BC80C27B2E3A0001A225E /* Assets.xcassets in Resources */,
 			);
@@ -588,7 +756,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		D4168D9CF8EF6561A3215198 /* [CP] Check Pods Manifest.lock */ = {
+		369A5331C6475FC9C2FF5540 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -608,6 +776,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		45B16C45B674263051247842 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dance_Course/Pods-Dance_Course-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dance_Course/Pods-Dance_Course-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Dance_Course/Pods-Dance_Course-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EF8BC89A27B30CD1001A225E /* ShellScript */ = {
@@ -630,23 +815,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
 		};
-		F52DA779530A5A5FFAB32265 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Dance_Course/Pods-Dance_Course-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Dance_Course/Pods-Dance_Course-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Dance_Course/Pods-Dance_Course-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -654,22 +822,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF8BC8BC27B436ED001A225E /* ViewPresentable.swift in Sources */,
 				EF8BC89427B30776001A225E /* CoordinatorFactoryImp.swift in Sources */,
 				EF8BC86E27B30249001A225E /* UIViewController+Extencion.swift in Sources */,
 				EF8BC81B27B2E7E3001A225E /* ClosureTypealiases.swift in Sources */,
+				EF8BC8B727B43641001A225E /* CustomNavigationView.swift in Sources */,
 				EF8BC85F27B2FA53001A225E /* WaitingScreenView.swift in Sources */,
 				EF8BC89C27B310ED001A225E /* R.generated.swift in Sources */,
+				EF0D500027B8572900B62482 /* ProfileModuleFactory.swift in Sources */,
 				EF8BC82327B2E90C001A225E /* RouterImp.swift in Sources */,
+				EF0D4FFE27B8567800B62482 /* ProfileCoordinator.swift in Sources */,
 				EF8BC85727B2F956001A225E /* LoaderViewOutput.swift in Sources */,
 				EF8BC83927B2F1EF001A225E /* Coordinator.swift in Sources */,
+				EF8BC8C127B43C64001A225E /* BaseNavigationBar.swift in Sources */,
 				EF8BC82B27B2EA2D001A225E /* UIDevice+Extension.swift in Sources */,
 				EF8BC85B27B2F9FD001A225E /* BaseViewController.swift in Sources */,
+				EF0D4FEA27B6BF5C00B62482 /* StoryboardsEnum.swift in Sources */,
 				EF8BC86127B2FA78001A225E /* PrimaryView.swift in Sources */,
 				EF8BC82D27B2EB4C001A225E /* UIViewController.swift in Sources */,
+				EF8BC8B227B435E1001A225E /* NavigationViewFactory.swift in Sources */,
+				EF8BC8D127B47829001A225E /* String+Extension.swift in Sources */,
+				EF0D4FF627B8564000B62482 /* ProfileViewModel.swift in Sources */,
 				EF8BC87E27B304B0001A225E /* DashboardViewInput.swift in Sources */,
 				EF8BC80727B2E39F001A225E /* ViewController.swift in Sources */,
+				EF0D4FFA27B8565B00B62482 /* ProfileViewInput.swift in Sources */,
+				EF8BC8C627B472E1001A225E /* TabbarView.swift in Sources */,
+				EF0D4FE827B6BF3100B62482 /* NSObject+Extension.swift in Sources */,
 				EF8BC89727B30838001A225E /* ModuleFactoryImp.swift in Sources */,
+				EF8BC8CD27B473D6001A225E /* TabbarViewModel.swift in Sources */,
 				EF8BC84027B2F5CB001A225E /* BaseCoordinator.swift in Sources */,
+				EF8BC8BA27B436A3001A225E /* NavigationButton.swift in Sources */,
 				EF8BC87C27B3049F001A225E /* DashboardController.swift in Sources */,
 				EF8BC81927B2E7B2001A225E /* Presentable.swift in Sources */,
 				EF8BC86827B2FDE8001A225E /* LoaderModuleFactories.swift in Sources */,
@@ -677,26 +859,32 @@
 				EF8BC82827B2E989001A225E /* Constants.swift in Sources */,
 				EF8BC83427B2EE70001A225E /* Coordinatable.swift in Sources */,
 				EF8BC88427B30533001A225E /* CoordinatorInTabbarInitiable.swift in Sources */,
+				EF0D4FFC27B8566A00B62482 /* ProfileViewOutput.swift in Sources */,
+				EF8BC8CA27B47382001A225E /* TabbarCell.swift in Sources */,
 				EF8BC86527B2FD74001A225E /* LoaderViewModel.swift in Sources */,
+				EF0D4FF827B8564C00B62482 /* ProfileViewController.swift in Sources */,
 				EF8BC86C27B301BD001A225E /* CustomNavigationController.swift in Sources */,
 				EF8BC89E27B313B2001A225E /* NavigationBarHelper.swift in Sources */,
 				EF8BC88027B304C5001A225E /* DashboardViewOutput.swift in Sources */,
 				EF8BC83B27B2F300001A225E /* MainCoordinator.swift in Sources */,
 				EF8BC88227B304D5001A225E /* DashboardViewModel.swift in Sources */,
+				EF8BC8CF27B47536001A225E /* Integer+Extension.swift in Sources */,
 				EF8BC86A27B2FE50001A225E /* Dependencies.swift in Sources */,
 				EF8BC82127B2E8E4001A225E /* Router.swift in Sources */,
 				EF8BC87727B303E6001A225E /* DashboardCoordinator.swift in Sources */,
 				EF8BC83127B2EBF1001A225E /* Wireframe.swift in Sources */,
 				EF8BC8A227B314E0001A225E /* NavigationViewFactoryImp.swift in Sources */,
-				EF8BC80527B2E39F001A225E /* SceneDelegate.swift in Sources */,
 				EF8BC8A527B31564001A225E /* ModalNavigationBar.swift in Sources */,
 				EF8BC88C27B3059F001A225E /* TabbarViewOutput.swift in Sources */,
 				EF8BC81E27B2E84D001A225E /* LanguageController.swift in Sources */,
+				EF8BC8BE27B438D1001A225E /* NavigationTargetViewPositionObservable.swift in Sources */,
+				EF8BC8B027B434D9001A225E /* UIApplication+Extencion.swift in Sources */,
 				EF8BC84427B2F737001A225E /* CoordinatorFactory.swift in Sources */,
 				EF8BC85227B2F930001A225E /* LoaderController.swift in Sources */,
 				EF8BC88A27B30592001A225E /* TabbarController.swift in Sources */,
 				EF8BC85427B2F943001A225E /* LoaderViewInput.swift in Sources */,
 				EF8BC87927B30464001A225E /* DashboardModuleFactory.swift in Sources */,
+				EF8BC8C327B43CAE001A225E /* NavigationButtonStateObservable.swift in Sources */,
 				EF8BC85927B2F98E001A225E /* BaseView.swift in Sources */,
 				EF8BC8A727B3157B001A225E /* ModalNavigationBarViewModel.swift in Sources */,
 				EF8BC84F27B2F915001A225E /* LoaderCoordinator.swift in Sources */,
@@ -840,7 +1028,7 @@
 		};
 		EF8BC81427B2E3A0001A225E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9828B4033890F6CA3F51163F /* Pods-Dance_Course.debug.xcconfig */;
+			baseConfigurationReference = 5EC35E8B8886EF224ADB38E9 /* Pods-Dance_Course.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -860,7 +1048,7 @@
 		};
 		EF8BC81527B2E3A0001A225E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CD48932F2584B922A10213D6 /* Pods-Dance_Course.release.xcconfig */;
+			baseConfigurationReference = D8A5C3D5877AE19683475EC6 /* Pods-Dance_Course.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

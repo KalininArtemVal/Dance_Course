@@ -9,9 +9,10 @@ enum TabbarItemType: Int {
     case dashboard    = 0
     case profile
 }
-protocol TabbarViewInput: class {
+protocol TabbarViewInput: AnyObject {
     // vc, itemType
     var onFlow: ((CustomNavigationController, TabbarItemType) -> Void)? { get set }
     var onViewDidLoad: ((CustomNavigationController) -> Void)? { get set }
     var finishFlow: Action? { get set }
+    func updateTabbarItem(with item: TabbarItemType, completion: Action?)
 }

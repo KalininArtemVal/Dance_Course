@@ -8,6 +8,9 @@ target 'Dance_Course' do
   # Pods for Dance_Course
   # Reactive
     pod 'RxSwift', '~> 5'
+    pod 'RxCocoa',    '~> 5'
+    pod 'RxDataSources', '~> 4.0'
+    pod 'RxGesture'
     pod 'R.swift', '~> 5.0'
     pod 'SnapKit', '~> 4.0.0'
 

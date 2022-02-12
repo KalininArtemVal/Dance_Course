@@ -19,12 +19,12 @@ private var onboardingWasShown: Bool {
 }
 
 private enum LaunchInstructor {
-    case main, onboarding
+    case main
     
     static func configure(isAuthorized: Bool = false,
                           onboardingWasShown: Bool = onboardingWasShown) -> LaunchInstructor {
         switch (isAuthorized, onboardingWasShown) {
-        case (_, false): return .onboarding
+        case (_, false): return .main
         case (true, true): return .main
         case (false, true): return .main
         }
@@ -39,12 +39,9 @@ final class ApplicationCoordinator: BaseCoordinator {
         return LaunchInstructor.configure(isAuthorized: true)
     }
     
-//    private let profileUseCase: IProfileUseCase
-    
     init(router: Router, coordinatorFactory: CoordinatorFactory) {
         self.router = router
         self.coordinatorFactory = coordinatorFactory
-//        self.profileUseCase = ProfileUseCaseImpl(api: Dependencies.sharedDependencies.api)
     }
     
     override func start() {
@@ -53,7 +50,6 @@ final class ApplicationCoordinator: BaseCoordinator {
     
     private func runInstructor() {
         switch instructor {
-        case .onboarding: runOnboardingFlow()
         case .main: runMainFlow()
         }
     }
@@ -69,20 +65,9 @@ final class ApplicationCoordinator: BaseCoordinator {
         coordinator.start()
     }
     
-    private func runOnboardingFlow() {
-        print("run onboarding flow")
-        let coordinator = coordinatorFactory.makeOnboardingCoordinator(router: router)
-        coordinator.finishFlow = { [weak self, weak coordinator] in
-            onboardingWasShown = true
-            self?.runInstructor()
-            self?.removeDependency(coordinator)
-        }
-        addDependency(coordinator)
-        coordinator.start()
-    }
-    
     private func runMainFlow() {
-//        setCustomNavController()
+        print("runMainFlow")
+        setCustomNavController()
         let (coordinator, module) = coordinatorFactory.makeTabbarCoordinator()
         coordinator.finishFlow = { [weak self, weak coordinator] in
             self?.runInstructor()
@@ -100,16 +85,16 @@ extension ApplicationCoordinator {
         let navController = UINavigationController()
         let routerNav = RouterImp(rootController: navController)
         self.router = routerNav
-        // swiftlint:disable force_cast
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.window?.rootViewController = navController
     }
+    // Решить проблему с кастомным Нав контроллером
     
-//    func setCustomNavController() {
-//        let navController = CustomNavigationController(rootViewController: <#UIViewController#>)
-//        let routerNav = RouterImp(rootController: navController)
-//        self.router = routerNav
-//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//        appDelegate.window?.rootViewController = navController
-//    }
+    func setCustomNavController() {
+        let navController = CustomNavigationController(rootViewController: UIViewController())
+        let routerNav = RouterImp(rootController: navController)
+        self.router = routerNav
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window?.rootViewController = navController
+    }
 }

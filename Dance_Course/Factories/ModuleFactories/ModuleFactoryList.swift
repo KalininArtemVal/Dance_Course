@@ -6,4 +6,5 @@
 //
 
 protocol ModuleFactoryList: LoaderModuleFactory,
-                            DashboardModuleFactory {}
+                            DashboardModuleFactory,
+                            ProfileModuleFactory {}

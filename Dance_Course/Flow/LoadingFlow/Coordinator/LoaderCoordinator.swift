@@ -10,14 +10,12 @@ class LoaderCoordinator: BaseCoordinator {
     
     private let factory: LoaderModuleFactory
     private let router: Router
-    private let wireframe: AlertShowable
     
     private var loaderModule: (LoaderViewInput & LoaderViewOutput)?
     
     init(with factory: LoaderModuleFactory, router: Router) {
         self.factory = factory
         self.router = router
-        self.wireframe = Dependencies.sharedDependencies.wireFrame
     }
     
     override func start() {
@@ -30,6 +28,7 @@ class LoaderCoordinator: BaseCoordinator {
     private func showLoaderModule() {
         loaderModule = factory.makeLoaderModule()
         router.setRootModule(loaderModule)
+        
     }
     
     private func sync() {

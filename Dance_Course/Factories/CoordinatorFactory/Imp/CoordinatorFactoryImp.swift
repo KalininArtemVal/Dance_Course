@@ -12,11 +12,6 @@ final class CoordinatorFactoryImp: CoordinatorFactory {
         return LoaderCoordinator(with: ModuleFactoryImp(), router: router)
     }
     
-//    func makeOnboardingCoordinator(router: Router) -> Coordinatable {
-//        return OnboardingCoordinator.init(router: router, factory: ModuleFactoryImp())
-//    }
-    
-    
     func makeTabbarCoordinator() -> (configurator: Coordinatable, toPresent: Presentable?) {
         let controller = TabbarController.controllerFromStoryboard(.main)
         let coordinator = TabbarCoordinator(tabbarView: controller, coordinatorFactory: CoordinatorFactoryImp())
@@ -30,6 +25,7 @@ final class CoordinatorFactoryImp: CoordinatorFactory {
         case .profile: coordinatorClassName = .profileCoordinatorClassName
 
         }
+        
         guard let coordinatorClass = NSClassFromString(coordinatorClassName) as? CoordinatorInTabbarInitiable.Type else {
             fatalError("makeRootTabbarItemCoordinator fatal error")
         }

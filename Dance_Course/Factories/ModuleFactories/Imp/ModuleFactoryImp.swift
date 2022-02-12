@@ -31,7 +31,13 @@ final class ModuleFactoryImp: ModuleFactoryList {
     
     // MARK: - ProfileModuleFactory
     
-//    func makeProfileRootModule() -> ProfileRootViewInput & ProfileRootViewOutput {
-//        return ProfileRootViewController.controllerFromStoryboard(.profile)
-//    }
+    func makeProfileModule() -> ProfileViewInput & ProfileViewOutput {
+        let controller = ProfileViewController()
+        controller.providesPresentationContextTransitionStyle = true
+        controller.definesPresentationContext = true
+        controller.modalPresentationStyle = .overCurrentContext
+        controller.modalTransitionStyle = .coverVertical
+        return controller
+    }
+    
 }

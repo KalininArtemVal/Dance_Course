@@ -23,7 +23,9 @@ class TabbarCoordinator: BaseCoordinator, TabbarViewOutput {
     }
     
     override func start() {
+        
         tabbarView.onViewDidLoad = { [weak self] (navigationController) in
+            print(navigationController)
             print("onViewDidLoad")
             self?.runItemFlow(navController: navigationController, itemType: .dashboard)
         }
@@ -39,10 +41,18 @@ class TabbarCoordinator: BaseCoordinator, TabbarViewOutput {
         
     }
     
+    
+    
     private func runItemFlow(navController: CustomNavigationController, itemType: TabbarItemType) {
         if navController.viewControllers.isEmpty == true {
             let itemCoordinator = self.coordinatorFactory.makeRootTabbarItemCoordinator(navigationController: navController, itemType: itemType)
-            itemCoordinator.start()
+            
+            itemCoordinator.selectTabbarItemBlock = { [weak self] (item) in
+                self?.tabbarView.updateTabbarItem(with: item) { [weak self] in
+                    guard let coordinator = self?.findCoordinator(for: item) else { return }
+                    coordinator.processTabbarSelectionWithCoordinatorMode?(itemType)
+                }
+            }
             
             itemCoordinator.finishFlow = { [weak self, weak itemCoordinator] in
                 self?.removeDependency(itemCoordinator)
@@ -53,6 +63,22 @@ class TabbarCoordinator: BaseCoordinator, TabbarViewOutput {
             }
             
             self.addDependency(itemCoordinator)
+            itemCoordinator.start()
         }
     }
+    
+    func findCoordinator(for item: TabbarItemType) -> CoordinatorInTabbarInitiable? {
+        guard childCoordinators.isEmpty == false else { return nil }
+
+        var result: Coordinatable?
+        switch item {
+        case .dashboard:
+            result = childCoordinators.first(where: { type(of: $0) === DashboardCoordinator.self })
+        case .profile:
+            result = childCoordinators.first(where: { type(of: $0) === ProfileCoordinator.self })
+        }
+
+        return result as? CoordinatorInTabbarInitiable
+    }
+    
 }

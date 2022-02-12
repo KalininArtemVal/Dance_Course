@@ -70,11 +70,11 @@ class ModalNavigationBar: PrimaryView, ModalNavigationBarInput, ModalNavigationB
             rightButtonHidded = true
             leftButtonImage = #imageLiteral(resourceName: "backIcon")
         case .doneStyle:
-            rightButton.applyTextNavButtonDesign(title: R.string.localizable.navigationDoneButtonTitle().localized)
+//            rightButton.applyTextNavButtonDesign(title: R.string.localizable.navigationDoneButtonTitle().localized)
             rightButtonWidthConstraint.constant = 70.0
         case .doneWithBackStyle:
             leftButtonImage = #imageLiteral(resourceName: "backIcon")
-            rightButton.applyTextNavButtonDesign(title: R.string.localizable.navigationDoneButtonTitle().localized)
+//            rightButton.applyTextNavButtonDesign(title: R.string.localizable.navigationDoneButtonTitle().localized)
             rightButtonWidthConstraint.constant = 70.0
         case .closeWithoutRightStyle:
             rightButtonHidded = true

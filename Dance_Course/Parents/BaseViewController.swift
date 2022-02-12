@@ -5,6 +5,8 @@
 //  Created by Артем Калинин on 08.02.2022.
 //
 import RxSwift
+import RxRelay
+import RxGesture
 import UIKit
 
 class BaseViewController: UIViewController {
@@ -46,7 +48,7 @@ class BaseViewController: UIViewController {
     }
     
     deinit {
-        print("\(self.nameOfClass) deinit")
+        print("BaseViewController deinit")
     }
     
     // MARK: - Public methods
@@ -65,23 +67,6 @@ class BaseViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         view.addGestureRecognizer(tapBackground)
-    }
-}
-
-extension BaseViewController {
-    func keyboardHeightObservable() -> Observable<CGFloat> {
-        return Observable
-            .from([
-                NotificationCenter.default.rx.notification(UIResponder.keyboardWillShowNotification)
-                    .map { notification -> CGFloat in
-                        (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.height ?? 0
-                },
-                NotificationCenter.default.rx.notification(UIResponder.keyboardWillHideNotification)
-                    .map { _ -> CGFloat in
-                        0
-                }
-                ])
-            .merge()
     }
 }
 

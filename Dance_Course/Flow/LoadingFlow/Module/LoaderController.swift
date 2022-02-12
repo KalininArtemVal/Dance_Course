@@ -5,6 +5,8 @@
 //  Created by Артем Калинин on 08.02.2022.
 //
 import Rswift
+import RxRelay
+import RxSwift
 import UIKit
 
 final class LoaderViewController: BaseViewController, LoaderViewInput, LoaderViewOutput {

@@ -9,9 +9,10 @@ class Dependencies {
 
     static let sharedDependencies = Dependencies()
 
-    let wireFrame: Wireframe & AlertShowable & ActionSheetShowable & RouteBuildable & StoreInfoViewShowable
+//    let wireFrame: Wireframe & AlertShowable & ActionSheetShowable & RouteBuildable & StoreInfoViewShowable
 
     private init() {
-        wireFrame = DefaultWireframe.shared as! ActionSheetShowable & AlertShowable & RouteBuildable & StoreInfoViewShowable & Wireframe
+//        wireFrame = DefaultWireframe.shared
+        print("wireFrame")
     }
 }

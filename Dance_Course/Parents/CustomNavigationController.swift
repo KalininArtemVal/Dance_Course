@@ -42,7 +42,7 @@ final class CustomNavigationController: UINavigationController {
     }
     
     deinit {
-//        print("\(self.nameOfClass) deinit")
+        print("\(self.nameOfClass) deinit")
         delegate = nil
         interactivePopGestureRecognizer?.delegate = nil
     }
@@ -52,6 +52,7 @@ final class CustomNavigationController: UINavigationController {
     private func configureUI() {
         navigationBar.removeFromSuperview()
         view.backgroundColor = .clear
+        UIApplication.statusBarBackgroundColor = .black
         delegate = self
     }
     

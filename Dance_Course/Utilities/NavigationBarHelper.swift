@@ -6,26 +6,13 @@
 //
 import UIKit
 import RxSwift
+import RxRelay
 import SnapKit
 
 enum NavBarStyle: Int {
-    case rootStyle
+    case mainStyle
+    case closeStyle
     case backStyle
-    case backStyle2Line
-    case backStyleWithNonSeparatorLine
-    case backStyleWithDoneButton
-    case backStyleWithNonSeparatorLineDoneButton
-    case backStyleWithCheckButton
-    case backStyleWithStatisticButton
-    case backStyleWithFilterButton
-    case mapRootStyle
-    case mapBottomSheet
-    case modalStyle
-    case rootStyleWithScanButton
-    case backStyleWithScanButton
-    case backStyleWithSeparatorAndScanButton
-    case backStyleWithPlusButton
-    case backStyleWithShareAndEditButtons
 }
 
 class NavigationBarHelper {
@@ -41,34 +28,23 @@ class NavigationBarHelper {
             vc.toPresent()?.view.addSubview(view)
             
             var topOffsetValue: CGFloat = 0.0
-            var styles = [NavBarStyle.modalStyle]
+            var styles = [NavBarStyle.mainStyle]
             if isPresent {
-                styles.append(NavBarStyle.backStyleWithDoneButton)
+                styles.append(NavBarStyle.mainStyle)
             }
             if isModalNavigation && UIDevice.current.isSmallScreen {
                 topOffsetValue = 12
             }
-            if (!styles.contains(style) && !isModalNavigation) || UIDevice.current.isIOS12 {
+            if (!styles.contains(style) && !isModalNavigation) {
                 
                 // in order to show view without any offsets for this case http://prntscr.com/w11sy6
                 topOffsetValue = Constants.navigationViewTopOffsetValue
-                
-                // swiftlint:disable discouraged_direct_init
-
-                if UIDevice().isXSeriesScreen && !isModalNavigation {
-                    topOffsetValue = Constants.navigationViewTopOffsetiPhoneXValue
-                    if style != .backStyleWithScanButton &&
-                        style != .rootStyleWithScanButton &&
-                        style != .backStyleWithSeparatorAndScanButton {
-                        topOffsetValue -= 6
-                    }
-                }
             }
             
             
             if let parentView = vc.toPresent()?.view {
                 view.snp.makeConstraints { (make) -> Void in
-                    make.height.equalTo(isModalNavigation ? Constants.modalNavigationHeight : Constants.navigationViewHeight)
+                    make.height.equalTo(isModalNavigation ? 50 : Constants.navigationViewHeight)
                     make.top.equalTo(parentView.snp.top).offset(topOffsetValue)
                     make.left.equalTo(parentView.snp.left)
                     make.right.equalTo(parentView.snp.right)

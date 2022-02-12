@@ -8,12 +8,16 @@
 
 final class DashboardCoordinator: BaseCoordinator, CoordinatorInTabbarInitiable {
     
+    var selectTabbarItemBlock: SelectTabbarItemBlock?
+    
+    var processTabbarSelectionWithCoordinatorMode: SelectTabbarItemBlock?
+    
     // MARK: - Private Properties
     
     private let factory: DashboardModuleFactory
     private let coordinatorFactory: CoordinatorFactory
     private let router: Router
-    private let wireFrame: AlertShowable & ActionSheetShowable = Dependencies.sharedDependencies.wireFrame
+//    private let wireFrame: AlertShowable & ActionSheetShowable
     
     // MARK: - CoordinatorInTabbarInitiable
     
@@ -23,7 +27,7 @@ final class DashboardCoordinator: BaseCoordinator, CoordinatorInTabbarInitiable 
         self.router = router
         self.factory = factory
         self.coordinatorFactory = coordinatorFactory
-
+        
     }
     
     // MARK: - Override Methods
@@ -35,7 +39,8 @@ final class DashboardCoordinator: BaseCoordinator, CoordinatorInTabbarInitiable 
     // MARK: - Run current flow's controllers
     
     private func showDashboardModule() {
-        var dashboardView = factory.makeDashboardModule()
+        let dashboardView = factory.makeDashboardModule()
+        
 //        dashboardView.viewModel = DashboardViewModel(profileUseCase: profileUseCase, wireframe: wireFrame)
         
         router.setRootModule(dashboardView)
@@ -46,7 +51,7 @@ final class DashboardCoordinator: BaseCoordinator, CoordinatorInTabbarInitiable 
     // MARK: - Configuring Navigation View
 
     private func configureNavigationView(title: String,
-                                         style: NavBarStyle = .rootStyle,
+                                         style: NavBarStyle = .mainStyle,
                                          module: Presentable) {
         
         _ = NavigationBarHelper.customizeNavBarFor(for: module,
@@ -65,12 +70,6 @@ final class DashboardCoordinator: BaseCoordinator, CoordinatorInTabbarInitiable 
         switch type {
         case .back:
             router.popModule(animated: true)
-        
-        case .statistic:
-            showStatisticsModule()
-        
-        case .filter:
-            print("Need to handle filter button")
         default:
             break
         }

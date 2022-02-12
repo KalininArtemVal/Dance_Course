@@ -12,4 +12,6 @@ protocol CoordinatorInTabbarInitiable: Coordinatable {
     init(router: Router,
          factory: ModuleFactoryList,
          coordinatorFactory: CoordinatorFactory)
+    var selectTabbarItemBlock: SelectTabbarItemBlock? { get set }
+    var processTabbarSelectionWithCoordinatorMode: SelectTabbarItemBlock? { get set }
 }
