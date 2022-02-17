@@ -17,7 +17,8 @@ final class NavigationViewFactoryImp: NavigationViewFactory {
         switch style {
         
         case .mainStyle, .closeStyle, .backStyle:
-            return makePlainStyleNavigationView(title: title, style: style)
+            return makeDashboardNavigationView(title: title, style: style)
+            
         }
     }
     
@@ -37,15 +38,13 @@ final class NavigationViewFactoryImp: NavigationViewFactory {
     
     // MARK: - Private Methods
     
-    private func makePlainStyleNavigationView(title: String?,
+    private func makeDashboardNavigationView(title: String?,
                                               isShowBackButton: Bool = false,
                                               rightButtonRelay: BehaviorRelay<Bool>? = nil,
                                               style: NavBarStyle? = nil) -> CustomNavigationView {
-        let navigationView = BaseNavigationView(frame: commonFrame)
+        let navigationView = DashboardNavigationView(frame: commonFrame)
         navigationView.updateTitle(title ?? "")
-        navigationView.isShowBackButton = isShowBackButton
-//        navigationView.titleAlignment = .center
-        navigationView.isEnabledRightButtonRelay = rightButtonRelay
+//        navigationView.isEnabledRightButtonRelay = rightButtonRelay
         
         var rightButtonType: NavigationButtonType = .other
         
@@ -60,7 +59,7 @@ final class NavigationViewFactoryImp: NavigationViewFactory {
             break
         }
         
-        navigationView.rightButtonType = rightButtonType
+//        navigationView.rightButtonType = rightButtonType
 
         return navigationView
     }

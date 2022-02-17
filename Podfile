@@ -11,7 +11,9 @@ target 'Dance_Course' do
     pod 'RxCocoa',    '~> 5'
     pod 'RxDataSources', '~> 4.0'
     pod 'RxGesture'
-    pod 'R.swift', '~> 5.0'
+    pod 'R.swift', '~> 5.0.3'
     pod 'SnapKit', '~> 4.0.0'
+    pod 'IQKeyboardManagerSwift'
+    pod 'RxDataSources', '~> 4.0'
 
 end

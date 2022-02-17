@@ -26,27 +26,17 @@ class ModalNavigationBar: PrimaryView, ModalNavigationBarInput, ModalNavigationB
     var onRight: Action?
     
     // MARK: - Outlets
-    
-    private let titleLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
-    private let leftButton: UIButton = {
-        let button = UIButton()
-        button.tintColor = .black
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
-    
-    private let rightButton: UIButton = {
-        let button = UIButton()
-        button.tintColor = .black
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
-    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var leftButton: UIButton! {
+        didSet {
+            leftButton.tintColor = .blue
+        }
+    }
+    @IBOutlet weak var rightButton: UIButton! {
+        didSet {
+            rightButton.tintColor = .blue
+        }
+    }
     @IBOutlet weak var rightButtonWidthConstraint: NSLayoutConstraint!
     
     // MARK: - Life cycle
@@ -60,7 +50,7 @@ class ModalNavigationBar: PrimaryView, ModalNavigationBarInput, ModalNavigationB
     
     // MARK: - Public methods
     func setupUI() {
-        titleLabel.text = viewModel.title
+//        titleLabel.applySortByPriceTitleLabelDesign(title: viewModel.title)
         
         var rightButtonHidded = false
         var leftButtonImage = #imageLiteral(resourceName: "closeIcon")
@@ -70,11 +60,11 @@ class ModalNavigationBar: PrimaryView, ModalNavigationBarInput, ModalNavigationB
             rightButtonHidded = true
             leftButtonImage = #imageLiteral(resourceName: "backIcon")
         case .doneStyle:
-//            rightButton.applyTextNavButtonDesign(title: R.string.localizable.navigationDoneButtonTitle().localized)
+            rightButton.setTitle("right", for: .normal)
             rightButtonWidthConstraint.constant = 70.0
         case .doneWithBackStyle:
             leftButtonImage = #imageLiteral(resourceName: "backIcon")
-//            rightButton.applyTextNavButtonDesign(title: R.string.localizable.navigationDoneButtonTitle().localized)
+            rightButton.setTitle("right", for: .normal)
             rightButtonWidthConstraint.constant = 70.0
         case .closeWithoutRightStyle:
             rightButtonHidded = true

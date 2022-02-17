@@ -6,4 +6,5 @@
 //
 
 protocol DashboardViewInput: BaseView {
+    var viewModel: DashboardViewModel! { get set }
 }

@@ -42,7 +42,7 @@ final class ProfileCoordinator: BaseCoordinator, CoordinatorInTabbarInitiable {
         let profileView = factory.makeProfileModule()
         
 //        dashboardView.viewModel = DashboardViewModel(profileUseCase: profileUseCase, wireframe: wireFrame)
-        
+//        configureNavigationView(title: "Профиль", module: profileView)
         router.setRootModule(profileView)
     }
     

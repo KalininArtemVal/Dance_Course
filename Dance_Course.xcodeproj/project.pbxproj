@@ -3,11 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D84C45AD138FC8DE4B7C9FD /* Pods_Dance_Course.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25F238ED20A596DE899A6655 /* Pods_Dance_Course.framework */; };
+		6884E4176D59B158148DC549 /* Pods_Dance_Course.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88ECF760956FB8B54EF6BD4 /* Pods_Dance_Course.framework */; };
 		EF0D4FE627B6BC3B00B62482 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF0D4FE527B6BC3B00B62482 /* Main.storyboard */; };
 		EF0D4FE827B6BF3100B62482 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0D4FE727B6BF3100B62482 /* NSObject+Extension.swift */; };
 		EF0D4FEA27B6BF5C00B62482 /* StoryboardsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0D4FE927B6BF5C00B62482 /* StoryboardsEnum.swift */; };
@@ -18,6 +18,13 @@
 		EF0D4FFE27B8567800B62482 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0D4FFD27B8567800B62482 /* ProfileCoordinator.swift */; };
 		EF0D500027B8572900B62482 /* ProfileModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0D4FFF27B8572900B62482 /* ProfileModuleFactory.swift */; };
 		EF0D500527B86BC800B62482 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EF0D500727B86BC800B62482 /* Localizable.strings */; };
+		EF0D501127B92B6000B62482 /* ModalNavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF0D501027B92B6000B62482 /* ModalNavigationBar.xib */; };
+		EF0D501627B982E900B62482 /* DashboardNavigationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF0D501527B982E900B62482 /* DashboardNavigationView.xib */; };
+		EF0D501827B982F900B62482 /* DashboardNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0D501727B982F800B62482 /* DashboardNavigationView.swift */; };
+		EF0D501A27B9B19900B62482 /* UIWindow+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0D501927B9B19900B62482 /* UIWindow+Extension.swift */; };
+		EF2B99B227BEB1FE0059F6B6 /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2B99B127BEB1FE0059F6B6 /* TitleTableViewCell.swift */; };
+		EF2B99BD27BEB7A00059F6B6 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2B99BC27BEB7A00059F6B6 /* UIFont+Extension.swift */; };
+		EF2B99BF27BEC86F0059F6B6 /* DashboardSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2B99BE27BEC86F0059F6B6 /* DashboardSectionModel.swift */; };
 		EF8BC80C27B2E3A0001A225E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF8BC80B27B2E3A0001A225E /* Assets.xcassets */; };
 		EF8BC80F27B2E3A0001A225E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF8BC80D27B2E3A0001A225E /* LaunchScreen.storyboard */; };
 		EF8BC81927B2E7B2001A225E /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC81827B2E7B2001A225E /* Presentable.swift */; };
@@ -75,7 +82,7 @@
 		EF8BC8BA27B436A3001A225E /* NavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC8B927B436A3001A225E /* NavigationButton.swift */; };
 		EF8BC8BC27B436ED001A225E /* ViewPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC8BB27B436ED001A225E /* ViewPresentable.swift */; };
 		EF8BC8BE27B438D1001A225E /* NavigationTargetViewPositionObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC8BD27B438D1001A225E /* NavigationTargetViewPositionObservable.swift */; };
-		EF8BC8C127B43C64001A225E /* BaseNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC8C027B43C64001A225E /* BaseNavigationBar.swift */; };
+		EF8BC8C127B43C64001A225E /* BaseNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC8C027B43C64001A225E /* BaseNavigationView.swift */; };
 		EF8BC8C327B43CAE001A225E /* NavigationButtonStateObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC8C227B43CAE001A225E /* NavigationButtonStateObservable.swift */; };
 		EF8BC8C627B472E1001A225E /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC8C527B472E1001A225E /* TabbarView.swift */; };
 		EF8BC8CA27B47382001A225E /* TabbarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC8C927B47382001A225E /* TabbarCell.swift */; };
@@ -85,8 +92,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		25F238ED20A596DE899A6655 /* Pods_Dance_Course.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dance_Course.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		631057346C35E5AD7F3A87A4 /* Pods-Dance_Course.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dance_Course.release.xcconfig"; path = "Target Support Files/Pods-Dance_Course/Pods-Dance_Course.release.xcconfig"; sourceTree = "<group>"; };
+		8A1609179EF244B821EF005C /* Pods-Dance_Course.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dance_Course.release.xcconfig"; path = "Target Support Files/Pods-Dance_Course/Pods-Dance_Course.release.xcconfig"; sourceTree = "<group>"; };
+		A779F02C03A61AB2ED6B43CC /* Pods-Dance_Course.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dance_Course.debug.xcconfig"; path = "Target Support Files/Pods-Dance_Course/Pods-Dance_Course.debug.xcconfig"; sourceTree = "<group>"; };
+		D88ECF760956FB8B54EF6BD4 /* Pods_Dance_Course.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dance_Course.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF0D4FE527B6BC3B00B62482 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		EF0D4FE727B6BF3100B62482 /* NSObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
 		EF0D4FE927B6BF5C00B62482 /* StoryboardsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardsEnum.swift; sourceTree = "<group>"; };
@@ -99,6 +107,21 @@
 		EF0D500127B8678C00B62482 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		EF0D500627B86BC800B62482 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EF0D500827B86BCC00B62482 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EF0D501027B92B6000B62482 /* ModalNavigationBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModalNavigationBar.xib; sourceTree = "<group>"; };
+		EF0D501527B982E900B62482 /* DashboardNavigationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardNavigationView.xib; sourceTree = "<group>"; };
+		EF0D501727B982F800B62482 /* DashboardNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardNavigationView.swift; sourceTree = "<group>"; };
+		EF0D501927B9B19900B62482 /* UIWindow+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extension.swift"; sourceTree = "<group>"; };
+		EF2B99B127BEB1FE0059F6B6 /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
+		EF2B99B427BEB52B0059F6B6 /* SFProDisplay-Ultralight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Ultralight.ttf"; sourceTree = "<group>"; };
+		EF2B99B527BEB52B0059F6B6 /* SFProDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Regular.ttf"; sourceTree = "<group>"; };
+		EF2B99B627BEB52B0059F6B6 /* SFProDisplay-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Semibold.ttf"; sourceTree = "<group>"; };
+		EF2B99B727BEB52B0059F6B6 /* SFProDisplay-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Black.ttf"; sourceTree = "<group>"; };
+		EF2B99B827BEB52B0059F6B6 /* SFProDisplay-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Light.ttf"; sourceTree = "<group>"; };
+		EF2B99B927BEB52B0059F6B6 /* SFProDisplay-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Medium.ttf"; sourceTree = "<group>"; };
+		EF2B99BA27BEB52B0059F6B6 /* SFProDisplay-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Thin.ttf"; sourceTree = "<group>"; };
+		EF2B99BB27BEB52B0059F6B6 /* SFProDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Bold.ttf"; sourceTree = "<group>"; };
+		EF2B99BC27BEB7A00059F6B6 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		EF2B99BE27BEC86F0059F6B6 /* DashboardSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardSectionModel.swift; sourceTree = "<group>"; };
 		EF8BC7FF27B2E39F001A225E /* Dance_Course.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dance_Course.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF8BC80B27B2E3A0001A225E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF8BC80E27B2E3A0001A225E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -158,14 +181,13 @@
 		EF8BC8B927B436A3001A225E /* NavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButton.swift; sourceTree = "<group>"; };
 		EF8BC8BB27B436ED001A225E /* ViewPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPresentable.swift; sourceTree = "<group>"; };
 		EF8BC8BD27B438D1001A225E /* NavigationTargetViewPositionObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTargetViewPositionObservable.swift; sourceTree = "<group>"; };
-		EF8BC8C027B43C64001A225E /* BaseNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationBar.swift; sourceTree = "<group>"; };
+		EF8BC8C027B43C64001A225E /* BaseNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationView.swift; sourceTree = "<group>"; };
 		EF8BC8C227B43CAE001A225E /* NavigationButtonStateObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButtonStateObservable.swift; sourceTree = "<group>"; };
 		EF8BC8C527B472E1001A225E /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
 		EF8BC8C927B47382001A225E /* TabbarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarCell.swift; sourceTree = "<group>"; };
 		EF8BC8CC27B473D6001A225E /* TabbarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewModel.swift; sourceTree = "<group>"; };
 		EF8BC8CE27B47536001A225E /* Integer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Integer+Extension.swift"; sourceTree = "<group>"; };
 		EF8BC8D027B47829001A225E /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
-		FE88AEA4A29C3F11F6F4E056 /* Pods-Dance_Course.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dance_Course.debug.xcconfig"; path = "Target Support Files/Pods-Dance_Course/Pods-Dance_Course.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,17 +195,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D84C45AD138FC8DE4B7C9FD /* Pods_Dance_Course.framework in Frameworks */,
+				6884E4176D59B158148DC549 /* Pods_Dance_Course.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1FA1A6FEC1C80762FE0226AF /* Frameworks */ = {
+		DE5F22841B1CC352FBBA0F36 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				25F238ED20A596DE899A6655 /* Pods_Dance_Course.framework */,
+				D88ECF760956FB8B54EF6BD4 /* Pods_Dance_Course.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -191,8 +213,8 @@
 		E7854649260890CD7FDF0553 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				FE88AEA4A29C3F11F6F4E056 /* Pods-Dance_Course.debug.xcconfig */,
-				631057346C35E5AD7F3A87A4 /* Pods-Dance_Course.release.xcconfig */,
+				A779F02C03A61AB2ED6B43CC /* Pods-Dance_Course.debug.xcconfig */,
+				8A1609179EF244B821EF005C /* Pods-Dance_Course.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -245,9 +267,50 @@
 		EF0D500227B8681500B62482 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EF2B99B327BEB3E90059F6B6 /* Fonts */,
 				EF0D500727B86BC800B62482 /* Localizable.strings */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		EF0D501427B982D000B62482 /* DashboardNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				EF0D501727B982F800B62482 /* DashboardNavigationView.swift */,
+				EF0D501527B982E900B62482 /* DashboardNavigationView.xib */,
+			);
+			path = DashboardNavigation;
+			sourceTree = "<group>";
+		};
+		EF2B99AF27BEB1D90059F6B6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EF2B99B027BEB1E30059F6B6 /* TitleCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		EF2B99B027BEB1E30059F6B6 /* TitleCell */ = {
+			isa = PBXGroup;
+			children = (
+				EF2B99B127BEB1FE0059F6B6 /* TitleTableViewCell.swift */,
+			);
+			path = TitleCell;
+			sourceTree = "<group>";
+		};
+		EF2B99B327BEB3E90059F6B6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				EF2B99B727BEB52B0059F6B6 /* SFProDisplay-Black.ttf */,
+				EF2B99BB27BEB52B0059F6B6 /* SFProDisplay-Bold.ttf */,
+				EF2B99B827BEB52B0059F6B6 /* SFProDisplay-Light.ttf */,
+				EF2B99B927BEB52B0059F6B6 /* SFProDisplay-Medium.ttf */,
+				EF2B99B527BEB52B0059F6B6 /* SFProDisplay-Regular.ttf */,
+				EF2B99B627BEB52B0059F6B6 /* SFProDisplay-Semibold.ttf */,
+				EF2B99BA27BEB52B0059F6B6 /* SFProDisplay-Thin.ttf */,
+				EF2B99B427BEB52B0059F6B6 /* SFProDisplay-Ultralight.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		EF8BC7F627B2E39F001A225E = {
@@ -256,7 +319,7 @@
 				EF8BC80127B2E39F001A225E /* Dance_Course */,
 				EF8BC80027B2E39F001A225E /* Products */,
 				E7854649260890CD7FDF0553 /* Pods */,
-				1FA1A6FEC1C80762FE0226AF /* Frameworks */,
+				DE5F22841B1CC352FBBA0F36 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -344,6 +407,8 @@
 				EF8BC8CE27B47536001A225E /* Integer+Extension.swift */,
 				EF8BC8D027B47829001A225E /* String+Extension.swift */,
 				EF0D4FE727B6BF3100B62482 /* NSObject+Extension.swift */,
+				EF0D501927B9B19900B62482 /* UIWindow+Extension.swift */,
+				EF2B99BC27BEB7A00059F6B6 /* UIFont+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -526,6 +591,7 @@
 		EF8BC87427B303CC001A225E /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				EF2B99AF27BEB1D90059F6B6 /* Cells */,
 				EF8BC87A27B30488001A225E /* ViewModel */,
 				EF8BC87B27B3049F001A225E /* DashboardController.swift */,
 				EF8BC87D27B304B0001A225E /* DashboardViewInput.swift */,
@@ -546,6 +612,7 @@
 			isa = PBXGroup;
 			children = (
 				EF8BC88127B304D5001A225E /* DashboardViewModel.swift */,
+				EF2B99BE27BEC86F0059F6B6 /* DashboardSectionModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -625,6 +692,7 @@
 			children = (
 				EF8BC8A427B31564001A225E /* ModalNavigationBar.swift */,
 				EF8BC8A627B3157B001A225E /* ModalNavigationBarViewModel.swift */,
+				EF0D501027B92B6000B62482 /* ModalNavigationBar.xib */,
 			);
 			path = ModalNavigationBar;
 			sourceTree = "<group>";
@@ -641,6 +709,7 @@
 		EF8BC8B427B43627001A225E /* NavigationView */ = {
 			isa = PBXGroup;
 			children = (
+				EF0D501427B982D000B62482 /* DashboardNavigation */,
 				EF8BC8BF27B43C53001A225E /* Base */,
 				EF8BC8B527B43630001A225E /* Protocols */,
 			);
@@ -667,7 +736,7 @@
 		EF8BC8BF27B43C53001A225E /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				EF8BC8C027B43C64001A225E /* BaseNavigationBar.swift */,
+				EF8BC8C027B43C64001A225E /* BaseNavigationView.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -704,12 +773,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF8BC81327B2E3A0001A225E /* Build configuration list for PBXNativeTarget "Dance_Course" */;
 			buildPhases = (
-				87ECC896A16FEEA83523C9E5 /* [CP] Check Pods Manifest.lock */,
+				0C15275C6432F3386C0E42A9 /* [CP] Check Pods Manifest.lock */,
 				EF8BC89A27B30CD1001A225E /* ShellScript */,
 				EF8BC7FB27B2E39F001A225E /* Sources */,
 				EF8BC7FC27B2E39F001A225E /* Frameworks */,
 				EF8BC7FD27B2E39F001A225E /* Resources */,
-				856B0A1CB2ADF9404DA6005C /* [CP] Embed Pods Frameworks */,
+				016A5DB576C0C7887D5C5F84 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -760,15 +829,17 @@
 			files = (
 				EF0D4FE627B6BC3B00B62482 /* Main.storyboard in Resources */,
 				EF0D500527B86BC800B62482 /* Localizable.strings in Resources */,
+				EF0D501127B92B6000B62482 /* ModalNavigationBar.xib in Resources */,
 				EF8BC80F27B2E3A0001A225E /* LaunchScreen.storyboard in Resources */,
 				EF8BC80C27B2E3A0001A225E /* Assets.xcassets in Resources */,
+				EF0D501627B982E900B62482 /* DashboardNavigationView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		856B0A1CB2ADF9404DA6005C /* [CP] Embed Pods Frameworks */ = {
+		016A5DB576C0C7887D5C5F84 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -785,7 +856,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Dance_Course/Pods-Dance_Course-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		87ECC896A16FEEA83523C9E5 /* [CP] Check Pods Manifest.lock */ = {
+		0C15275C6432F3386C0E42A9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -809,7 +880,6 @@
 		};
 		EF8BC89A27B30CD1001A225E /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -821,7 +891,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				$SRCROOT/R.generated.swift,
+				"$SRCROOT/R.generated.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -846,7 +916,9 @@
 				EF0D4FFE27B8567800B62482 /* ProfileCoordinator.swift in Sources */,
 				EF8BC85727B2F956001A225E /* LoaderViewOutput.swift in Sources */,
 				EF8BC83927B2F1EF001A225E /* Coordinator.swift in Sources */,
-				EF8BC8C127B43C64001A225E /* BaseNavigationBar.swift in Sources */,
+				EF2B99BD27BEB7A00059F6B6 /* UIFont+Extension.swift in Sources */,
+				EF8BC8C127B43C64001A225E /* BaseNavigationView.swift in Sources */,
+				EF2B99B227BEB1FE0059F6B6 /* TitleTableViewCell.swift in Sources */,
 				EF8BC82B27B2EA2D001A225E /* UIDevice+Extension.swift in Sources */,
 				EF8BC85B27B2F9FD001A225E /* BaseViewController.swift in Sources */,
 				EF0D4FEA27B6BF5C00B62482 /* StoryboardsEnum.swift in Sources */,
@@ -876,6 +948,7 @@
 				EF0D4FF827B8564C00B62482 /* ProfileViewController.swift in Sources */,
 				EF8BC86C27B301BD001A225E /* CustomNavigationController.swift in Sources */,
 				EF8BC89E27B313B2001A225E /* NavigationBarHelper.swift in Sources */,
+				EF2B99BF27BEC86F0059F6B6 /* DashboardSectionModel.swift in Sources */,
 				EF8BC88027B304C5001A225E /* DashboardViewOutput.swift in Sources */,
 				EF8BC83B27B2F300001A225E /* MainCoordinator.swift in Sources */,
 				EF8BC88227B304D5001A225E /* DashboardViewModel.swift in Sources */,
@@ -895,9 +968,11 @@
 				EF8BC88A27B30592001A225E /* TabbarController.swift in Sources */,
 				EF8BC85427B2F943001A225E /* LoaderViewInput.swift in Sources */,
 				EF8BC87927B30464001A225E /* DashboardModuleFactory.swift in Sources */,
+				EF0D501827B982F900B62482 /* DashboardNavigationView.swift in Sources */,
 				EF8BC8C327B43CAE001A225E /* NavigationButtonStateObservable.swift in Sources */,
 				EF8BC85927B2F98E001A225E /* BaseView.swift in Sources */,
 				EF8BC8A727B3157B001A225E /* ModalNavigationBarViewModel.swift in Sources */,
+				EF0D501A27B9B19900B62482 /* UIWindow+Extension.swift in Sources */,
 				EF8BC84F27B2F915001A225E /* LoaderCoordinator.swift in Sources */,
 				EF8BC89027B30706001A225E /* TabbarCoordinator.swift in Sources */,
 				EF8BC89927B308A6001A225E /* ModuleFactoryList.swift in Sources */,
@@ -1051,7 +1126,7 @@
 		};
 		EF8BC81427B2E3A0001A225E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FE88AEA4A29C3F11F6F4E056 /* Pods-Dance_Course.debug.xcconfig */;
+			baseConfigurationReference = A779F02C03A61AB2ED6B43CC /* Pods-Dance_Course.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1071,7 +1146,7 @@
 		};
 		EF8BC81527B2E3A0001A225E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 631057346C35E5AD7F3A87A4 /* Pods-Dance_Course.release.xcconfig */;
+			baseConfigurationReference = 8A1609179EF244B821EF005C /* Pods-Dance_Course.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

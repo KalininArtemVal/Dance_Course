@@ -9,3 +9,7 @@
 // MARK: - Tabbar
 "Tabbar.Item.Dashboard.Title" = "Главная";
 "Tabbar.Item.Profile.Title" = "Профиль";
+
+// MARK: - Dashboard Title Cell
+
+"TitleCell.Label.Main.Text" = "Найди для себя подходящий кофе";

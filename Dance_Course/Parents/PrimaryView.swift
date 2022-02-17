@@ -31,7 +31,7 @@ class PrimaryView: UIView, NibInitializable {
         }
     }
     
-//    private var maskedGradientBackgroundView: GradientView?
+    private var maskedGradientBackgroundView: UIView?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -44,4 +44,19 @@ class PrimaryView: UIView, NibInitializable {
     }
 
     func configureUI() {}
+    
+    func setupMaskedGradientBackgroundView(size: CGSize) {
+        maskedGradientBackgroundView = UIView()
+//        maskedGradientBackgroundView?.colors = [.mainThemeColor, .mainThemeColor]
+//        maskedGradientBackgroundView?.direction = .vertical
+        maskedGradientBackgroundView?.frame = CGRect(origin: .zero, size: size)
+        insertSubview(maskedGradientBackgroundView!, at: 0)
+        clipsToBounds = true
+    }
+    
+    func setMaskedGradientBackgroundOffset(point: CGPoint) {
+        var frame = maskedGradientBackgroundView?.frame
+        frame?.origin = point
+        maskedGradientBackgroundView?.frame = CGRect(origin: point, size: maskedGradientBackgroundView?.frame.size ?? .zero)
+    }
 }

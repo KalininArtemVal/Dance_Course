@@ -68,11 +68,10 @@ final class TabbarController: UITabBarController, TabbarViewInput, TabbarViewOut
                 }
             }
         }
-        
-//        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont.tabFont,
-//                                                          NSAttributedString.Key.foregroundColor: UIColor.labelDarkPrimaryColor], for: .normal)
-//        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont.tabFont,
-//                                                          NSAttributedString.Key.foregroundColor: UIColor.labelDarkPrimaryColor], for: .selected)
+        //C67C4D
+        //NSAttributedString.Key.foregroundColor: UIColor.white
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont.tabbarFont], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont.tabbarFont], for: .selected)
     }
     
     func updateTabbarItem(with item: TabbarItemType, completion: Action?) {

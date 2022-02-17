@@ -18,7 +18,7 @@
                         <viewLayoutGuide key="safeArea" id="ma8-CE-bcb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="iqw-Yv-fZT"/>
+                    <tabBarItem key="tabBarItem" title="Item 2" image="person" catalog="system" selectedImage="person" id="iqw-Yv-fZT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JYx-8G-Wb7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -34,7 +34,7 @@
                         <viewLayoutGuide key="safeArea" id="scI-gq-Vbd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="9VZ-rj-2m0"/>
+                    <tabBarItem key="tabBarItem" title="Item 1" image="line.horizontal.3.decrease" catalog="system" selectedImage="line.horizontal.3.decrease" id="9VZ-rj-2m0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VfG-b6-3SI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -59,7 +59,9 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="E0C-ii-wFM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.77647058823529413" green="0.48627450980392156" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="tga-wi-hch" kind="relationship" relationship="viewControllers" id="8l8-ey-jjf"/>
@@ -72,6 +74,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="line.horizontal.3.decrease" catalog="system" width="128" height="73"/>
+        <image name="person" catalog="system" width="128" height="117"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

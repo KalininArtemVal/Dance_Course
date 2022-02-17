@@ -8,3 +8,7 @@
 // MARK: - Tabbar
 "Tabbar.Item.Dashboard.Title" = "Dashboard";
 "Tabbar.Item.Profile.Title" = "Profile";
+
+// MARK: - Dashboard Title Cell
+
+"TitleCell.Label.Main.Text" = "Find the best coffee for you";

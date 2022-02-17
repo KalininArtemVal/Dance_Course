@@ -19,8 +19,8 @@ final class LoaderViewController: BaseViewController, LoaderViewInput, LoaderVie
     
     private let imageView: UIImageView = {
         let view = UIImageView()
-        view.image = R.image.loadView()
-        view.contentMode = .scaleAspectFit
+        view.image = R.image.coffeeLoadView()
+        view.contentMode = .scaleAspectFill
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -68,8 +68,8 @@ final class LoaderViewController: BaseViewController, LoaderViewInput, LoaderVie
         ])
         
         NSLayoutConstraint.activate([
-            activeIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            activeIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            activeIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            activeIndicator.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40)
         ])
     }
     

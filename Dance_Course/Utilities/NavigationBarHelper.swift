@@ -27,17 +27,15 @@ class NavigationBarHelper {
         if let view = navigationView.toPresent() {
             vc.toPresent()?.view.addSubview(view)
             
-            var topOffsetValue: CGFloat = 0.0
+            var topOffsetValue: CGFloat = 50.0
             var styles = [NavBarStyle.mainStyle]
             if isPresent {
                 styles.append(NavBarStyle.mainStyle)
             }
             if isModalNavigation && UIDevice.current.isSmallScreen {
-                topOffsetValue = 12
+                topOffsetValue = 50
             }
             if (!styles.contains(style) && !isModalNavigation) {
-                
-                // in order to show view without any offsets for this case http://prntscr.com/w11sy6
                 topOffsetValue = Constants.navigationViewTopOffsetValue
             }
             

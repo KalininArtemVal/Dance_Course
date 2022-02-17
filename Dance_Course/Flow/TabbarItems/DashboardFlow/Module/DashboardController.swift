@@ -6,21 +6,38 @@
 //
 
 import Rswift
+import RxSwift
+import RxRelay
+import RxDataSources
 import UIKit
 
 final class DashboardViewController: BaseViewController, DashboardViewInput, DashboardViewOutput {
 
     // MARK: - LoaderViewInput
+    
+    var viewModel: DashboardViewModel!
 
     // MARK: - LoaderViewOutput
+    
+    // MARK: - Private properties
 
     // MARK: - Views
     
     private let mainView: UIView = {
         let view = UIView()
-        view.backgroundColor = .green
+        view.backgroundColor = .black
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
+    }()
+    
+    private let tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 80
+        tableView.allowsSelection = false
+        tableView.backgroundColor = .black
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        return tableView
     }()
 
     // MARK: - Life Cycle
@@ -41,14 +58,23 @@ final class DashboardViewController: BaseViewController, DashboardViewInput, Das
 
     private func setupUI() {
         setupConstraints()
+        registerCells()
     }
 
     private func setupBindings() {
+        let dataSource = self.dataSource()
         
+        tableView.rx.setDelegate(self)
+            .disposed(by: disposeBag)
+        
+        viewModel.sections.asObservable()
+            .bind(to: tableView.rx.items(dataSource: dataSource))
+            .disposed(by: disposeBag)
     }
     
     private func setupConstraints() {
         view.addSubview(mainView)
+        mainView.addSubview(tableView)
         
         NSLayoutConstraint.activate([
             mainView.topAnchor.constraint(equalTo: view.topAnchor),
@@ -56,7 +82,42 @@ final class DashboardViewController: BaseViewController, DashboardViewInput, Das
             mainView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             mainView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
+        
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
     }
     
+    private func registerCells() {
+        tableView.register(TitleTableViewCell.self, forCellReuseIdentifier: TitleTableViewCell.identifier)
+    }
+    
+}
+
+extension DashboardViewController: UIScrollViewDelegate, UITableViewDelegate {
+    
+    private func dataSource() -> RxTableViewSectionedReloadDataSource<DashboardSectionModel> {
+        return RxTableViewSectionedReloadDataSource<DashboardSectionModel>(
+            configureCell: { [weak self] (_, tv, indexPath, sectionItem) in
+                guard let self = self else { return UITableViewCell() }
+                switch sectionItem {
+                case .headerItem:
+                    return self.prepareHeaderCell(tv, indexPath: indexPath)
+                }
+            }
+        )
+    }
+    
+    private func prepareHeaderCell(_ tv: UITableView, indexPath: IndexPath) -> UITableViewCell {
+        guard let headerCell = tv.dequeueReusableCell(withIdentifier: TitleTableViewCell.identifier, for: indexPath)
+                as? TitleTableViewCell else {
+            fatalError("Cell is not of kind \(TitleTableViewCell.nameOfClass)")
+        }
+        
+        return headerCell
+    }
     
 }

@@ -1,8 +1,9 @@
 PODS:
   - Differentiator (4.0.1)
-  - R.swift (5.4.0):
-    - R.swift.Library (~> 5.3.0)
-  - R.swift.Library (5.3.0)
+  - IQKeyboardManagerSwift (6.5.9)
+  - R.swift (5.0.3):
+    - R.swift.Library (~> 5.0.0)
+  - R.swift.Library (5.0.1)
   - RxCocoa (5.1.3):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -19,7 +20,8 @@ PODS:
   - SnapKit (4.0.1)
 
 DEPENDENCIES:
-  - R.swift (~> 5.0)
+  - IQKeyboardManagerSwift
+  - R.swift (~> 5.0.3)
   - RxCocoa (~> 5)
   - RxDataSources (~> 4.0)
   - RxGesture
@@ -29,6 +31,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Differentiator
+    - IQKeyboardManagerSwift
     - R.swift
     - R.swift.Library
     - RxCocoa
@@ -40,8 +43,9 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
-  R.swift: c533450b0f7dc494e0993f5f1a1db925d84c3006
-  R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
+  IQKeyboardManagerSwift: 6e839c575c4aa1078d58a596e41244e77abe918f
+  R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
+  R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
   RxCocoa: e2ed092d5432e4296aa818021d27de4090ac0354
   RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
   RxGesture: d6bd7447ca3a596c7a9702a6a2b6a2bb5d8bae54
@@ -49,6 +53,6 @@ SPEC CHECKSUMS:
   RxSwift: 915abbdfb62214aa89ccd0b194d44fb478019b27
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
 
-PODFILE CHECKSUM: 4884c7f5629f4b5e19916feb03dc6b3be5cb0a53
+PODFILE CHECKSUM: 08d6a056ef19ac8354fe69ab97a99ff3b6ab341a
 
 COCOAPODS: 1.11.2
