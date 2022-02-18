@@ -12,10 +12,14 @@ class ContentContentViewModel {
     
     var title: String?
     var image: UIImage?
+    var price: String?
+    var description: String?
     
-    init(title: String?, image: UIImage?) {
+    init(title: String?, image: UIImage?, price: String?, description: String?) {
         self.image = image
         self.title = title
+        self.price = price
+        self.description = description
     }
 }
 
@@ -84,8 +88,8 @@ class ContentCollectionCell: UICollectionViewCell {
     func configure(with viewModel: ContentContentViewModel) {
         imageView.image = viewModel.image
         titleLabel.text = viewModel.title
-        subtitleLabel.text = "With white chocolate"
-        priceLabel.text = "$4.99"
+        subtitleLabel.text = viewModel.description
+        priceLabel.text = viewModel.price
     }
     
     // MARK: - Private properties

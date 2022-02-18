@@ -33,14 +33,3 @@ class DashboardViewModel {
         return items
     }
 }
-
-//ContentContentViewModel(title: "Latte", image: R.image.coffeeLoadView()),
-//                  ContentContentViewModel(title: "Capuchono", image: R.image.coffeeLoadView()),
-//                  ContentContentViewModel(title: "Mate", image: R.image.coffeeLoadView()),
-//                  ContentContentViewModel(title: "Tea", image: R.image.coffeeLoadView()),
-//                  ContentContentViewModel(title: "Bumble", image: R.image.coffeeLoadView()),
-//                  ContentContentViewModel(title: "Espresso Tonic", image: R.image.coffeeLoadView()),
-//                  ContentContentViewModel(title: "Capuchono", image: R.image.coffeeLoadView()),
-//                  ContentContentViewModel(title: "Tea", image: R.image.coffeeLoadView()),
-//                  ContentContentViewModel(title: "Bumble", image: R.image.coffeeLoadView()),
-//                  ContentContentViewModel(title: "Latte", image: R.image.coffeeLoadView()
