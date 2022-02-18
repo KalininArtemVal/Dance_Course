@@ -12,21 +12,35 @@ import UIKit
 
 class DashboardContentViewModel {
     
-    var coffeeItems: [ContentContentViewModel]
     var sections = BehaviorRelay<[ContentSectionModel]>(value: [])
     
-    init(coffeeItems: [ContentContentViewModel]) {
-        self.coffeeItems = coffeeItems
+    init() {
+        generateSection()
     }
     
-    func generateSection(coffeeItems: [ContentContentViewModel]) -> [ContentSectionModel] {
-        
+    func generateSection() {
         let items: [ContentSectionModel] = [
             .mainSection(items: [
-                .coffeeItem(vm: coffeeItems)
+                .coffeeItem(vm: ContentContentViewModel(title: "Latte", image: R.image.coffeeLoadView())),
+                .coffeeItem(vm: ContentContentViewModel(title: "Capuchono", image: R.image.coffeeLoadView())),
+                .coffeeItem(vm: ContentContentViewModel(title: "Mate", image: R.image.coffeeLoadView())),
+                .coffeeItem(vm: ContentContentViewModel(title: "Tea", image: R.image.coffeeLoadView())),
+                .coffeeItem(vm: ContentContentViewModel(title: "Bumble", image: R.image.coffeeLoadView())),
             ])
         ]
         
-        return items
+        sections.accept(items)
     }
 }
+
+
+//ContentContentViewModel(title: "Latte", image: R.image.coffeeLoadView()),
+//ContentContentViewModel(title: "Capuchono", image: R.image.coffeeLoadView()),
+//ContentContentViewModel(title: "Mate", image: R.image.coffeeLoadView()),
+//ContentContentViewModel(title: "Tea", image: R.image.coffeeLoadView()),
+//ContentContentViewModel(title: "Bumble", image: R.image.coffeeLoadView()),
+//ContentContentViewModel(title: "Espresso Tonic", image: R.image.coffeeLoadView()),
+//ContentContentViewModel(title: "Capuchono", image: R.image.coffeeLoadView()),
+//ContentContentViewModel(title: "Tea", image: R.image.coffeeLoadView()),
+//ContentContentViewModel(title: "Bumble", image: R.image.coffeeLoadView()),
+//ContentContentViewModel(title: "Latte", image: R.image.coffeeLoadView()

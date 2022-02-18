@@ -14,7 +14,7 @@ class DashboardContentCell: UITableViewCell {
     
     static let identifier = "DashboardContentCell"
     
-    var viewModel: DashboardContentViewModel!
+    var viewModel = DashboardContentViewModel()
     
     private var sections: BehaviorRelay<[ContentSectionModel]> = BehaviorRelay(value: [])
     
@@ -32,7 +32,7 @@ class DashboardContentCell: UITableViewCell {
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = .black
         collectionView.isPagingEnabled = true
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.showsVerticalScrollIndicator = false
@@ -53,27 +53,21 @@ class DashboardContentCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(items: [ContentContentViewModel]) {
-//        viewModel.coffeeItems = items
-        let dataSource = self.dataSource()
-        sections.accept([ContentSectionModel.mainSection(items: [ContentItem.coffeeItem(vm: items)])])
-        sections.bind(to: collectionView.rx.items(dataSource: dataSource))
-            .disposed(by: disposeBag)
-    }
-    
     // MARK: - Private methods
     
     private func setupUI() {
-//        viewModel.displayItems()
         registerCell()
         setupConstraints()
         setupBindings()
     }
     
     private func setupBindings() {
-//        let dataSource = self.dataSource()
-//        viewModel.sections.bind(to: collectionView.rx.items(dataSource: dataSource))
-//            .disposed(by: disposeBag)
+        let dataSource = self.dataSource()
+        self.viewModel.sections.bind(to: collectionView.rx.items(dataSource: dataSource))
+            .disposed(by: self.disposeBag)
+
+        self.collectionView.rx.setDelegate(self)
+            .disposed(by: self.disposeBag)
     }
     
     private func registerCell() {
@@ -82,7 +76,7 @@ class DashboardContentCell: UITableViewCell {
     
     private func setupConstraints() {
         contentView.addSubview(collectionView)
-        collectionView.backgroundColor = .yellow
+        collectionView.backgroundColor = .black
         
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: contentView.topAnchor),
@@ -103,7 +97,6 @@ extension DashboardContentCell {
                 guard let self = self else {
                     return cv.dequeueReusableCell(withReuseIdentifier: UICollectionViewCell.nameOfClass, for: indexPath)
                 }
-                
                 switch item {
                 case .coffeeItem(vm: let cellVM):
                     return self.prepareContentCell(cv, indexPath: indexPath, cellViewModel: cellVM)
@@ -112,13 +105,13 @@ extension DashboardContentCell {
         )
     }
     
-    private func prepareContentCell(_ cv: UICollectionView, indexPath: IndexPath, cellViewModel: [ContentContentViewModel]) -> UICollectionViewCell {
+    private func prepareContentCell(_ cv: UICollectionView, indexPath: IndexPath, cellViewModel: ContentContentViewModel) -> UICollectionViewCell {
         guard let cell = cv.dequeueReusableCell(withReuseIdentifier: ContentCollectionCell.identifier, for: indexPath)
                 as? ContentCollectionCell else {
             fatalError("Cell is not of kind \(ContentCollectionCell.nameOfClass)")
         }
-        let item = cellViewModel[indexPath.row]
-        cell.configure(with: item)
+        
+        cell.configure(with: cellViewModel)
         
         return cell
     }
@@ -147,12 +140,12 @@ extension DashboardContentCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         insetForSectionAt section: Int) -> UIEdgeInsets {
-        return collectionEdgeInsets ?? UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        return collectionEdgeInsets ?? UIEdgeInsets(top: 10, left: 16, bottom: 0, right: 16)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = UIScreen.main.bounds.width / 2 - 60
-        let height = CGFloat(80)
+        let width = UIScreen.main.bounds.width / 2 - 30
+        let height = CGFloat(250)
         return CGSize(width: width, height: height)
     }
 

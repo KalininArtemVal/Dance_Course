@@ -31,5 +31,5 @@ extension ContentSectionModel: SectionModelType {
 }
 
 enum ContentItem {
-    case coffeeItem(vm: [ContentContentViewModel])
+    case coffeeItem(vm: ContentContentViewModel)
 }

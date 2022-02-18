@@ -31,5 +31,5 @@ extension DashboardSectionModel: SectionModelType {
 
 enum DashboardItem {
     case headerItem
-    case contentItem(vm: [ContentContentViewModel])
+    case contentItem
 }

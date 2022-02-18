@@ -107,8 +107,8 @@ extension DashboardViewController: UIScrollViewDelegate, UITableViewDelegate {
                 switch sectionItem {
                 case .headerItem:
                     return self.prepareHeaderCell(tv, indexPath: indexPath)
-                case .contentItem(let cellVM):
-                    return self.prepareContentCell(tv, indexPath: indexPath, cellViewModel: cellVM)
+                case .contentItem:
+                    return self.prepareContentCell(tv, indexPath: indexPath)
                 }
             }
         )
@@ -123,12 +123,11 @@ extension DashboardViewController: UIScrollViewDelegate, UITableViewDelegate {
         return headerCell
     }
     
-    private func prepareContentCell(_ tv: UITableView, indexPath: IndexPath, cellViewModel: [ContentContentViewModel]) -> UITableViewCell {
+    private func prepareContentCell(_ tv: UITableView, indexPath: IndexPath) -> UITableViewCell {
         guard let contentCell = tv.dequeueReusableCell(withIdentifier: DashboardContentCell.identifier, for: indexPath)
                 as? DashboardContentCell else {
             fatalError("Cell is not of kind \(DashboardContentCell.nameOfClass)")
         }
-        contentCell.configure(items: cellViewModel)
         return contentCell
     }
     

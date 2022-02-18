@@ -27,6 +27,8 @@ class ContentCollectionCell: UICollectionViewCell {
     private let imageView: UIImageView = {
        let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 7
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -52,7 +54,7 @@ class ContentCollectionCell: UICollectionViewCell {
     
     private func setupConstraints() {
         backgroundColor = .black
-        layer.cornerRadius = 16
+        layer.cornerRadius = 7
         contentView.addSubview(imageView)
         
         NSLayoutConstraint.activate([
