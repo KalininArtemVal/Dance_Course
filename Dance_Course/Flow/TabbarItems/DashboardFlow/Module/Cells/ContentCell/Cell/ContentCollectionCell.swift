@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GradientView
 
 class ContentContentViewModel {
     
@@ -24,6 +25,8 @@ class ContentCollectionCell: UICollectionViewCell {
     
     // MARK: - Private properties
     
+    private var maskedGradientBackgroundView: GradientView?
+    
     private let imageView: UIImageView = {
        let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
@@ -31,6 +34,37 @@ class ContentCollectionCell: UICollectionViewCell {
         imageView.layer.cornerRadius = 7
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
+    }()
+    
+    private let titleLabel: UILabel = {
+        let label = UILabel()
+        label.font = .textFont
+        label.textColor = .white
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    private let subtitleLabel: UILabel = {
+        let label = UILabel()
+        label.font = .subtextFont
+        label.textColor = .gray
+        label.numberOfLines = 0
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    private let priceLabel: UILabel = {
+        let label = UILabel()
+        label.font = .priceFont
+        label.textColor = .white
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    private let gradientView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
     }()
     
     
@@ -49,13 +83,28 @@ class ContentCollectionCell: UICollectionViewCell {
     
     func configure(with viewModel: ContentContentViewModel) {
         imageView.image = viewModel.image
+        titleLabel.text = viewModel.title
+        subtitleLabel.text = "With white chocolate"
+        priceLabel.text = "$4.99"
     }
+    
     // MARK: - Private properties
     
     private func setupConstraints() {
         backgroundColor = .black
         layer.cornerRadius = 7
         contentView.addSubview(imageView)
+        imageView.addSubview(gradientView)
+        contentView.addSubview(titleLabel)
+        contentView.addSubview(subtitleLabel)
+        contentView.addSubview(priceLabel)
+        
+        NSLayoutConstraint.activate([
+            gradientView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            gradientView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            gradientView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            gradientView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
+        ])
         
         NSLayoutConstraint.activate([
             imageView.topAnchor.constraint(equalTo: contentView.topAnchor),
@@ -63,6 +112,50 @@ class ContentCollectionCell: UICollectionViewCell {
             imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
         ])
+        
+        NSLayoutConstraint.activate([
+            titleLabel.bottomAnchor.constraint(equalTo: subtitleLabel.topAnchor, constant: -10),
+            titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20)
+        ])
+        
+        NSLayoutConstraint.activate([
+            subtitleLabel.bottomAnchor.constraint(equalTo: priceLabel.topAnchor, constant: -10),
+            subtitleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            subtitleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20)
+        ])
+        
+        NSLayoutConstraint.activate([
+            priceLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20),
+            priceLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            priceLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20)
+        ])
+    }
+    
+    override func draw(_ rect: CGRect) {
+        gradientView.applyGradientWithStartAndEndPoint(
+            colors: [
+                .clear,
+                .black
+            ],
+            cornerRadius: 2,
+            isTopToBottom: true,
+            // --- Left color move to right
+            startTopPoint:  CGPoint(x: 1, y: 0),
+            endTopPoint: CGPoint(x: 1, y: 1),
+            // --- Right color move to left
+            startBottomPoint: CGPoint(x: 0, y: 1),
+            endBottomPoint: CGPoint(x: 1, y: 1)
+        )
+    }
+    
+    func setupMaskedGradientBackgroundView(view: UIView) {
+        maskedGradientBackgroundView = GradientView()
+        maskedGradientBackgroundView?.colors = [.white, .black]
+        maskedGradientBackgroundView?.direction = .vertical
+        maskedGradientBackgroundView?.frame = view.bounds
+        insertSubview(maskedGradientBackgroundView!, at: 0)
+        clipsToBounds = true
     }
     
 }

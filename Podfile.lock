@@ -1,5 +1,6 @@
 PODS:
   - Differentiator (4.0.1)
+  - GradientView (2.3.4)
   - IQKeyboardManagerSwift (6.5.9)
   - R.swift (5.0.3):
     - R.swift.Library (~> 5.0.0)
@@ -20,6 +21,7 @@ PODS:
   - SnapKit (4.0.1)
 
 DEPENDENCIES:
+  - GradientView
   - IQKeyboardManagerSwift
   - R.swift (~> 5.0.3)
   - RxCocoa (~> 5)
@@ -31,6 +33,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Differentiator
+    - GradientView
     - IQKeyboardManagerSwift
     - R.swift
     - R.swift.Library
@@ -43,6 +46,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
+  GradientView: 61d79cc948bf66f9d453865794ace916c2ba0918
   IQKeyboardManagerSwift: 6e839c575c4aa1078d58a596e41244e77abe918f
   R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
   R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
@@ -53,6 +57,6 @@ SPEC CHECKSUMS:
   RxSwift: 915abbdfb62214aa89ccd0b194d44fb478019b27
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
 
-PODFILE CHECKSUM: 08d6a056ef19ac8354fe69ab97a99ff3b6ab341a
+PODFILE CHECKSUM: 2402aa12aa67fc107216e77c85de14a77eeeee19
 
 COCOAPODS: 1.11.2

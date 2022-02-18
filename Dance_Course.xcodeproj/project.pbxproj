@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6884E4176D59B158148DC549 /* Pods_Dance_Course.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88ECF760956FB8B54EF6BD4 /* Pods_Dance_Course.framework */; };
+		DE18E8F7035870AFF4C32527 /* Pods_Dance_Course.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8DBB249E7FEC32A3CC7AFB9 /* Pods_Dance_Course.framework */; };
 		EF0D4FE627B6BC3B00B62482 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF0D4FE527B6BC3B00B62482 /* Main.storyboard */; };
 		EF0D4FE827B6BF3100B62482 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0D4FE727B6BF3100B62482 /* NSObject+Extension.swift */; };
 		EF0D4FEA27B6BF5C00B62482 /* StoryboardsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0D4FE927B6BF5C00B62482 /* StoryboardsEnum.swift */; };
@@ -22,6 +22,14 @@
 		EF0D501627B982E900B62482 /* DashboardNavigationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF0D501527B982E900B62482 /* DashboardNavigationView.xib */; };
 		EF0D501827B982F900B62482 /* DashboardNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0D501727B982F800B62482 /* DashboardNavigationView.swift */; };
 		EF0D501A27B9B19900B62482 /* UIWindow+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0D501927B9B19900B62482 /* UIWindow+Extension.swift */; };
+		EF20F3B427C0523D00197067 /* SFProDisplay-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF2B99B727BEB52B0059F6B6 /* SFProDisplay-Black.ttf */; };
+		EF20F3B527C0524100197067 /* SFProDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF2B99BB27BEB52B0059F6B6 /* SFProDisplay-Bold.ttf */; };
+		EF20F3B627C0524300197067 /* SFProDisplay-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF2B99B827BEB52B0059F6B6 /* SFProDisplay-Light.ttf */; };
+		EF20F3B727C0524600197067 /* SFProDisplay-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF2B99B927BEB52B0059F6B6 /* SFProDisplay-Medium.ttf */; };
+		EF20F3B827C0524800197067 /* SFProDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF2B99B527BEB52B0059F6B6 /* SFProDisplay-Regular.ttf */; };
+		EF20F3B927C0524A00197067 /* SFProDisplay-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF2B99B627BEB52B0059F6B6 /* SFProDisplay-Semibold.ttf */; };
+		EF20F3BA27C0524C00197067 /* SFProDisplay-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF2B99BA27BEB52B0059F6B6 /* SFProDisplay-Thin.ttf */; };
+		EF20F3BB27C0524E00197067 /* SFProDisplay-Ultralight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF2B99B427BEB52B0059F6B6 /* SFProDisplay-Ultralight.ttf */; };
 		EF2B99B227BEB1FE0059F6B6 /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2B99B127BEB1FE0059F6B6 /* TitleTableViewCell.swift */; };
 		EF2B99BD27BEB7A00059F6B6 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2B99BC27BEB7A00059F6B6 /* UIFont+Extension.swift */; };
 		EF2B99BF27BEC86F0059F6B6 /* DashboardSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2B99BE27BEC86F0059F6B6 /* DashboardSectionModel.swift */; };
@@ -96,9 +104,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8A1609179EF244B821EF005C /* Pods-Dance_Course.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dance_Course.release.xcconfig"; path = "Target Support Files/Pods-Dance_Course/Pods-Dance_Course.release.xcconfig"; sourceTree = "<group>"; };
-		A779F02C03A61AB2ED6B43CC /* Pods-Dance_Course.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dance_Course.debug.xcconfig"; path = "Target Support Files/Pods-Dance_Course/Pods-Dance_Course.debug.xcconfig"; sourceTree = "<group>"; };
-		D88ECF760956FB8B54EF6BD4 /* Pods_Dance_Course.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dance_Course.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F383CE9BFBF929F26B82D5E /* Pods-Dance_Course.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dance_Course.debug.xcconfig"; path = "Target Support Files/Pods-Dance_Course/Pods-Dance_Course.debug.xcconfig"; sourceTree = "<group>"; };
+		707EF0C1ED30343C2D4D40F6 /* Pods-Dance_Course.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dance_Course.release.xcconfig"; path = "Target Support Files/Pods-Dance_Course/Pods-Dance_Course.release.xcconfig"; sourceTree = "<group>"; };
+		D8DBB249E7FEC32A3CC7AFB9 /* Pods_Dance_Course.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dance_Course.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF0D4FE527B6BC3B00B62482 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		EF0D4FE727B6BF3100B62482 /* NSObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
 		EF0D4FE927B6BF5C00B62482 /* StoryboardsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardsEnum.swift; sourceTree = "<group>"; };
@@ -203,17 +211,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6884E4176D59B158148DC549 /* Pods_Dance_Course.framework in Frameworks */,
+				DE18E8F7035870AFF4C32527 /* Pods_Dance_Course.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DE5F22841B1CC352FBBA0F36 /* Frameworks */ = {
+		B778C8BA3D23E489086A2EC2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D88ECF760956FB8B54EF6BD4 /* Pods_Dance_Course.framework */,
+				D8DBB249E7FEC32A3CC7AFB9 /* Pods_Dance_Course.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -221,8 +229,8 @@
 		E7854649260890CD7FDF0553 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A779F02C03A61AB2ED6B43CC /* Pods-Dance_Course.debug.xcconfig */,
-				8A1609179EF244B821EF005C /* Pods-Dance_Course.release.xcconfig */,
+				5F383CE9BFBF929F26B82D5E /* Pods-Dance_Course.debug.xcconfig */,
+				707EF0C1ED30343C2D4D40F6 /* Pods-Dance_Course.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -355,7 +363,7 @@
 				EF8BC80127B2E39F001A225E /* Dance_Course */,
 				EF8BC80027B2E39F001A225E /* Products */,
 				E7854649260890CD7FDF0553 /* Pods */,
-				DE5F22841B1CC352FBBA0F36 /* Frameworks */,
+				B778C8BA3D23E489086A2EC2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -809,12 +817,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF8BC81327B2E3A0001A225E /* Build configuration list for PBXNativeTarget "Dance_Course" */;
 			buildPhases = (
-				0C15275C6432F3386C0E42A9 /* [CP] Check Pods Manifest.lock */,
+				3916909464CC61051D498A19 /* [CP] Check Pods Manifest.lock */,
 				EF8BC89A27B30CD1001A225E /* ShellScript */,
 				EF8BC7FB27B2E39F001A225E /* Sources */,
 				EF8BC7FC27B2E39F001A225E /* Frameworks */,
 				EF8BC7FD27B2E39F001A225E /* Resources */,
-				016A5DB576C0C7887D5C5F84 /* [CP] Embed Pods Frameworks */,
+				E423AF1066912E3CD08166B3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -864,35 +872,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF0D4FE627B6BC3B00B62482 /* Main.storyboard in Resources */,
+				EF20F3B927C0524A00197067 /* SFProDisplay-Semibold.ttf in Resources */,
 				EF0D500527B86BC800B62482 /* Localizable.strings in Resources */,
 				EF0D501127B92B6000B62482 /* ModalNavigationBar.xib in Resources */,
+				EF20F3BB27C0524E00197067 /* SFProDisplay-Ultralight.ttf in Resources */,
+				EF20F3B427C0523D00197067 /* SFProDisplay-Black.ttf in Resources */,
 				EF8BC80F27B2E3A0001A225E /* LaunchScreen.storyboard in Resources */,
+				EF20F3BA27C0524C00197067 /* SFProDisplay-Thin.ttf in Resources */,
 				EF8BC80C27B2E3A0001A225E /* Assets.xcassets in Resources */,
+				EF20F3B827C0524800197067 /* SFProDisplay-Regular.ttf in Resources */,
+				EF20F3B627C0524300197067 /* SFProDisplay-Light.ttf in Resources */,
 				EF0D501627B982E900B62482 /* DashboardNavigationView.xib in Resources */,
+				EF20F3B527C0524100197067 /* SFProDisplay-Bold.ttf in Resources */,
+				EF20F3B727C0524600197067 /* SFProDisplay-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		016A5DB576C0C7887D5C5F84 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Dance_Course/Pods-Dance_Course-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Dance_Course/Pods-Dance_Course-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Dance_Course/Pods-Dance_Course-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		0C15275C6432F3386C0E42A9 /* [CP] Check Pods Manifest.lock */ = {
+		3916909464CC61051D498A19 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -914,6 +913,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E423AF1066912E3CD08166B3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dance_Course/Pods-Dance_Course-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dance_Course/Pods-Dance_Course-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Dance_Course/Pods-Dance_Course-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		EF8BC89A27B30CD1001A225E /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -927,7 +943,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				$SRCROOT/R.generated.swift,
+				"$SRCROOT/R.generated.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1166,7 +1182,7 @@
 		};
 		EF8BC81427B2E3A0001A225E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A779F02C03A61AB2ED6B43CC /* Pods-Dance_Course.debug.xcconfig */;
+			baseConfigurationReference = 5F383CE9BFBF929F26B82D5E /* Pods-Dance_Course.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1186,7 +1202,7 @@
 		};
 		EF8BC81527B2E3A0001A225E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8A1609179EF244B821EF005C /* Pods-Dance_Course.release.xcconfig */;
+			baseConfigurationReference = 707EF0C1ED30343C2D4D40F6 /* Pods-Dance_Course.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

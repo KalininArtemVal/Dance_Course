@@ -15,5 +15,6 @@ target 'Dance_Course' do
     pod 'SnapKit', '~> 4.0.0'
     pod 'IQKeyboardManagerSwift'
     pod 'RxDataSources', '~> 4.0'
+    pod 'GradientView'
 
 end

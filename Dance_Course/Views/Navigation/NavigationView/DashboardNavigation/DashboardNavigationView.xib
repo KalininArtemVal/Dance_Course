@@ -25,9 +25,10 @@
                     <nil key="textColor"/>
                     <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nay-Gx-jbY">
-                    <rect key="frame" x="20" y="25" width="31" height="30"/>
-                    <state key="normal" title="Щит">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nay-Gx-jbY">
+                    <rect key="frame" x="20" y="29" width="21" height="22"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" image="text.alignleft" catalog="system">
                         <color key="titleColor" systemColor="systemGray6Color"/>
                     </state>
                     <connections>
@@ -48,6 +49,7 @@
         </view>
     </objects>
     <resources>
+        <image name="text.alignleft" catalog="system" width="128" height="100"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
