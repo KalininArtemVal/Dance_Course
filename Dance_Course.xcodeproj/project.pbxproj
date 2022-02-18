@@ -25,6 +25,10 @@
 		EF2B99B227BEB1FE0059F6B6 /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2B99B127BEB1FE0059F6B6 /* TitleTableViewCell.swift */; };
 		EF2B99BD27BEB7A00059F6B6 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2B99BC27BEB7A00059F6B6 /* UIFont+Extension.swift */; };
 		EF2B99BF27BEC86F0059F6B6 /* DashboardSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2B99BE27BEC86F0059F6B6 /* DashboardSectionModel.swift */; };
+		EF2B99C327BED0700059F6B6 /* DashboardContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2B99C227BED0700059F6B6 /* DashboardContentCell.swift */; };
+		EF2B99C627BED1AA0059F6B6 /* ContentCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2B99C527BED1AA0059F6B6 /* ContentCollectionCell.swift */; };
+		EF2B99CE27BEF8FA0059F6B6 /* DashboardContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2B99CD27BEF8FA0059F6B6 /* DashboardContentViewModel.swift */; };
+		EF2B99D027BEF9050059F6B6 /* ContentSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2B99CF27BEF9050059F6B6 /* ContentSectionModel.swift */; };
 		EF8BC80C27B2E3A0001A225E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF8BC80B27B2E3A0001A225E /* Assets.xcassets */; };
 		EF8BC80F27B2E3A0001A225E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF8BC80D27B2E3A0001A225E /* LaunchScreen.storyboard */; };
 		EF8BC81927B2E7B2001A225E /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BC81827B2E7B2001A225E /* Presentable.swift */; };
@@ -122,6 +126,10 @@
 		EF2B99BB27BEB52B0059F6B6 /* SFProDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Bold.ttf"; sourceTree = "<group>"; };
 		EF2B99BC27BEB7A00059F6B6 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		EF2B99BE27BEC86F0059F6B6 /* DashboardSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardSectionModel.swift; sourceTree = "<group>"; };
+		EF2B99C227BED0700059F6B6 /* DashboardContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardContentCell.swift; sourceTree = "<group>"; };
+		EF2B99C527BED1AA0059F6B6 /* ContentCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCollectionCell.swift; sourceTree = "<group>"; };
+		EF2B99CD27BEF8FA0059F6B6 /* DashboardContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardContentViewModel.swift; sourceTree = "<group>"; };
+		EF2B99CF27BEF9050059F6B6 /* ContentSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentSectionModel.swift; sourceTree = "<group>"; };
 		EF8BC7FF27B2E39F001A225E /* Dance_Course.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dance_Course.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF8BC80B27B2E3A0001A225E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF8BC80E27B2E3A0001A225E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -285,6 +293,7 @@
 		EF2B99AF27BEB1D90059F6B6 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				EF2B99C127BED0110059F6B6 /* ContentCell */,
 				EF2B99B027BEB1E30059F6B6 /* TitleCell */,
 			);
 			path = Cells;
@@ -311,6 +320,33 @@
 				EF2B99B427BEB52B0059F6B6 /* SFProDisplay-Ultralight.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		EF2B99C127BED0110059F6B6 /* ContentCell */ = {
+			isa = PBXGroup;
+			children = (
+				EF2B99CC27BEF8D80059F6B6 /* ViewModel */,
+				EF2B99C427BED18F0059F6B6 /* Cell */,
+				EF2B99C227BED0700059F6B6 /* DashboardContentCell.swift */,
+			);
+			path = ContentCell;
+			sourceTree = "<group>";
+		};
+		EF2B99C427BED18F0059F6B6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EF2B99C527BED1AA0059F6B6 /* ContentCollectionCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		EF2B99CC27BEF8D80059F6B6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EF2B99CD27BEF8FA0059F6B6 /* DashboardContentViewModel.swift */,
+				EF2B99CF27BEF9050059F6B6 /* ContentSectionModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		EF8BC7F627B2E39F001A225E = {
@@ -891,7 +927,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$SRCROOT/R.generated.swift",
+				$SRCROOT/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -928,8 +964,10 @@
 				EF8BC8D127B47829001A225E /* String+Extension.swift in Sources */,
 				EF0D4FF627B8564000B62482 /* ProfileViewModel.swift in Sources */,
 				EF8BC87E27B304B0001A225E /* DashboardViewInput.swift in Sources */,
+				EF2B99CE27BEF8FA0059F6B6 /* DashboardContentViewModel.swift in Sources */,
 				EF0D4FFA27B8565B00B62482 /* ProfileViewInput.swift in Sources */,
 				EF8BC8C627B472E1001A225E /* TabbarView.swift in Sources */,
+				EF2B99D027BEF9050059F6B6 /* ContentSectionModel.swift in Sources */,
 				EF0D4FE827B6BF3100B62482 /* NSObject+Extension.swift in Sources */,
 				EF8BC89727B30838001A225E /* ModuleFactoryImp.swift in Sources */,
 				EF8BC8CD27B473D6001A225E /* TabbarViewModel.swift in Sources */,
@@ -944,10 +982,12 @@
 				EF8BC88427B30533001A225E /* CoordinatorInTabbarInitiable.swift in Sources */,
 				EF0D4FFC27B8566A00B62482 /* ProfileViewOutput.swift in Sources */,
 				EF8BC8CA27B47382001A225E /* TabbarCell.swift in Sources */,
+				EF2B99C327BED0700059F6B6 /* DashboardContentCell.swift in Sources */,
 				EF8BC86527B2FD74001A225E /* LoaderViewModel.swift in Sources */,
 				EF0D4FF827B8564C00B62482 /* ProfileViewController.swift in Sources */,
 				EF8BC86C27B301BD001A225E /* CustomNavigationController.swift in Sources */,
 				EF8BC89E27B313B2001A225E /* NavigationBarHelper.swift in Sources */,
+				EF2B99C627BED1AA0059F6B6 /* ContentCollectionCell.swift in Sources */,
 				EF2B99BF27BEC86F0059F6B6 /* DashboardSectionModel.swift in Sources */,
 				EF8BC88027B304C5001A225E /* DashboardViewOutput.swift in Sources */,
 				EF8BC83B27B2F300001A225E /* MainCoordinator.swift in Sources */,
