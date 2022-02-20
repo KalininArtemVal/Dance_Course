@@ -12,3 +12,11 @@
 // MARK: - Dashboard Title Cell
 
 "TitleCell.Label.Main.Text" = "Find the best coffee for you";
+
+// MARK: - Slider Menu Title
+
+"SliderMenuItem.Label.All.Text" = "All";
+"SliderMenuItem.Label.Coffee.Text" = "Coffee";
+"SliderMenuItem.Label.Tea.Text" = "Tea";
+"SliderMenuItem.Label.Deserts.Text" = "Deserts";
+"SliderMenuItem.Label.Fresh.Text" = "Fresh drinks";

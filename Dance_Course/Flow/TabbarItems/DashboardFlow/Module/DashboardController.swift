@@ -19,6 +19,8 @@ final class DashboardViewController: BaseViewController, DashboardViewInput, Das
 
     // MARK: - LoaderViewOutput
     
+    var onSelected: DrinksTypeAction?
+    
     // MARK: - Private properties
 
     // MARK: - Views
@@ -136,11 +138,16 @@ extension DashboardViewController: UIScrollViewDelegate, UITableViewDelegate {
     }
     
     private func prepareSliderMenuCell(_ tv: UITableView, indexPath: IndexPath) -> UITableViewCell {
-        guard let contentCell = tv.dequeueReusableCell(withIdentifier: SliderMenuCell.identifier, for: indexPath)
+        guard let sliderCell = tv.dequeueReusableCell(withIdentifier: SliderMenuCell.identifier, for: indexPath)
                 as? SliderMenuCell else {
             fatalError("Cell is not of kind \(SliderMenuCell.nameOfClass)")
         }
-        return contentCell
+        
+        sliderCell.onSelected = { [weak self] drinkType in
+            self?.onSelected?(drinkType)
+        }
+        
+        return sliderCell
     }
     
 }

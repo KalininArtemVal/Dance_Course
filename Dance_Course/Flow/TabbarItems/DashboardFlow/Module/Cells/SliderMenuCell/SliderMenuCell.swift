@@ -17,13 +17,15 @@ class SliderMenuCell: UITableViewCell, UIScrollViewDelegate {
     
     var viewModel = SliderMenuViewModel()
     
-    private var sections: BehaviorRelay<[SliderMenuSectionModel]> = BehaviorRelay(value: [])
-    
     private var disposeBag = DisposeBag()
     
     var collectionEdgeInsets: UIEdgeInsets?
     
     var contentOffset: ((CGPoint) -> Void)?
+    
+    private var selectedCell = 0
+    
+    var onSelected: DrinksTypeAction?
     
     // MARK: -  Private properties
     
@@ -60,6 +62,10 @@ class SliderMenuCell: UITableViewCell, UIScrollViewDelegate {
         registerCell()
         setupConstraints()
         setupBindings()
+        
+        collectionView.selectItem(at: IndexPath(item: selectedCell, section: 0),
+                                  animated: false,
+                                  scrollPosition: .left)
     }
     
     private func setupBindings() {
@@ -84,7 +90,7 @@ class SliderMenuCell: UITableViewCell, UIScrollViewDelegate {
             collectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             collectionView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            collectionView.heightAnchor.constraint(equalToConstant: 40)
+            collectionView.heightAnchor.constraint(equalToConstant: 60)
         ])
     }
     
@@ -115,6 +121,28 @@ extension SliderMenuCell {
         cell.configure(vm: cellViewModel)
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        onSelected?(sendDrinkType(index: indexPath.row))
+    }
+    
+    func sendDrinkType(index: Int) -> DrinksType {
+        
+        switch index {
+        case 0:
+            return .all
+        case 1:
+            return .coffee
+        case 2:
+            return .tea
+        case 3:
+            return .deserts
+        case 4:
+            return .freshDrinks
+        default:
+            return .all
+        }
     }
     
 }

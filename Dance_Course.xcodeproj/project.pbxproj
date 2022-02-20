@@ -34,6 +34,7 @@
 		EF20F3C227C2534500197067 /* SliderMenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF20F3C127C2534500197067 /* SliderMenuItemCell.swift */; };
 		EF20F3C527C254FF00197067 /* SliderMenuSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF20F3C427C254FF00197067 /* SliderMenuSectionModel.swift */; };
 		EF20F3C727C2551B00197067 /* SliderMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF20F3C627C2551B00197067 /* SliderMenuViewModel.swift */; };
+		EF20F3C927C2968200197067 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF20F3C827C2968200197067 /* UIColor+Extension.swift */; };
 		EF2B99B227BEB1FE0059F6B6 /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2B99B127BEB1FE0059F6B6 /* TitleTableViewCell.swift */; };
 		EF2B99BD27BEB7A00059F6B6 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2B99BC27BEB7A00059F6B6 /* UIFont+Extension.swift */; };
 		EF2B99BF27BEC86F0059F6B6 /* DashboardSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2B99BE27BEC86F0059F6B6 /* DashboardSectionModel.swift */; };
@@ -131,6 +132,7 @@
 		EF20F3C127C2534500197067 /* SliderMenuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderMenuItemCell.swift; sourceTree = "<group>"; };
 		EF20F3C427C254FF00197067 /* SliderMenuSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderMenuSectionModel.swift; sourceTree = "<group>"; };
 		EF20F3C627C2551B00197067 /* SliderMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderMenuViewModel.swift; sourceTree = "<group>"; };
+		EF20F3C827C2968200197067 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		EF2B99B127BEB1FE0059F6B6 /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
 		EF2B99B427BEB52B0059F6B6 /* SFProDisplay-Ultralight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Ultralight.ttf"; sourceTree = "<group>"; };
 		EF2B99B527BEB52B0059F6B6 /* SFProDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Regular.ttf"; sourceTree = "<group>"; };
@@ -489,6 +491,7 @@
 				EF0D4FE727B6BF3100B62482 /* NSObject+Extension.swift */,
 				EF0D501927B9B19900B62482 /* UIWindow+Extension.swift */,
 				EF2B99BC27BEB7A00059F6B6 /* UIFont+Extension.swift */,
+				EF20F3C827C2968200197067 /* UIColor+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1055,6 +1058,7 @@
 				EF8BC8A527B31564001A225E /* ModalNavigationBar.swift in Sources */,
 				EF8BC88C27B3059F001A225E /* TabbarViewOutput.swift in Sources */,
 				EF8BC81E27B2E84D001A225E /* LanguageController.swift in Sources */,
+				EF20F3C927C2968200197067 /* UIColor+Extension.swift in Sources */,
 				EF8BC8BE27B438D1001A225E /* NavigationTargetViewPositionObservable.swift in Sources */,
 				EF8BC8B027B434D9001A225E /* UIApplication+Extencion.swift in Sources */,
 				EF8BC84427B2F737001A225E /* CoordinatorFactory.swift in Sources */,

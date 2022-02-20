@@ -6,7 +6,14 @@
 //
 
 import UIKit
-import GradientView
+
+enum DrinksType {
+    case all
+    case coffee
+    case tea
+    case deserts
+    case freshDrinks
+}
 
 class ContentContentViewModel {
     
@@ -14,12 +21,14 @@ class ContentContentViewModel {
     var image: UIImage?
     var price: String?
     var description: String?
+    var drinksType: DrinksType
     
-    init(title: String?, image: UIImage?, price: String?, description: String?) {
+    init(title: String?, image: UIImage?, price: String?, description: String?, drinksType: DrinksType) {
         self.image = image
         self.title = title
         self.price = price
         self.description = description
+        self.drinksType = drinksType
     }
 }
 
@@ -28,8 +37,6 @@ class ContentCollectionCell: UICollectionViewCell {
     static let identifier = "ContentCollectionCell"
     
     // MARK: - Private properties
-    
-    private var maskedGradientBackgroundView: GradientView?
     
     private let imageView: UIImageView = {
        let imageView = UIImageView()
@@ -153,13 +160,10 @@ class ContentCollectionCell: UICollectionViewCell {
         )
     }
     
-    func setupMaskedGradientBackgroundView(view: UIView) {
-        maskedGradientBackgroundView = GradientView()
-        maskedGradientBackgroundView?.colors = [.white, .black]
-        maskedGradientBackgroundView?.direction = .vertical
-        maskedGradientBackgroundView?.frame = view.bounds
-        insertSubview(maskedGradientBackgroundView!, at: 0)
-        clipsToBounds = true
+    override func prepareForReuse() {
+        if let _ = gradientView.layer.sublayers?.first as? CAGradientLayer {
+            gradientView.layer.sublayers?.first?.removeFromSuperlayer()
+        }
     }
     
 }

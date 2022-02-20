@@ -110,9 +110,7 @@ extension DashboardContentCell {
                 as? ContentCollectionCell else {
             fatalError("Cell is not of kind \(ContentCollectionCell.nameOfClass)")
         }
-        
         cell.configure(with: cellViewModel)
-        
         return cell
     }
     

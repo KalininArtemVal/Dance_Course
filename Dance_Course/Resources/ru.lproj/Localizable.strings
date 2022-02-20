@@ -13,3 +13,11 @@
 // MARK: - Dashboard Title Cell
 
 "TitleCell.Label.Main.Text" = "Найди для себя подходящий кофе";
+
+// MARK: - Slider Menu Title
+
+"SliderMenuItem.Label.All.Text" = "Все";
+"SliderMenuItem.Label.Coffee.Text" = "Кофе";
+"SliderMenuItem.Label.Tea.Text" = "Чай";
+"SliderMenuItem.Label.Deserts.Text" = "Десерты";
+"SliderMenuItem.Label.Fresh.Text" = "Другое";

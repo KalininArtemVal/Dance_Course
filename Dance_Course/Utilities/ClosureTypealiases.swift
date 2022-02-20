@@ -35,6 +35,8 @@ typealias SelectedURLBlock = (URL) -> Void
 
 typealias SearchNavigationViewCallback = (_ string: String) -> Void
 
+typealias DrinksTypeAction = (DrinksType) -> Void
+
 // API
 
 typealias Failure = (Error?) -> Void

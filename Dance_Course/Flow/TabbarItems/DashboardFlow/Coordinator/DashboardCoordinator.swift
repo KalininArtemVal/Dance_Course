@@ -41,6 +41,7 @@ final class DashboardCoordinator: BaseCoordinator, CoordinatorInTabbarInitiable 
     private func showDashboardModule() {
         let dashboardView = factory.makeDashboardModule()
         dashboardView.viewModel = DashboardViewModel()
+        
 //        dashboardView.viewModel = DashboardViewModel(profileUseCase: profileUseCase, wireframe: wireFrame)
         configureNavigationView(title: "Главная", module: dashboardView)
         router.setRootModule(dashboardView)
