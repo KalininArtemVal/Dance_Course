@@ -94,6 +94,8 @@ final class DashboardViewController: BaseViewController, DashboardViewInput, Das
     private func registerCells() {
         tableView.register(TitleTableViewCell.self, forCellReuseIdentifier: TitleTableViewCell.identifier)
         tableView.register(DashboardContentCell.self, forCellReuseIdentifier: DashboardContentCell.identifier)
+        tableView.register(SliderMenuCell.self, forCellReuseIdentifier: SliderMenuCell.identifier)
+        
     }
     
 }
@@ -107,6 +109,8 @@ extension DashboardViewController: UIScrollViewDelegate, UITableViewDelegate {
                 switch sectionItem {
                 case .headerItem:
                     return self.prepareHeaderCell(tv, indexPath: indexPath)
+                case .sliderMenuItem:
+                    return self.prepareSliderMenuCell(tv, indexPath: indexPath)
                 case .contentItem:
                     return self.prepareContentCell(tv, indexPath: indexPath)
                 }
@@ -127,6 +131,14 @@ extension DashboardViewController: UIScrollViewDelegate, UITableViewDelegate {
         guard let contentCell = tv.dequeueReusableCell(withIdentifier: DashboardContentCell.identifier, for: indexPath)
                 as? DashboardContentCell else {
             fatalError("Cell is not of kind \(DashboardContentCell.nameOfClass)")
+        }
+        return contentCell
+    }
+    
+    private func prepareSliderMenuCell(_ tv: UITableView, indexPath: IndexPath) -> UITableViewCell {
+        guard let contentCell = tv.dequeueReusableCell(withIdentifier: SliderMenuCell.identifier, for: indexPath)
+                as? SliderMenuCell else {
+            fatalError("Cell is not of kind \(SliderMenuCell.nameOfClass)")
         }
         return contentCell
     }

@@ -28,6 +28,10 @@ extension UIFont {
         return UIFont.init(name: "SFProDisplay-Light", size: 14) ?? UIFont.systemFont(ofSize: 14)
     }
     
+    static var menuSliderFont: UIFont {
+        return UIFont.init(name: "SFProDisplay-Medium", size: 14) ?? UIFont.systemFont(ofSize: 14)
+    }
+    
     static var tabbarFont: UIFont {
         return UIFont.init(name: "SFProDisplay-Medium", size: 9) ?? UIFont.systemFont(ofSize: 9)
     }

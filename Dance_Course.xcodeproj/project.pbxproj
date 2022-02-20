@@ -30,6 +30,10 @@
 		EF20F3B927C0524A00197067 /* SFProDisplay-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF2B99B627BEB52B0059F6B6 /* SFProDisplay-Semibold.ttf */; };
 		EF20F3BA27C0524C00197067 /* SFProDisplay-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF2B99BA27BEB52B0059F6B6 /* SFProDisplay-Thin.ttf */; };
 		EF20F3BB27C0524E00197067 /* SFProDisplay-Ultralight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF2B99B427BEB52B0059F6B6 /* SFProDisplay-Ultralight.ttf */; };
+		EF20F3BF27C2521700197067 /* SliderMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF20F3BE27C2521700197067 /* SliderMenuCell.swift */; };
+		EF20F3C227C2534500197067 /* SliderMenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF20F3C127C2534500197067 /* SliderMenuItemCell.swift */; };
+		EF20F3C527C254FF00197067 /* SliderMenuSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF20F3C427C254FF00197067 /* SliderMenuSectionModel.swift */; };
+		EF20F3C727C2551B00197067 /* SliderMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF20F3C627C2551B00197067 /* SliderMenuViewModel.swift */; };
 		EF2B99B227BEB1FE0059F6B6 /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2B99B127BEB1FE0059F6B6 /* TitleTableViewCell.swift */; };
 		EF2B99BD27BEB7A00059F6B6 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2B99BC27BEB7A00059F6B6 /* UIFont+Extension.swift */; };
 		EF2B99BF27BEC86F0059F6B6 /* DashboardSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2B99BE27BEC86F0059F6B6 /* DashboardSectionModel.swift */; };
@@ -123,6 +127,10 @@
 		EF0D501527B982E900B62482 /* DashboardNavigationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardNavigationView.xib; sourceTree = "<group>"; };
 		EF0D501727B982F800B62482 /* DashboardNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardNavigationView.swift; sourceTree = "<group>"; };
 		EF0D501927B9B19900B62482 /* UIWindow+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extension.swift"; sourceTree = "<group>"; };
+		EF20F3BE27C2521700197067 /* SliderMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderMenuCell.swift; sourceTree = "<group>"; };
+		EF20F3C127C2534500197067 /* SliderMenuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderMenuItemCell.swift; sourceTree = "<group>"; };
+		EF20F3C427C254FF00197067 /* SliderMenuSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderMenuSectionModel.swift; sourceTree = "<group>"; };
+		EF20F3C627C2551B00197067 /* SliderMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderMenuViewModel.swift; sourceTree = "<group>"; };
 		EF2B99B127BEB1FE0059F6B6 /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
 		EF2B99B427BEB52B0059F6B6 /* SFProDisplay-Ultralight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Ultralight.ttf"; sourceTree = "<group>"; };
 		EF2B99B527BEB52B0059F6B6 /* SFProDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Regular.ttf"; sourceTree = "<group>"; };
@@ -298,9 +306,37 @@
 			path = DashboardNavigation;
 			sourceTree = "<group>";
 		};
+		EF20F3BD27C251F300197067 /* SliderMenuCell */ = {
+			isa = PBXGroup;
+			children = (
+				EF20F3C327C254E300197067 /* ViewModel */,
+				EF20F3C027C2521A00197067 /* Cell */,
+				EF20F3BE27C2521700197067 /* SliderMenuCell.swift */,
+			);
+			path = SliderMenuCell;
+			sourceTree = "<group>";
+		};
+		EF20F3C027C2521A00197067 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EF20F3C127C2534500197067 /* SliderMenuItemCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		EF20F3C327C254E300197067 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EF20F3C627C2551B00197067 /* SliderMenuViewModel.swift */,
+				EF20F3C427C254FF00197067 /* SliderMenuSectionModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		EF2B99AF27BEB1D90059F6B6 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				EF20F3BD27C251F300197067 /* SliderMenuCell */,
 				EF2B99C127BED0110059F6B6 /* ContentCell */,
 				EF2B99B027BEB1E30059F6B6 /* TitleCell */,
 			);
@@ -943,7 +979,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$SRCROOT/R.generated.swift",
+				$SRCROOT/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -963,6 +999,8 @@
 				EF8BC8B727B43641001A225E /* CustomNavigationView.swift in Sources */,
 				EF8BC85F27B2FA53001A225E /* WaitingScreenView.swift in Sources */,
 				EF8BC89C27B310ED001A225E /* R.generated.swift in Sources */,
+				EF20F3C527C254FF00197067 /* SliderMenuSectionModel.swift in Sources */,
+				EF20F3BF27C2521700197067 /* SliderMenuCell.swift in Sources */,
 				EF0D500027B8572900B62482 /* ProfileModuleFactory.swift in Sources */,
 				EF8BC82327B2E90C001A225E /* RouterImp.swift in Sources */,
 				EF0D4FFE27B8567800B62482 /* ProfileCoordinator.swift in Sources */,
@@ -1023,6 +1061,7 @@
 				EF8BC85227B2F930001A225E /* LoaderController.swift in Sources */,
 				EF8BC88A27B30592001A225E /* TabbarController.swift in Sources */,
 				EF8BC85427B2F943001A225E /* LoaderViewInput.swift in Sources */,
+				EF20F3C227C2534500197067 /* SliderMenuItemCell.swift in Sources */,
 				EF8BC87927B30464001A225E /* DashboardModuleFactory.swift in Sources */,
 				EF0D501827B982F900B62482 /* DashboardNavigationView.swift in Sources */,
 				EF8BC8C327B43CAE001A225E /* NavigationButtonStateObservable.swift in Sources */,
@@ -1031,6 +1070,7 @@
 				EF0D501A27B9B19900B62482 /* UIWindow+Extension.swift in Sources */,
 				EF8BC84F27B2F915001A225E /* LoaderCoordinator.swift in Sources */,
 				EF8BC89027B30706001A225E /* TabbarCoordinator.swift in Sources */,
+				EF20F3C727C2551B00197067 /* SliderMenuViewModel.swift in Sources */,
 				EF8BC89927B308A6001A225E /* ModuleFactoryList.swift in Sources */,
 				EF8BC88E27B305A5001A225E /* TabbarViewInput.swift in Sources */,
 				EF8BC83D27B2F355001A225E /* AppDelegate.swift in Sources */,
