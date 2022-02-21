@@ -79,12 +79,6 @@ final class DashboardViewController: BaseViewController, DashboardViewInput, Das
         viewModel.sections.asObservable()
             .bind(to: tableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
-        self.isItemSelected.asObservable().subscribe { [weak self] event in
-            guard let event = event.element else { return }
-            if event {
-                self?.tableView.reloadData()
-            }
-        }.disposed(by: self.disposeBag)
     }
     
     private func setupConstraints() {
@@ -110,7 +104,6 @@ final class DashboardViewController: BaseViewController, DashboardViewInput, Das
         tableView.register(TitleTableViewCell.self, forCellReuseIdentifier: TitleTableViewCell.identifier)
         tableView.register(DashboardContentCell.self, forCellReuseIdentifier: DashboardContentCell.identifier)
         tableView.register(SliderMenuCell.self, forCellReuseIdentifier: SliderMenuCell.identifier)
-        
     }
     
 }
@@ -152,14 +145,6 @@ extension DashboardViewController: UIScrollViewDelegate, UITableViewDelegate {
             contentCell?.configure(type: drinkType)
         }).disposed(by: disposeBag)
         
-        contentCell.isItemSelected.asObservable().subscribe { [weak self] isItemSelected in
-            guard let isItemSelected = isItemSelected.element else { return }
-            if isItemSelected {
-                self?.isItemSelected.accept(isItemSelected)
-            }
-            
-        }.disposed(by: disposeBag)
-        
         return contentCell
     }
     
@@ -171,6 +156,7 @@ extension DashboardViewController: UIScrollViewDelegate, UITableViewDelegate {
         
         sliderCell.onSelected = { [weak self] drinkType in
             self?.viewModel.isSelected.accept(drinkType)
+            self?.tableView.reloadData()
         }
         
         return sliderCell

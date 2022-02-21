@@ -24,7 +24,9 @@ class DashboardContentCell: UITableViewCell {
     
     var contentOffset: ((CGPoint) -> Void)?
     
-    var isItemSelected = BehaviorRelay<Bool>(value: false)
+    var contentCount = BehaviorRelay<Int>(value: 0)
+    
+    private var isFiltering = false
     
     // MARK: -  Private properties
     
@@ -56,9 +58,11 @@ class DashboardContentCell: UITableViewCell {
     }
     
     func configure(type: DrinksType) {
-        setContentHeight()
+        
         hideCollection { [weak self] in
-            self?.viewModel.setItems(with: type)
+//            self?.viewModel.setItems(with: type)
+            self?.isFiltering = true
+            self?.filterItems(with: type)
             self?.collectionView.reloadData()
         }
         showCollection()
@@ -70,7 +74,8 @@ class DashboardContentCell: UITableViewCell {
         backgroundColor = .blackColor
         registerCell()
         setupConstraints()
-        setupBindings()
+        collectionView.delegate = self
+        collectionView.dataSource = self
     }
     
     private func hideCollection(completion: Action?) {
@@ -86,20 +91,28 @@ class DashboardContentCell: UITableViewCell {
         }
     }
     
-    private func setupBindings() {
-        let dataSource = self.dataSource()
-        self.viewModel.sections.bind(to: collectionView.rx.items(dataSource: dataSource))
-            .disposed(by: self.disposeBag)
-
-        self.collectionView.rx.setDelegate(self)
-            .disposed(by: self.disposeBag)
-        self.viewModel.isItemSelected.asObservable().subscribe { [weak self] event in
-            guard let event = event.element else { return }
-            if event {
-                self?.setContentHeight()
-                self?.isItemSelected.accept(event)
+    func filterItems(with type: DrinksType) {
+        guard type != .all else {
+            viewModel.filterItems = viewModel.contentItems
+            setContentHeight(with: viewModel.filterItems.count)
+            contentCount.accept(viewModel.filterItems.count)
+            return
+        }
+        viewModel.filterItems = viewModel.contentItems.filter({
+            (content: ContentContentViewModel) -> Bool in
+            if !viewModel.filterItems.isEmpty {
+                viewModel.filterItems = []
             }
-        }.disposed(by: self.disposeBag)
+            if content.drinksType == type {
+                print(content.drinksType)
+                viewModel.filterItems.append(content)
+                
+            }
+            contentCount.accept(viewModel.filterItems.count)
+            return content.drinksType == type
+        })
+        setContentHeight(with: viewModel.filterItems.count)
+        collectionView.reloadData()
     }
     
     private func registerCell() {
@@ -115,55 +128,59 @@ class DashboardContentCell: UITableViewCell {
             collectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             collectionView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            collectionView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height)
+//            collectionView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height)
         ])
     }
     
-    private func setContentHeight() {
-        self.viewModel.itemsCount.asObservable().subscribe { [weak self] count in
-            guard let count = count.element else { return }
-            
-//            var a = CGFloat(250)count % 2
-            
-            var collectionHeight = CGFloat(0)
-            
-            collectionHeight = count
-            print(collectionHeight)
-            self?.collectionView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height).isActive = true
-        }.disposed(by: disposeBag)
+    private func setContentHeight(with count: Int) {
+        
+        var columnElement: CGFloat = 0
+        var collectionHeight: CGFloat = 0
+        
+        if count % 2 == 0 {
+            columnElement = CGFloat(count / 2)
+            collectionHeight = 250 * (columnElement)
+        } else {
+            columnElement = CGFloat(count / 2) + CGFloat(0.5)
+            collectionHeight = 250 * (columnElement + 0.5)
+        }
+        print(collectionHeight)
+        self.collectionView.heightAnchor.constraint(equalToConstant: collectionHeight).isActive = true
     }
     
 }
 
-extension DashboardContentCell {
+extension DashboardContentCell: UICollectionViewDelegate, UICollectionViewDataSource {
     
-    private func dataSource() -> RxCollectionViewSectionedReloadDataSource<ContentSectionModel> {
-        return RxCollectionViewSectionedReloadDataSource<ContentSectionModel>(
-            configureCell: { [weak self] (_, cv, indexPath, item) -> UICollectionViewCell in
-                guard let self = self else {
-                    return cv.dequeueReusableCell(withReuseIdentifier: UICollectionViewCell.nameOfClass, for: indexPath)
-                }
-                switch item {
-                case .coffeeItem(vm: let cellVM):
-                    return self.prepareContentCell(cv, indexPath: indexPath, cellViewModel: cellVM)
-                }
-            }
-        )
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if isFiltering {
+            return viewModel.filterItems.count
+        }
+        return viewModel.contentItems.count
     }
     
-    private func prepareContentCell(_ cv: UICollectionView, indexPath: IndexPath, cellViewModel: ContentContentViewModel) -> UICollectionViewCell {
-        guard let cell = cv.dequeueReusableCell(withReuseIdentifier: ContentCollectionCell.identifier, for: indexPath)
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ContentCollectionCell.identifier, for: indexPath)
                 as? ContentCollectionCell else {
             fatalError("Cell is not of kind \(ContentCollectionCell.nameOfClass)")
+            
         }
         
-        cell.configure(with: cellViewModel)
+        if isFiltering {
+            let cellViewModel = viewModel.filterItems[indexPath.row]
+            cell.configure(with: cellViewModel)
+        } else {
+            let cellViewModel = viewModel.contentItems[indexPath.row]
+            cell.configure(with: cellViewModel)
+        }
+        
         return cell
     }
     
 }
 
 extension DashboardContentCell {
+    
     private func bindOffset(contentOffset: CGPoint) {
         collectionView.setContentOffset(contentOffset, animated: false)
     }
