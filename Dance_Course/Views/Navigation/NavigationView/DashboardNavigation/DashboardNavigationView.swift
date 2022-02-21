@@ -11,11 +11,10 @@ class DashboardNavigationView: PrimaryView, CustomNavigationView  {
     
     @IBOutlet weak var title: UILabel! {
         didSet {
-            title.text = "Главная"
+            title.text = ""
         }
     }
     @IBOutlet weak var leftButton: UIButton!
-    
     
     var actionHandler: NavigationViewHandler?
     

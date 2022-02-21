@@ -19,15 +19,17 @@ final class DashboardViewController: BaseViewController, DashboardViewInput, Das
 
     // MARK: - LoaderViewOutput
     
-    var onSelected: DrinksTypeAction?
+    var selectedType: DrinksType = .all
     
     // MARK: - Private properties
+    
+    var isItemSelected = BehaviorRelay<Bool>(value: false)
 
     // MARK: - Views
     
     private let mainView: UIView = {
         let view = UIView()
-        view.backgroundColor = .black
+        view.backgroundColor = .blackColor
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -37,7 +39,8 @@ final class DashboardViewController: BaseViewController, DashboardViewInput, Das
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 80
         tableView.allowsSelection = false
-        tableView.backgroundColor = .black
+        tableView.separatorStyle = .none
+        tableView.backgroundColor = .blackColor
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
@@ -52,6 +55,10 @@ final class DashboardViewController: BaseViewController, DashboardViewInput, Das
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
+    }
+    
+    deinit {
+        print("DashboardViewController")
     }
 
     // MARK: - Actions
@@ -72,6 +79,12 @@ final class DashboardViewController: BaseViewController, DashboardViewInput, Das
         viewModel.sections.asObservable()
             .bind(to: tableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
+        self.isItemSelected.asObservable().subscribe { [weak self] event in
+            guard let event = event.element else { return }
+            if event {
+                self?.tableView.reloadData()
+            }
+        }.disposed(by: self.disposeBag)
     }
     
     private func setupConstraints() {
@@ -134,6 +147,19 @@ extension DashboardViewController: UIScrollViewDelegate, UITableViewDelegate {
                 as? DashboardContentCell else {
             fatalError("Cell is not of kind \(DashboardContentCell.nameOfClass)")
         }
+        self.viewModel.isSelected.asObservable().subscribe({ [weak self, weak contentCell] drinkType in
+            guard let drinkType = drinkType.element else { return }
+            contentCell?.configure(type: drinkType)
+        }).disposed(by: disposeBag)
+        
+        contentCell.isItemSelected.asObservable().subscribe { [weak self] isItemSelected in
+            guard let isItemSelected = isItemSelected.element else { return }
+            if isItemSelected {
+                self?.isItemSelected.accept(isItemSelected)
+            }
+            
+        }.disposed(by: disposeBag)
+        
         return contentCell
     }
     
@@ -144,7 +170,7 @@ extension DashboardViewController: UIScrollViewDelegate, UITableViewDelegate {
         }
         
         sliderCell.onSelected = { [weak self] drinkType in
-            self?.onSelected?(drinkType)
+            self?.viewModel.isSelected.accept(drinkType)
         }
         
         return sliderCell

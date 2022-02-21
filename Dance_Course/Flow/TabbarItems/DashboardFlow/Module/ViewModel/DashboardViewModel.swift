@@ -11,6 +11,8 @@ import UIKit
 
 class DashboardViewModel {
     
+    var isSelected: BehaviorRelay<DrinksType> = BehaviorRelay<DrinksType>(value: .all)
+    
     var sections = BehaviorRelay<[DashboardSectionModel]>(value: [])
     
     init() {
@@ -32,5 +34,9 @@ class DashboardViewModel {
             ]
         
         return items
+    }
+    
+    func setFilterItems(type: DrinksType = .all) {
+        
     }
 }

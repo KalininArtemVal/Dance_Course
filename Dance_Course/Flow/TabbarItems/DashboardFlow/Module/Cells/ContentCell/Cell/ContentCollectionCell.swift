@@ -97,12 +97,14 @@ class ContentCollectionCell: UICollectionViewCell {
         titleLabel.text = viewModel.title
         subtitleLabel.text = viewModel.description
         priceLabel.text = viewModel.price
+        
+        
     }
     
     // MARK: - Private properties
     
     private func setupConstraints() {
-        backgroundColor = .black
+        backgroundColor = .blackColor
         layer.cornerRadius = 7
         contentView.addSubview(imageView)
         imageView.addSubview(gradientView)
@@ -147,7 +149,7 @@ class ContentCollectionCell: UICollectionViewCell {
         gradientView.applyGradientWithStartAndEndPoint(
             colors: [
                 .clear,
-                .black
+                .blackColor
             ],
             cornerRadius: 2,
             isTopToBottom: true,
@@ -160,10 +162,10 @@ class ContentCollectionCell: UICollectionViewCell {
         )
     }
     
-    override func prepareForReuse() {
-        if let _ = gradientView.layer.sublayers?.first as? CAGradientLayer {
-            gradientView.layer.sublayers?.first?.removeFromSuperlayer()
-        }
-    }
+//    override func prepareForReuse() {
+//        if let _ = gradientView.layer.sublayers?.first as? CAGradientLayer {
+//            gradientView.layer.sublayers?.first?.removeFromSuperlayer()
+//        }
+//    }
     
 }

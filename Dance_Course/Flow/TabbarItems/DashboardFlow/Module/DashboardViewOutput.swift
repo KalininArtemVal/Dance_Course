@@ -6,5 +6,4 @@
 //
 
 protocol DashboardViewOutput {
-    var onSelected: DrinksTypeAction? { get set }
 }

@@ -35,7 +35,7 @@ class SliderMenuCell: UITableViewCell, UIScrollViewDelegate {
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
-        collectionView.backgroundColor = .black
+        collectionView.backgroundColor = .blackColor
 //        collectionView.isPagingEnabled = true
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.showsVerticalScrollIndicator = false
@@ -83,7 +83,7 @@ class SliderMenuCell: UITableViewCell, UIScrollViewDelegate {
     
     private func setupConstraints() {
         contentView.addSubview(collectionView)
-        collectionView.backgroundColor = .black
+        collectionView.backgroundColor = .blackColor
         
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: contentView.topAnchor),

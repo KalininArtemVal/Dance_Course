@@ -37,7 +37,7 @@
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="qn5-wv-uI1"/>
-            <color key="backgroundColor" systemColor="labelColor"/>
+            <color key="backgroundColor" red="0.050980392156862744" green="0.058823529411764705" blue="0.078431372549019607" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
                 <constraint firstItem="tcV-2g-JeP" firstAttribute="centerY" secondItem="XnX-M4-9LN" secondAttribute="centerY" id="PFK-43-JBz"/>
                 <constraint firstItem="nay-Gx-jbY" firstAttribute="leading" secondItem="qn5-wv-uI1" secondAttribute="leading" constant="20" id="UEq-tn-SeC"/>
@@ -50,9 +50,6 @@
     </objects>
     <resources>
         <image name="text.alignleft" catalog="system" width="128" height="100"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

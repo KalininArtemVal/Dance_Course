@@ -15,6 +15,8 @@ typealias SearchAction = (Action?) -> Void
 
 typealias IndexAction = (Int) -> Void
 
+typealias FloatAction = (CGFloat) -> Void
+
 typealias IntArrayAction = ([Int]) -> Void
 
 typealias BoolAction = (Bool) -> Void

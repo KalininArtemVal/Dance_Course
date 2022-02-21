@@ -41,9 +41,7 @@ final class DashboardCoordinator: BaseCoordinator, CoordinatorInTabbarInitiable 
     private func showDashboardModule() {
         let dashboardView = factory.makeDashboardModule()
         dashboardView.viewModel = DashboardViewModel()
-        
-//        dashboardView.viewModel = DashboardViewModel(profileUseCase: profileUseCase, wireframe: wireFrame)
-        configureNavigationView(title: "Главная", module: dashboardView)
+        configureNavigationView(title: "", module: dashboardView)
         router.setRootModule(dashboardView)
     }
     
@@ -55,13 +53,6 @@ final class DashboardCoordinator: BaseCoordinator, CoordinatorInTabbarInitiable 
                                          style: NavBarStyle = .mainStyle,
                                          module: Presentable) {
         
-//        _ = NavigationBarHelper.customizeNavBarFor(for: module,
-//                                                       style: style,
-//                                                       title: title,
-//                                                       actionHandler: { [weak self] (type) in
-//                                                        print("navigation button type = \(type)")
-//                                                        self?.handleNavigationButtonActionWith(type: type)
-//            })
         _ = NavigationBarHelper.customizeNavBarFor(for: module,
                                                    style: style,
                                                    title: title,

@@ -24,6 +24,8 @@ class DashboardContentCell: UITableViewCell {
     
     var contentOffset: ((CGPoint) -> Void)?
     
+    var isItemSelected = BehaviorRelay<Bool>(value: false)
+    
     // MARK: -  Private properties
     
     private let collectionView: UICollectionView = {
@@ -32,7 +34,7 @@ class DashboardContentCell: UITableViewCell {
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
-        collectionView.backgroundColor = .black
+        collectionView.backgroundColor = .blackColor
         collectionView.isPagingEnabled = true
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.showsVerticalScrollIndicator = false
@@ -53,12 +55,35 @@ class DashboardContentCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func configure(type: DrinksType) {
+        setContentHeight()
+        hideCollection { [weak self] in
+            self?.viewModel.setItems(with: type)
+            self?.collectionView.reloadData()
+        }
+        showCollection()
+    }
+    
     // MARK: - Private methods
     
     private func setupUI() {
+        backgroundColor = .blackColor
         registerCell()
         setupConstraints()
         setupBindings()
+    }
+    
+    private func hideCollection(completion: Action?) {
+        UIView.animate(withDuration: 0.7) {
+            self.collectionView.alpha = 0
+        }
+        completion?()
+    }
+    
+    private func showCollection() {
+        UIView.animate(withDuration: 0.7) {
+            self.collectionView.alpha = 1
+        }
     }
     
     private func setupBindings() {
@@ -68,6 +93,13 @@ class DashboardContentCell: UITableViewCell {
 
         self.collectionView.rx.setDelegate(self)
             .disposed(by: self.disposeBag)
+        self.viewModel.isItemSelected.asObservable().subscribe { [weak self] event in
+            guard let event = event.element else { return }
+            if event {
+                self?.setContentHeight()
+                self?.isItemSelected.accept(event)
+            }
+        }.disposed(by: self.disposeBag)
     }
     
     private func registerCell() {
@@ -76,7 +108,7 @@ class DashboardContentCell: UITableViewCell {
     
     private func setupConstraints() {
         contentView.addSubview(collectionView)
-        collectionView.backgroundColor = .black
+        collectionView.backgroundColor = .blackColor
         
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: contentView.topAnchor),
@@ -85,6 +117,20 @@ class DashboardContentCell: UITableViewCell {
             collectionView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             collectionView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height)
         ])
+    }
+    
+    private func setContentHeight() {
+        self.viewModel.itemsCount.asObservable().subscribe { [weak self] count in
+            guard let count = count.element else { return }
+            
+//            var a = CGFloat(250)count % 2
+            
+            var collectionHeight = CGFloat(0)
+            
+            collectionHeight = count
+            print(collectionHeight)
+            self?.collectionView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height).isActive = true
+        }.disposed(by: disposeBag)
     }
     
 }
@@ -110,6 +156,7 @@ extension DashboardContentCell {
                 as? ContentCollectionCell else {
             fatalError("Cell is not of kind \(ContentCollectionCell.nameOfClass)")
         }
+        
         cell.configure(with: cellViewModel)
         return cell
     }

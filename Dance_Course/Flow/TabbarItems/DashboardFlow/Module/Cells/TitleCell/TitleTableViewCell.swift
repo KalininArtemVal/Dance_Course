@@ -39,7 +39,7 @@ class TitleTableViewCell: UITableViewCell {
     
     private func setupConstraints() {
         contentView.addSubview(mainTitle)
-        contentView.backgroundColor = .black
+        contentView.backgroundColor = .blackColor
         
         NSLayoutConstraint.activate([
             mainTitle.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20),

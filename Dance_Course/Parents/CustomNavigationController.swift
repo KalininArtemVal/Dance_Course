@@ -52,7 +52,7 @@ final class CustomNavigationController: UINavigationController {
     private func configureUI() {
         navigationBar.removeFromSuperview()
         view.backgroundColor = .clear
-        UIApplication.statusBarBackgroundColor = .black
+        UIApplication.statusBarBackgroundColor = .blackColor
         delegate = self
     }
     

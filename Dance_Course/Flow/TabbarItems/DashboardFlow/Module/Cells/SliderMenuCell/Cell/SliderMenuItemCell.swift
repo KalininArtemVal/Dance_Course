@@ -78,7 +78,7 @@ class SliderMenuItemCell: UICollectionViewCell {
     }
     
     private func setupConstraints() {
-        backgroundColor = .black
+        backgroundColor = .blackColor
         contentView.addSubview(titleLabel)
         contentView.addSubview(selectedCircle)
         

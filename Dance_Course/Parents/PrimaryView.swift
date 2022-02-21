@@ -43,12 +43,15 @@ class PrimaryView: UIView, NibInitializable {
         nibSetup()
     }
 
-    func configureUI() {}
+    func configureUI() {
+        backgroundColor = .blackColor
+    }
     
     func setupMaskedGradientBackgroundView(size: CGSize) {
         maskedGradientBackgroundView = UIView()
 //        maskedGradientBackgroundView?.colors = [.mainThemeColor, .mainThemeColor]
 //        maskedGradientBackgroundView?.direction = .vertical
+        backgroundColor = .blackColor
         maskedGradientBackgroundView?.frame = CGRect(origin: .zero, size: size)
         insertSubview(maskedGradientBackgroundView!, at: 0)
         clipsToBounds = true
