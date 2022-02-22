@@ -39,6 +39,8 @@ typealias SearchNavigationViewCallback = (_ string: String) -> Void
 
 typealias DrinksTypeAction = (DrinksType) -> Void
 
+typealias ContentItemAction = (ContentContentViewModel?) -> Void
+
 // API
 
 typealias Failure = (Error?) -> Void

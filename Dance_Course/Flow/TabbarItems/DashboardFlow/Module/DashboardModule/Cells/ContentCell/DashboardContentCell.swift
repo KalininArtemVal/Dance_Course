@@ -26,6 +26,8 @@ class DashboardContentCell: UITableViewCell {
     
     var contentCount = BehaviorRelay<Int>(value: 0)
     
+    var onSelectedContent: ContentItemAction?
+    
     private var isFiltering = false
     
     // MARK: -  Private properties
@@ -178,6 +180,10 @@ extension DashboardContentCell {
     
     private func bindOffset(contentOffset: CGPoint) {
         collectionView.setContentOffset(contentOffset, animated: false)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        onSelectedContent?(viewModel.filterItems[indexPath.row])
     }
 }
 

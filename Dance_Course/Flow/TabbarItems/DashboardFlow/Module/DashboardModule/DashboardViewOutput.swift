@@ -6,4 +6,5 @@
 //
 
 protocol DashboardViewOutput {
+    var onSelectedContent: ContentItemAction? { get set }
 }

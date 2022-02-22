@@ -7,4 +7,5 @@
 
 protocol DashboardModuleFactory {
     func makeDashboardModule() -> DashboardViewInput & DashboardViewOutput
+    func makeDashboardDetailModule() -> DashboardDetailViewInput & DashboardDetailViewOutput
 }

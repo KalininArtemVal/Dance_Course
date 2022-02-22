@@ -29,6 +29,15 @@ final class ModuleFactoryImp: ModuleFactoryList {
         return controller
     }
     
+    func makeDashboardDetailModule() -> DashboardDetailViewInput & DashboardDetailViewOutput {
+        let controller = DashboardDetailController()
+        controller.providesPresentationContextTransitionStyle = true
+        controller.definesPresentationContext = true
+        controller.modalPresentationStyle = .overCurrentContext
+        controller.modalTransitionStyle = .coverVertical
+        return controller
+    }
+    
     // MARK: - ProfileModuleFactory
     
     func makeProfileModule() -> ProfileViewInput & ProfileViewOutput {

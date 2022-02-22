@@ -16,9 +16,10 @@ final class NavigationViewFactoryImp: NavigationViewFactory {
     func makeNavigationView(with style: NavBarStyle, title: String? = nil, rightButtonRelay: BehaviorRelay<Bool>? = nil) -> CustomNavigationView {
         switch style {
         
-        case .mainStyle, .closeStyle, .backStyle:
+        case .mainStyle, .closeStyle:
             return makeDashboardNavigationView(title: title, style: style)
-            
+        case .backStyle:
+            return makeDashboardDetailNavigationView(title: title, style: style)
         }
     }
     
@@ -64,5 +65,25 @@ final class NavigationViewFactoryImp: NavigationViewFactory {
         return navigationView
     }
     
+    private func makeDashboardDetailNavigationView(title: String?,
+                                              isShowBackButton: Bool = false,
+                                              rightButtonRelay: BehaviorRelay<Bool>? = nil,
+                                              style: NavBarStyle? = nil) -> CustomNavigationView {
+        let navigationView = DashboardDetailNavigationView(frame: commonFrame)
+        navigationView.updateTitle(title ?? "")
+//        navigationView.isEnabledRightButtonRelay = rightButtonRelay
+        
+        var rightButtonType: NavigationButtonType = .other
+        
+        switch style {
+        case .backStyle:
+            rightButtonType = .back
+        default:
+            break
+        }
+//        navigationView.rightButtonType = rightButtonType
+
+        return navigationView
+    }
     
 }

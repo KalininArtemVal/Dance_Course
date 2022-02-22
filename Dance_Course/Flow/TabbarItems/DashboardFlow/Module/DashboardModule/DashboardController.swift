@@ -21,6 +21,8 @@ final class DashboardViewController: BaseViewController, DashboardViewInput, Das
     
     var selectedType: DrinksType = .all
     
+    var onSelectedContent: ContentItemAction?
+    
     // MARK: - Private properties
     
     var isItemSelected = BehaviorRelay<Bool>(value: false)
@@ -144,6 +146,10 @@ extension DashboardViewController: UIScrollViewDelegate, UITableViewDelegate {
             guard let drinkType = drinkType.element else { return }
             contentCell?.configure(type: drinkType)
         }).disposed(by: disposeBag)
+        
+        contentCell.onSelectedContent = { [weak self] contentItem in
+            self?.onSelectedContent?(contentItem)
+        }
         
         return contentCell
     }

@@ -22,6 +22,16 @@
 		EF0D501627B982E900B62482 /* DashboardNavigationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF0D501527B982E900B62482 /* DashboardNavigationView.xib */; };
 		EF0D501827B982F900B62482 /* DashboardNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0D501727B982F800B62482 /* DashboardNavigationView.swift */; };
 		EF0D501A27B9B19900B62482 /* UIWindow+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0D501927B9B19900B62482 /* UIWindow+Extension.swift */; };
+		EF2046F127C56C9E00B4A083 /* DashboardDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2046F027C56C9E00B4A083 /* DashboardDetailController.swift */; };
+		EF2046F327C56CB200B4A083 /* DashboardDetailViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2046F227C56CB200B4A083 /* DashboardDetailViewInput.swift */; };
+		EF2046F527C56CBE00B4A083 /* DashboardDetailViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2046F427C56CBE00B4A083 /* DashboardDetailViewOutput.swift */; };
+		EF2046F827C56CDF00B4A083 /* DashboardDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2046F727C56CDF00B4A083 /* DashboardDetailViewModel.swift */; };
+		EF2046FB27C5767C00B4A083 /* DashboardDetailSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2046FA27C5767B00B4A083 /* DashboardDetailSectionModel.swift */; };
+		EF20470027C5785600B4A083 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2046FF27C5785600B4A083 /* HeaderCell.swift */; };
+		EF20470227C5787900B4A083 /* DescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF20470127C5787900B4A083 /* DescriptionCell.swift */; };
+		EF20470427C5788900B4A083 /* BasketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF20470327C5788900B4A083 /* BasketCell.swift */; };
+		EF20470727C57D7500B4A083 /* DashboardDetailNavigationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF20470627C57D7500B4A083 /* DashboardDetailNavigationView.xib */; };
+		EF20470927C57D8B00B4A083 /* DashboardDetailNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF20470827C57D8B00B4A083 /* DashboardDetailNavigationView.swift */; };
 		EF20F3B427C0523D00197067 /* SFProDisplay-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF2B99B727BEB52B0059F6B6 /* SFProDisplay-Black.ttf */; };
 		EF20F3B527C0524100197067 /* SFProDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF2B99BB27BEB52B0059F6B6 /* SFProDisplay-Bold.ttf */; };
 		EF20F3B627C0524300197067 /* SFProDisplay-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF2B99B827BEB52B0059F6B6 /* SFProDisplay-Light.ttf */; };
@@ -128,6 +138,16 @@
 		EF0D501527B982E900B62482 /* DashboardNavigationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardNavigationView.xib; sourceTree = "<group>"; };
 		EF0D501727B982F800B62482 /* DashboardNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardNavigationView.swift; sourceTree = "<group>"; };
 		EF0D501927B9B19900B62482 /* UIWindow+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extension.swift"; sourceTree = "<group>"; };
+		EF2046F027C56C9E00B4A083 /* DashboardDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardDetailController.swift; sourceTree = "<group>"; };
+		EF2046F227C56CB200B4A083 /* DashboardDetailViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardDetailViewInput.swift; sourceTree = "<group>"; };
+		EF2046F427C56CBE00B4A083 /* DashboardDetailViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardDetailViewOutput.swift; sourceTree = "<group>"; };
+		EF2046F727C56CDF00B4A083 /* DashboardDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardDetailViewModel.swift; sourceTree = "<group>"; };
+		EF2046FA27C5767B00B4A083 /* DashboardDetailSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardDetailSectionModel.swift; sourceTree = "<group>"; };
+		EF2046FF27C5785600B4A083 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
+		EF20470127C5787900B4A083 /* DescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionCell.swift; sourceTree = "<group>"; };
+		EF20470327C5788900B4A083 /* BasketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketCell.swift; sourceTree = "<group>"; };
+		EF20470627C57D7500B4A083 /* DashboardDetailNavigationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardDetailNavigationView.xib; sourceTree = "<group>"; };
+		EF20470827C57D8B00B4A083 /* DashboardDetailNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardDetailNavigationView.swift; sourceTree = "<group>"; };
 		EF20F3BE27C2521700197067 /* SliderMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderMenuCell.swift; sourceTree = "<group>"; };
 		EF20F3C127C2534500197067 /* SliderMenuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderMenuItemCell.swift; sourceTree = "<group>"; };
 		EF20F3C427C254FF00197067 /* SliderMenuSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderMenuSectionModel.swift; sourceTree = "<group>"; };
@@ -311,8 +331,77 @@
 		EF2046EE27C56BF100B4A083 /* DashboardModule */ = {
 			isa = PBXGroup;
 			children = (
+				EF2B99AF27BEB1D90059F6B6 /* Cells */,
+				EF8BC87A27B30488001A225E /* ViewModel */,
+				EF8BC87B27B3049F001A225E /* DashboardController.swift */,
+				EF8BC87D27B304B0001A225E /* DashboardViewInput.swift */,
+				EF8BC87F27B304C5001A225E /* DashboardViewOutput.swift */,
 			);
 			path = DashboardModule;
+			sourceTree = "<group>";
+		};
+		EF2046EF27C56C6D00B4A083 /* DashboardDetailModule */ = {
+			isa = PBXGroup;
+			children = (
+				EF2046F927C5715800B4A083 /* Cells */,
+				EF2046F627C56CC400B4A083 /* DashboardDetailViewModel */,
+				EF2046F027C56C9E00B4A083 /* DashboardDetailController.swift */,
+				EF2046F227C56CB200B4A083 /* DashboardDetailViewInput.swift */,
+				EF2046F427C56CBE00B4A083 /* DashboardDetailViewOutput.swift */,
+			);
+			path = DashboardDetailModule;
+			sourceTree = "<group>";
+		};
+		EF2046F627C56CC400B4A083 /* DashboardDetailViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EF2046F727C56CDF00B4A083 /* DashboardDetailViewModel.swift */,
+				EF2046FA27C5767B00B4A083 /* DashboardDetailSectionModel.swift */,
+			);
+			path = DashboardDetailViewModel;
+			sourceTree = "<group>";
+		};
+		EF2046F927C5715800B4A083 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EF2046FE27C5784400B4A083 /* HeaderCell */,
+				EF2046FD27C5783C00B4A083 /* DescriptionCell */,
+				EF2046FC27C5781400B4A083 /* BasketCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		EF2046FC27C5781400B4A083 /* BasketCell */ = {
+			isa = PBXGroup;
+			children = (
+				EF20470327C5788900B4A083 /* BasketCell.swift */,
+			);
+			path = BasketCell;
+			sourceTree = "<group>";
+		};
+		EF2046FD27C5783C00B4A083 /* DescriptionCell */ = {
+			isa = PBXGroup;
+			children = (
+				EF20470127C5787900B4A083 /* DescriptionCell.swift */,
+			);
+			path = DescriptionCell;
+			sourceTree = "<group>";
+		};
+		EF2046FE27C5784400B4A083 /* HeaderCell */ = {
+			isa = PBXGroup;
+			children = (
+				EF2046FF27C5785600B4A083 /* HeaderCell.swift */,
+			);
+			path = HeaderCell;
+			sourceTree = "<group>";
+		};
+		EF20470527C57D4900B4A083 /* DashboardDetailNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				EF20470827C57D8B00B4A083 /* DashboardDetailNavigationView.swift */,
+				EF20470627C57D7500B4A083 /* DashboardDetailNavigationView.xib */,
+			);
+			path = DashboardDetailNavigation;
 			sourceTree = "<group>";
 		};
 		EF20F3BD27C251F300197067 /* SliderMenuCell */ = {
@@ -682,11 +771,7 @@
 			isa = PBXGroup;
 			children = (
 				EF2046EE27C56BF100B4A083 /* DashboardModule */,
-				EF2B99AF27BEB1D90059F6B6 /* Cells */,
-				EF8BC87A27B30488001A225E /* ViewModel */,
-				EF8BC87B27B3049F001A225E /* DashboardController.swift */,
-				EF8BC87D27B304B0001A225E /* DashboardViewInput.swift */,
-				EF8BC87F27B304C5001A225E /* DashboardViewOutput.swift */,
+				EF2046EF27C56C6D00B4A083 /* DashboardDetailModule */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -800,6 +885,7 @@
 		EF8BC8B427B43627001A225E /* NavigationView */ = {
 			isa = PBXGroup;
 			children = (
+				EF20470527C57D4900B4A083 /* DashboardDetailNavigation */,
 				EF0D501427B982D000B62482 /* DashboardNavigation */,
 				EF8BC8BF27B43C53001A225E /* Base */,
 				EF8BC8B527B43630001A225E /* Protocols */,
@@ -925,6 +1011,7 @@
 				EF20F3BB27C0524E00197067 /* SFProDisplay-Ultralight.ttf in Resources */,
 				EF20F3B427C0523D00197067 /* SFProDisplay-Black.ttf in Resources */,
 				EF8BC80F27B2E3A0001A225E /* LaunchScreen.storyboard in Resources */,
+				EF20470727C57D7500B4A083 /* DashboardDetailNavigationView.xib in Resources */,
 				EF20F3BA27C0524C00197067 /* SFProDisplay-Thin.ttf in Resources */,
 				EF8BC80C27B2E3A0001A225E /* Assets.xcassets in Resources */,
 				EF20F3B827C0524800197067 /* SFProDisplay-Regular.ttf in Resources */,
@@ -1004,6 +1091,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF8BC8BC27B436ED001A225E /* ViewPresentable.swift in Sources */,
+				EF20470227C5787900B4A083 /* DescriptionCell.swift in Sources */,
 				EF8BC89427B30776001A225E /* CoordinatorFactoryImp.swift in Sources */,
 				EF8BC86E27B30249001A225E /* UIViewController+Extencion.swift in Sources */,
 				EF8BC81B27B2E7E3001A225E /* ClosureTypealiases.swift in Sources */,
@@ -1031,6 +1119,7 @@
 				EF8BC87E27B304B0001A225E /* DashboardViewInput.swift in Sources */,
 				EF2B99CE27BEF8FA0059F6B6 /* DashboardContentViewModel.swift in Sources */,
 				EF0D4FFA27B8565B00B62482 /* ProfileViewInput.swift in Sources */,
+				EF20470927C57D8B00B4A083 /* DashboardDetailNavigationView.swift in Sources */,
 				EF8BC8C627B472E1001A225E /* TabbarView.swift in Sources */,
 				EF2B99D027BEF9050059F6B6 /* ContentSectionModel.swift in Sources */,
 				EF0D4FE827B6BF3100B62482 /* NSObject+Extension.swift in Sources */,
@@ -1042,6 +1131,7 @@
 				EF8BC81927B2E7B2001A225E /* Presentable.swift in Sources */,
 				EF8BC86827B2FDE8001A225E /* LoaderModuleFactories.swift in Sources */,
 				EF8BC86327B2FAC1001A225E /* UIView+Extension.swift in Sources */,
+				EF2046F327C56CB200B4A083 /* DashboardDetailViewInput.swift in Sources */,
 				EF8BC82827B2E989001A225E /* Constants.swift in Sources */,
 				EF8BC83427B2EE70001A225E /* Coordinatable.swift in Sources */,
 				EF8BC88427B30533001A225E /* CoordinatorInTabbarInitiable.swift in Sources */,
@@ -1050,6 +1140,7 @@
 				EF2B99C327BED0700059F6B6 /* DashboardContentCell.swift in Sources */,
 				EF8BC86527B2FD74001A225E /* LoaderViewModel.swift in Sources */,
 				EF0D4FF827B8564C00B62482 /* ProfileViewController.swift in Sources */,
+				EF20470427C5788900B4A083 /* BasketCell.swift in Sources */,
 				EF8BC86C27B301BD001A225E /* CustomNavigationController.swift in Sources */,
 				EF8BC89E27B313B2001A225E /* NavigationBarHelper.swift in Sources */,
 				EF2B99C627BED1AA0059F6B6 /* ContentCollectionCell.swift in Sources */,
@@ -1058,6 +1149,7 @@
 				EF8BC83B27B2F300001A225E /* MainCoordinator.swift in Sources */,
 				EF8BC88227B304D5001A225E /* DashboardViewModel.swift in Sources */,
 				EF8BC8CF27B47536001A225E /* Integer+Extension.swift in Sources */,
+				EF2046F827C56CDF00B4A083 /* DashboardDetailViewModel.swift in Sources */,
 				EF8BC86A27B2FE50001A225E /* Dependencies.swift in Sources */,
 				EF8BC82127B2E8E4001A225E /* Router.swift in Sources */,
 				EF8BC87727B303E6001A225E /* DashboardCoordinator.swift in Sources */,
@@ -1067,14 +1159,18 @@
 				EF8BC88C27B3059F001A225E /* TabbarViewOutput.swift in Sources */,
 				EF8BC81E27B2E84D001A225E /* LanguageController.swift in Sources */,
 				EF20F3C927C2968200197067 /* UIColor+Extension.swift in Sources */,
+				EF2046F527C56CBE00B4A083 /* DashboardDetailViewOutput.swift in Sources */,
 				EF8BC8BE27B438D1001A225E /* NavigationTargetViewPositionObservable.swift in Sources */,
 				EF8BC8B027B434D9001A225E /* UIApplication+Extencion.swift in Sources */,
+				EF2046FB27C5767C00B4A083 /* DashboardDetailSectionModel.swift in Sources */,
 				EF8BC84427B2F737001A225E /* CoordinatorFactory.swift in Sources */,
 				EF8BC85227B2F930001A225E /* LoaderController.swift in Sources */,
 				EF8BC88A27B30592001A225E /* TabbarController.swift in Sources */,
 				EF8BC85427B2F943001A225E /* LoaderViewInput.swift in Sources */,
 				EF20F3C227C2534500197067 /* SliderMenuItemCell.swift in Sources */,
 				EF8BC87927B30464001A225E /* DashboardModuleFactory.swift in Sources */,
+				EF20470027C5785600B4A083 /* HeaderCell.swift in Sources */,
+				EF2046F127C56C9E00B4A083 /* DashboardDetailController.swift in Sources */,
 				EF0D501827B982F900B62482 /* DashboardNavigationView.swift in Sources */,
 				EF8BC8C327B43CAE001A225E /* NavigationButtonStateObservable.swift in Sources */,
 				EF8BC85927B2F98E001A225E /* BaseView.swift in Sources */,

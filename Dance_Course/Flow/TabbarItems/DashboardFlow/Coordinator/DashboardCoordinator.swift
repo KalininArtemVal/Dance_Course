@@ -39,12 +39,25 @@ final class DashboardCoordinator: BaseCoordinator, CoordinatorInTabbarInitiable 
     // MARK: - Run current flow's controllers
     
     private func showDashboardModule() {
-        let dashboardView = factory.makeDashboardModule()
+        var dashboardView = factory.makeDashboardModule()
         dashboardView.viewModel = DashboardViewModel()
+        
+        dashboardView.onSelectedContent = { [weak self] item in
+            guard let item = item else { return }
+            self?.showDetailDashboardModule(with: item)
+        }
+        
         configureNavigationView(title: "", module: dashboardView)
         router.setRootModule(dashboardView)
     }
     
+    private func showDetailDashboardModule(with contentItem: ContentContentViewModel) {
+        let detailModule = factory.makeDashboardDetailModule()
+        detailModule.viewModel = DashboardDetailViewModel(contentItem: contentItem)
+        
+        configureNavigationView(title: "", style: .backStyle, module: detailModule)
+        router.push(detailModule)
+    }
     
 
     // MARK: - Configuring Navigation View
@@ -71,7 +84,6 @@ final class DashboardCoordinator: BaseCoordinator, CoordinatorInTabbarInitiable 
         case .back:
             router.popModule(animated: true)
         case .menu:
-            
             print("Menu")
         default:
             break

@@ -15,6 +15,11 @@ enum DrinksType {
     case freshDrinks
 }
 
+enum ConditionType {
+    case cold
+    case hot
+}
+
 class ContentContentViewModel {
     
     var title: String?
@@ -22,13 +27,15 @@ class ContentContentViewModel {
     var price: String?
     var description: String?
     var drinksType: DrinksType
+    var conditionType: ConditionType
     
-    init(title: String?, image: UIImage?, price: String?, description: String?, drinksType: DrinksType) {
+    init(title: String?, image: UIImage?, price: String?, description: String?, drinksType: DrinksType, conditionType: ConditionType) {
         self.image = image
         self.title = title
         self.price = price
         self.description = description
         self.drinksType = drinksType
+        self.conditionType = conditionType
     }
 }
 

@@ -23,6 +23,10 @@ extension UIFont {
     static var priceFont: UIFont {
         return UIFont.init(name: "SFProDisplay-Bold", size: 20) ?? UIFont.systemFont(ofSize: 20)
     }
+    
+    static var descriptionFont: UIFont {
+        return UIFont.init(name: "SFProDisplay-Light", size: 18) ?? UIFont.systemFont(ofSize: 18)
+    }
 
     static var subtextFont: UIFont {
         return UIFont.init(name: "SFProDisplay-Light", size: 14) ?? UIFont.systemFont(ofSize: 14)
