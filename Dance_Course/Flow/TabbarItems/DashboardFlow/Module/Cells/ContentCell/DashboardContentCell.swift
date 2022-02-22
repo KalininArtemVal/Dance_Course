@@ -145,7 +145,7 @@ class DashboardContentCell: UITableViewCell {
             collectionHeight = 250 * (columnElement + 0.5)
         }
         print(collectionHeight)
-        self.collectionView.heightAnchor.constraint(equalToConstant: collectionHeight).isActive = true
+        self.collectionView.heightAnchor.constraint(equalToConstant: collectionHeight + Constants.tabbarHeight).isActive = true
     }
     
 }
