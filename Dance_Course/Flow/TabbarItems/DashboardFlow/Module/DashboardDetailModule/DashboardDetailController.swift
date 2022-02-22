@@ -72,6 +72,7 @@ class DashboardDetailController: BaseViewController, DashboardDetailViewInput, D
     private func registrationCell() {
         tableView.register(HeaderCell.self, forCellReuseIdentifier: HeaderCell.identifier)
         tableView.register(DescriptionCell.self, forCellReuseIdentifier: DescriptionCell.identifier)
+        tableView.register(SizeCell.self, forCellReuseIdentifier: SizeCell.identifier)
     }
     
     private func setupConstraints() {
@@ -104,8 +105,10 @@ extension DashboardDetailController: UIScrollViewDelegate, UITableViewDelegate {
                 switch sectionItem {
                 case .headerItem(let cellVM):
                     return self.prepareHeaderCell(tv, indexPath: indexPath, cellViewModel: cellVM)
-                case .description(vm: let cellVM):
+                case .descriptionItem(vm: let cellVM):
                     return self.prepareDescriptionCell(tv, indexPath: indexPath, cellViewModel: cellVM)
+                case .sizeItem:
+                    return self.prepareSizeCell(tv, indexPath: indexPath)
                 }
             }
         )
@@ -121,12 +124,20 @@ extension DashboardDetailController: UIScrollViewDelegate, UITableViewDelegate {
     }
     
     private func prepareDescriptionCell(_ tv: UITableView, indexPath: IndexPath, cellViewModel: DescriptionCellViewModel) -> UITableViewCell {
-        guard let headerCell = tv.dequeueReusableCell(withIdentifier: DescriptionCell.identifier, for: indexPath)
+        guard let descriptionCell = tv.dequeueReusableCell(withIdentifier: DescriptionCell.identifier, for: indexPath)
                 as? DescriptionCell else {
             fatalError("Cell is not of kind \(DescriptionCell.nameOfClass)")
         }
-        headerCell.configure(with: cellViewModel)
-        return headerCell
+        descriptionCell.configure(with: cellViewModel)
+        return descriptionCell
+    }
+    
+    private func prepareSizeCell(_ tv: UITableView, indexPath: IndexPath) -> UITableViewCell {
+        guard let sizeCell = tv.dequeueReusableCell(withIdentifier: SizeCell.identifier, for: indexPath)
+                as? SizeCell else {
+            fatalError("Cell is not of kind \(SizeCell.nameOfClass)")
+        }
+        return sizeCell
     }
     
 }

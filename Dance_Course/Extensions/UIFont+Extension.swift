@@ -16,16 +16,17 @@ extension UIFont {
     static var textFont: UIFont {
         return UIFont.init(name: "SFProDisplay-Semibold", size: 19) ?? UIFont.systemFont(ofSize: 19)
     }
-
-//    static var cameraFont: UIFont {
-//        return R.font.sfProTextRegular(size: 13) ?? UIFont.systemFont(ofSize: 13)
-//    }
-    static var priceFont: UIFont {
-        return UIFont.init(name: "SFProDisplay-Bold", size: 20) ?? UIFont.systemFont(ofSize: 20)
+    
+    static var sizeFont: UIFont {
+        return UIFont.init(name: "SFProDisplay-Light", size: 18) ?? UIFont.systemFont(ofSize: 18)
     }
     
     static var descriptionFont: UIFont {
-        return UIFont.init(name: "SFProDisplay-Light", size: 18) ?? UIFont.systemFont(ofSize: 18)
+        return UIFont.init(name: "SFProDisplay-Thin", size: 17) ?? UIFont.systemFont(ofSize: 17)
+    }
+    
+    static var priceFont: UIFont {
+        return UIFont.init(name: "SFProDisplay-Bold", size: 20) ?? UIFont.systemFont(ofSize: 20)
     }
 
     static var subtextFont: UIFont {

@@ -32,6 +32,8 @@
 		EF20470427C5788900B4A083 /* BasketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF20470327C5788900B4A083 /* BasketCell.swift */; };
 		EF20470727C57D7500B4A083 /* DashboardDetailNavigationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF20470627C57D7500B4A083 /* DashboardDetailNavigationView.xib */; };
 		EF20470927C57D8B00B4A083 /* DashboardDetailNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF20470827C57D8B00B4A083 /* DashboardDetailNavigationView.swift */; };
+		EF20470C27C598F800B4A083 /* SizeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF20470B27C598F800B4A083 /* SizeCell.swift */; };
+		EF20470F27C59A1300B4A083 /* SizeItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF20470E27C59A1300B4A083 /* SizeItemCell.swift */; };
 		EF20F3B427C0523D00197067 /* SFProDisplay-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF2B99B727BEB52B0059F6B6 /* SFProDisplay-Black.ttf */; };
 		EF20F3B527C0524100197067 /* SFProDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF2B99BB27BEB52B0059F6B6 /* SFProDisplay-Bold.ttf */; };
 		EF20F3B627C0524300197067 /* SFProDisplay-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF2B99B827BEB52B0059F6B6 /* SFProDisplay-Light.ttf */; };
@@ -148,6 +150,8 @@
 		EF20470327C5788900B4A083 /* BasketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketCell.swift; sourceTree = "<group>"; };
 		EF20470627C57D7500B4A083 /* DashboardDetailNavigationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardDetailNavigationView.xib; sourceTree = "<group>"; };
 		EF20470827C57D8B00B4A083 /* DashboardDetailNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardDetailNavigationView.swift; sourceTree = "<group>"; };
+		EF20470B27C598F800B4A083 /* SizeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeCell.swift; sourceTree = "<group>"; };
+		EF20470E27C59A1300B4A083 /* SizeItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeItemCell.swift; sourceTree = "<group>"; };
 		EF20F3BE27C2521700197067 /* SliderMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderMenuCell.swift; sourceTree = "<group>"; };
 		EF20F3C127C2534500197067 /* SliderMenuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderMenuItemCell.swift; sourceTree = "<group>"; };
 		EF20F3C427C254FF00197067 /* SliderMenuSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderMenuSectionModel.swift; sourceTree = "<group>"; };
@@ -366,6 +370,7 @@
 			children = (
 				EF2046FE27C5784400B4A083 /* HeaderCell */,
 				EF2046FD27C5783C00B4A083 /* DescriptionCell */,
+				EF20470A27C598D300B4A083 /* SizeCell */,
 				EF2046FC27C5781400B4A083 /* BasketCell */,
 			);
 			path = Cells;
@@ -402,6 +407,23 @@
 				EF20470627C57D7500B4A083 /* DashboardDetailNavigationView.xib */,
 			);
 			path = DashboardDetailNavigation;
+			sourceTree = "<group>";
+		};
+		EF20470A27C598D300B4A083 /* SizeCell */ = {
+			isa = PBXGroup;
+			children = (
+				EF20470D27C599E600B4A083 /* Cell */,
+				EF20470B27C598F800B4A083 /* SizeCell.swift */,
+			);
+			path = SizeCell;
+			sourceTree = "<group>";
+		};
+		EF20470D27C599E600B4A083 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EF20470E27C59A1300B4A083 /* SizeItemCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		EF20F3BD27C251F300197067 /* SliderMenuCell */ = {
@@ -1110,6 +1132,7 @@
 				EF2B99B227BEB1FE0059F6B6 /* TitleTableViewCell.swift in Sources */,
 				EF8BC82B27B2EA2D001A225E /* UIDevice+Extension.swift in Sources */,
 				EF8BC85B27B2F9FD001A225E /* BaseViewController.swift in Sources */,
+				EF20470F27C59A1300B4A083 /* SizeItemCell.swift in Sources */,
 				EF0D4FEA27B6BF5C00B62482 /* StoryboardsEnum.swift in Sources */,
 				EF8BC86127B2FA78001A225E /* PrimaryView.swift in Sources */,
 				EF8BC82D27B2EB4C001A225E /* UIViewController.swift in Sources */,
@@ -1120,6 +1143,7 @@
 				EF2B99CE27BEF8FA0059F6B6 /* DashboardContentViewModel.swift in Sources */,
 				EF0D4FFA27B8565B00B62482 /* ProfileViewInput.swift in Sources */,
 				EF20470927C57D8B00B4A083 /* DashboardDetailNavigationView.swift in Sources */,
+				EF20470C27C598F800B4A083 /* SizeCell.swift in Sources */,
 				EF8BC8C627B472E1001A225E /* TabbarView.swift in Sources */,
 				EF2B99D027BEF9050059F6B6 /* ContentSectionModel.swift in Sources */,
 				EF0D4FE827B6BF3100B62482 /* NSObject+Extension.swift in Sources */,

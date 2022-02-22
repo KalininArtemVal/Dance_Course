@@ -31,7 +31,8 @@ class DashboardDetailViewModel {
                                                     price: contentItem?.price,
                                                     image: contentItem?.image,
                                                     conditionType: contentItem?.conditionType)),
-                .description(vm: DescriptionCellViewModel(description: contentItem?.description)),
+                .descriptionItem(vm: DescriptionCellViewModel(description: contentItem?.description)),
+                .sizeItem
 //                .basket
             ])
         ]
