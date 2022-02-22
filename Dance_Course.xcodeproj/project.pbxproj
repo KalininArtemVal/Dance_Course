@@ -308,6 +308,13 @@
 			path = DashboardNavigation;
 			sourceTree = "<group>";
 		};
+		EF2046EE27C56BF100B4A083 /* DashboardModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DashboardModule;
+			sourceTree = "<group>";
+		};
 		EF20F3BD27C251F300197067 /* SliderMenuCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -674,6 +681,7 @@
 		EF8BC87427B303CC001A225E /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				EF2046EE27C56BF100B4A083 /* DashboardModule */,
 				EF2B99AF27BEB1D90059F6B6 /* Cells */,
 				EF8BC87A27B30488001A225E /* ViewModel */,
 				EF8BC87B27B3049F001A225E /* DashboardController.swift */,

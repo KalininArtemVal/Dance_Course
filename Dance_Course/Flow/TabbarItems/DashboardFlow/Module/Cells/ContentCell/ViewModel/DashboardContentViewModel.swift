@@ -21,7 +21,6 @@ class DashboardContentViewModel {
     var isItemSelected = BehaviorRelay<Bool>(value: false)
     
     init() {
-//        generateSection()
         generateItems()
     }
     
@@ -72,6 +71,36 @@ class DashboardContentViewModel {
                                                     price: "$6.99",
                                                     description: "with Cream",
                                                     drinksType: .deserts),
+            ContentContentViewModel(title: "Mint Tea",
+                                                    image: R.image.mintTeaImage(),
+                                                    price: "$6.99",
+                                                    description: "Tea with Mint",
+                                                    drinksType: .tea),
+            ContentContentViewModel(title: "Green Tea",
+                                                    image: R.image.greenTeaImage(),
+                                                    price: "$6.99",
+                                                    description: "tea with ice",
+                                                    drinksType: .tea),
+            ContentContentViewModel(title: "Sea-Buckthorn Tea",
+                                                    image: R.image.seaBuckthornTeaImage(),
+                                                    price: "$6.99",
+                                                    description: "with Sea-Buckthorn",
+                                                    drinksType: .tea),
+            ContentContentViewModel(title: "Pineapple lemonade",
+                                                    image: R.image.pinappleLemonadeImage(),
+                                                    price: "$6.99",
+                                                    description: "lemonade with Pineapple",
+                                                    drinksType: .freshDrinks),
+            ContentContentViewModel(title: "Espresso tonic",
+                                                    image: R.image.espressoTonicImage(),
+                                                    price: "$6.99",
+                                                    description: "with espresso and tonic",
+                                                    drinksType: .freshDrinks),
+            ContentContentViewModel(title: "Raf coffee",
+                                                    image: R.image.raffCoffeeImage(),
+                                                    price: "$4.99",
+                                                    description: "with espresso and tonic",
+                                                    drinksType: .coffee)
         ]
     }
 

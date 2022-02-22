@@ -24,19 +24,13 @@ class DashboardViewModel {
     }
     
     private func generateSection() -> [DashboardSectionModel] {
-        
         let items: [DashboardSectionModel] = [
             .mainSection(items: [
                 .headerItem,
                 .sliderMenuItem,
                 .contentItem
             ])
-            ]
-        
+        ]
         return items
-    }
-    
-    func setFilterItems(type: DrinksType = .all) {
-        
     }
 }

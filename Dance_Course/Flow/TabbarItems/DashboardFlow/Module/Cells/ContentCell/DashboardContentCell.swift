@@ -58,9 +58,7 @@ class DashboardContentCell: UITableViewCell {
     }
     
     func configure(type: DrinksType) {
-        
         hideCollection { [weak self] in
-//            self?.viewModel.setItems(with: type)
             self?.isFiltering = true
             self?.filterItems(with: type)
             self?.collectionView.reloadData()
@@ -112,7 +110,6 @@ class DashboardContentCell: UITableViewCell {
             return content.drinksType == type
         })
         setContentHeight(with: viewModel.filterItems.count)
-        collectionView.reloadData()
     }
     
     private func registerCell() {
@@ -127,13 +124,11 @@ class DashboardContentCell: UITableViewCell {
             collectionView.topAnchor.constraint(equalTo: contentView.topAnchor),
             collectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            collectionView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-//            collectionView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height)
+            collectionView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
     }
     
     private func setContentHeight(with count: Int) {
-        
         var columnElement: CGFloat = 0
         var collectionHeight: CGFloat = 0
         
@@ -187,6 +182,7 @@ extension DashboardContentCell {
 }
 
 extension DashboardContentCell: UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
