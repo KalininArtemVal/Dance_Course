@@ -31,6 +31,7 @@ extension DashboardSectionModel: SectionModelType {
 
 enum DashboardItem {
     case headerItem
+    case promoItem
     case sliderMenuItem
     case contentItem
 }

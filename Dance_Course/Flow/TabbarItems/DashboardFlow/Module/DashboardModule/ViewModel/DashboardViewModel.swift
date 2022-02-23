@@ -27,6 +27,7 @@ class DashboardViewModel {
         let items: [DashboardSectionModel] = [
             .mainSection(items: [
                 .headerItem,
+                .promoItem,
                 .sliderMenuItem,
                 .contentItem
             ])

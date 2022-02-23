@@ -106,6 +106,7 @@ final class DashboardViewController: BaseViewController, DashboardViewInput, Das
         tableView.register(TitleTableViewCell.self, forCellReuseIdentifier: TitleTableViewCell.identifier)
         tableView.register(DashboardContentCell.self, forCellReuseIdentifier: DashboardContentCell.identifier)
         tableView.register(SliderMenuCell.self, forCellReuseIdentifier: SliderMenuCell.identifier)
+        tableView.register(PromoCell.self, forCellReuseIdentifier: PromoCell.identifier)
     }
     
 }
@@ -119,6 +120,8 @@ extension DashboardViewController: UIScrollViewDelegate, UITableViewDelegate {
                 switch sectionItem {
                 case .headerItem:
                     return self.prepareHeaderCell(tv, indexPath: indexPath)
+                case .promoItem:
+                    return self.preparePromoCell(tv, indexPath: indexPath)
                 case .sliderMenuItem:
                     return self.prepareSliderMenuCell(tv, indexPath: indexPath)
                 case .contentItem:
@@ -132,6 +135,15 @@ extension DashboardViewController: UIScrollViewDelegate, UITableViewDelegate {
         guard let headerCell = tv.dequeueReusableCell(withIdentifier: TitleTableViewCell.identifier, for: indexPath)
                 as? TitleTableViewCell else {
             fatalError("Cell is not of kind \(TitleTableViewCell.nameOfClass)")
+        }
+        
+        return headerCell
+    }
+    
+    private func preparePromoCell(_ tv: UITableView, indexPath: IndexPath) -> UITableViewCell {
+        guard let headerCell = tv.dequeueReusableCell(withIdentifier: PromoCell.identifier, for: indexPath)
+                as? PromoCell else {
+            fatalError("Cell is not of kind \(PromoCell.nameOfClass)")
         }
         
         return headerCell

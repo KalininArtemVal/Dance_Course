@@ -26,6 +26,15 @@ class DescriptionCell: UITableViewCell {
     
     // MARK: -  Private properties
     
+    private let titleLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Description"
+        label.font = .sizeFont
+        label.textColor = .whiteColor
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
     private let descriptionLabel: UILabel = {
         let label = UILabel()
         label.font = .descriptionFont
@@ -57,9 +66,16 @@ class DescriptionCell: UITableViewCell {
     private func setupConstraints() {
         contentView.backgroundColor = .blackColor
         contentView.addSubview(descriptionLabel)
+        contentView.addSubview(titleLabel)
         
         NSLayoutConstraint.activate([
-            descriptionLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20),
+            titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20),
+            titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20)
+        ])
+        
+        NSLayoutConstraint.activate([
+            descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10),
             descriptionLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
             descriptionLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
             descriptionLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20),

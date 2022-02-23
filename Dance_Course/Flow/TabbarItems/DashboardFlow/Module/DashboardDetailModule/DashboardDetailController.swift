@@ -43,6 +43,17 @@ class DashboardDetailController: BaseViewController, DashboardDetailViewInput, D
         return tableView
     }()
     
+    private let buyButton: UIButton = {
+        let button = UIButton()
+        button.layer.cornerRadius = 15
+        button.setTitle("Buy", for: .normal)
+        button.titleLabel?.font = .priceFont
+        button.setTitleColor(.whiteColor, for: .normal)
+        button.backgroundColor = .orangeColor
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
     // MARK: - Life cycle
     
     override func viewDidLoad() {
@@ -78,6 +89,7 @@ class DashboardDetailController: BaseViewController, DashboardDetailViewInput, D
     private func setupConstraints() {
         view.addSubview(mainView)
         mainView.addSubview(tableView)
+        mainView.addSubview(buyButton)
         
         NSLayoutConstraint.activate([
             mainView.topAnchor.constraint(equalTo: view.topAnchor),
@@ -91,6 +103,13 @@ class DashboardDetailController: BaseViewController, DashboardDetailViewInput, D
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            buyButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100),
+            buyButton.leadingAnchor.constraint(equalTo: mainView.leadingAnchor, constant: 20),
+            buyButton.trailingAnchor.constraint(equalTo: mainView.trailingAnchor, constant: -20),
+            buyButton.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
     
